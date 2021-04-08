@@ -1,0 +1,108 @@
+2021-04-04 22:45:22.744 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerDao in com.brt.oa.customer.service.impl.CustomerServiceImpl required a bean of type 'com.brt.oa.customer.dao.CustomerDao' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.brt.oa.customer.dao.CustomerDao' in your configuration.
+
+2021-04-04 22:47:44.073 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerDao in com.brt.oa.customer.service.impl.CustomerServiceImpl required a bean of type 'com.brt.oa.customer.dao.CustomerDao' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.brt.oa.customer.dao.CustomerDao' in your configuration.
+
+2021-04-04 22:48:32.719 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field ud in com.brt.oa.user.service.imp.UserServiceImpl required a bean of type 'com.brt.oa.user.dao.UserDao' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.brt.oa.user.dao.UserDao' in your configuration.
+
+2021-04-04 22:49:20.847 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerDao in com.brt.oa.customer.service.impl.CustomerServiceImpl required a bean of type 'com.brt.oa.customer.dao.CustomerDao' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.brt.oa.customer.dao.CustomerDao' in your configuration.
+
+2021-04-04 22:50:19.570 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerDao in com.brt.oa.customer.service.impl.CustomerServiceImpl required a bean of type 'com.brt.oa.customer.dao.CustomerDao' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.brt.oa.customer.dao.CustomerDao' in your configuration.
+
+2021-04-04 22:51:43.816 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field ud in com.brt.oa.user.service.imp.UserServiceImpl required a bean of type 'com.brt.oa.user.dao.UserDao' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.brt.oa.user.dao.UserDao' in your configuration.
+

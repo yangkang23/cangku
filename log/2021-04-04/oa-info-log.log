@@ -1,0 +1,84 @@
+2021-04-04 22:45:20.887 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 12892 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-04 22:45:20.887 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-04-04 22:45:20.941 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-04 22:45:20.941 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-04 22:45:22.491 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-04 22:45:22.506 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-04 22:45:22.506 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-04 22:45:22.506 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-04 22:45:22.575 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-04 22:45:22.575 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1634 ms
+2021-04-04 22:45:22.622 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-04 22:47:42.601 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 29632 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-04 22:47:42.602 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-04-04 22:47:42.655 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-04 22:47:42.655 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-04 22:47:43.875 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-04 22:47:43.884 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-04 22:47:43.884 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-04 22:47:43.885 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-04 22:47:43.969 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-04 22:47:43.970 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1315 ms
+2021-04-04 22:47:44.019 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-04 22:48:30.999 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 16484 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-04 22:48:30.999 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-04-04 22:48:31.046 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-04 22:48:31.046 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-04 22:48:32.102 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-04 22:48:32.121 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-04 22:48:32.122 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-04 22:48:32.122 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-04 22:48:32.218 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-04 22:48:32.218 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1172 ms
+2021-04-04 22:48:32.672 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-04 22:49:19.575 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 30880 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-04 22:49:19.575 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-04-04 22:49:19.613 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-04 22:49:19.613 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-04 22:49:20.631 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-04 22:49:20.631 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-04 22:49:20.631 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-04 22:49:20.631 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-04 22:49:20.731 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-04 22:49:20.731 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1118 ms
+2021-04-04 22:49:20.785 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-04 22:50:18.182 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 8964 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-04 22:50:18.198 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-04-04 22:50:18.236 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-04 22:50:18.236 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-04 22:50:19.385 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-04 22:50:19.385 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-04 22:50:19.385 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-04 22:50:19.385 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-04 22:50:19.470 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-04 22:50:19.470 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1234 ms
+2021-04-04 22:50:19.517 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-04 22:51:42.336 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 8428 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-04 22:51:42.337 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-04-04 22:51:42.385 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-04 22:51:42.385 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-04 22:51:43.330 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-04 22:51:43.341 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-04 22:51:43.343 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-04 22:51:43.343 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-04 22:51:43.436 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-04 22:51:43.436 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1050 ms
+2021-04-04 22:51:43.764 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-04 22:51:57.043 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 3516 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-04 22:51:57.045 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-04-04 22:51:57.096 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-04 22:51:57.096 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-04 22:51:58.084 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-04 22:51:58.091 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-04 22:51:58.092 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-04 22:51:58.092 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-04 22:51:58.166 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-04 22:51:58.166 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1069 ms
+2021-04-04 22:51:59.131 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-04 22:51:59.146 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-04-04 22:51:59.203 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-04-04 22:51:59.245 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 2.592 seconds (JVM running for 3.663)
+2021-04-04 22:52:03.841 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-04 22:52:03.841 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-04 22:52:03.844 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-04-04 22:52:04.185 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited

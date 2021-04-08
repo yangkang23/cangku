@@ -1,0 +1,18 @@
+2021-04-02 09:53:20.941 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 27512 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-02 09:53:20.943 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-04-02 09:53:21.043 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-02 09:53:21.044 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-02 09:53:22.789 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-02 09:53:22.798 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-02 09:53:22.799 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-02 09:53:22.799 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-02 09:53:22.870 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-02 09:53:22.870 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1825 ms
+2021-04-02 09:53:23.702 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-02 09:53:23.723 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-04-02 09:53:23.753 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-04-02 09:53:23.772 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 3.668 seconds (JVM running for 6.455)
+2021-04-02 09:53:46.474 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-02 09:53:46.474 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-02 09:53:46.475 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-04-02 09:53:46.762 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited

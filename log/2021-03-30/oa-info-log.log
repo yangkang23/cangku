@@ -1,0 +1,570 @@
+2021-03-30 14:21:07.091 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:21:07.093 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:21:07.190 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 14:21:07.191 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 14:21:08.782 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:21:08.796 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:21:08.797 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:21:08.797 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:21:08.919 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:21:08.920 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1728 ms
+2021-03-30 14:21:09.902 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:21:09.921 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:21:09.956 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:21:09.990 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 3.542 seconds (JVM running for 6.132)
+2021-03-30 14:22:02.517 [http-nio-8060-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 14:22:02.517 [http-nio-8060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-30 14:22:02.518 [http-nio-8060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-03-30 14:22:03.015 [http-nio-8060-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-30 14:31:01.285 [Thread-13] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2021-03-30 14:31:01.570 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:31:01.570 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:31:02.136 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:31:02.137 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:31:02.137 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:31:02.137 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:31:02.176 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:31:02.176 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 603 ms
+2021-03-30 14:31:02.286 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 14:31:03.946 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:31:03.947 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:31:04.237 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:31:04.238 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:31:04.238 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:31:04.238 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:31:04.323 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:31:04.323 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 371 ms
+2021-03-30 14:31:04.523 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:31:04.541 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:31:04.563 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:31:04.611 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.716 seconds (JVM running for 600.753)
+2021-03-30 14:31:04.613 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:34:34.662 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:34:34.662 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:34:34.912 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:34:34.912 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:34:34.913 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:34:34.913 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:34:34.956 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:34:34.956 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 292 ms
+2021-03-30 14:34:35.172 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:34:35.181 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:34:35.203 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:34:35.214 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.585 seconds (JVM running for 811.356)
+2021-03-30 14:34:35.217 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:34:37.128 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:34:37.128 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:34:37.340 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:34:37.340 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:34:37.340 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:34:37.340 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:34:37.353 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:34:37.354 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 223 ms
+2021-03-30 14:34:37.483 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:34:37.492 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:34:37.508 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:34:37.514 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.416 seconds (JVM running for 813.655)
+2021-03-30 14:34:37.516 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:36:03.114 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:36:03.114 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:36:03.397 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:36:03.398 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:36:03.398 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:36:03.399 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:36:03.427 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:36:03.427 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 310 ms
+2021-03-30 14:36:03.675 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:36:03.712 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:36:03.739 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:36:03.751 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.676 seconds (JVM running for 899.893)
+2021-03-30 14:36:03.753 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:38:09.550 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:38:09.550 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:38:09.864 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:38:09.865 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:38:09.866 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:38:09.866 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:38:09.885 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:38:09.885 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 332 ms
+2021-03-30 14:38:09.935 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 14:39:38.780 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:39:38.780 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:39:39.037 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:39:39.038 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:39:39.039 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:39:39.039 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:39:39.064 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:39:39.064 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 282 ms
+2021-03-30 14:39:39.200 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:39:39.213 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:39:39.230 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:39:39.242 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.497 seconds (JVM running for 1115.383)
+2021-03-30 14:39:39.243 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:41:41.733 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:41:41.733 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:41:41.905 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:41:41.906 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:41:41.906 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:41:41.906 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:41:41.918 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:41:41.919 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 185 ms
+2021-03-30 14:41:41.924 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 14:47:15.687 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:47:15.687 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:47:15.930 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:47:15.931 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:47:15.931 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:47:15.931 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:47:15.946 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:47:15.946 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 257 ms
+2021-03-30 14:47:16.059 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:47:16.081 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:47:16.102 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:47:16.110 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.446 seconds (JVM running for 1572.251)
+2021-03-30 14:47:16.111 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:48:36.474 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:48:36.474 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:48:36.695 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:48:36.695 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:48:36.695 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:48:36.696 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:48:36.709 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:48:36.709 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 234 ms
+2021-03-30 14:48:36.836 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:48:36.845 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:48:36.862 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:48:36.870 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.419 seconds (JVM running for 1653.012)
+2021-03-30 14:48:36.872 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:48:38.731 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:48:38.731 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:48:38.878 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:48:38.879 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:48:38.879 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:48:38.879 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:48:38.891 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:48:38.892 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 159 ms
+2021-03-30 14:48:38.975 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:48:38.982 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:48:38.996 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:48:39.006 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.297 seconds (JVM running for 1655.147)
+2021-03-30 14:48:39.007 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:49:44.258 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:49:44.258 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:49:44.527 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:49:44.527 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:49:44.527 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:49:44.527 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:49:44.548 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:49:44.548 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 288 ms
+2021-03-30 14:49:44.694 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:49:44.703 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:49:44.719 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:49:44.728 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.511 seconds (JVM running for 1720.869)
+2021-03-30 14:49:44.729 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:49:46.594 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:49:46.595 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:49:46.737 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:49:46.738 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:49:46.738 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:49:46.738 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:49:46.751 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:49:46.751 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 155 ms
+2021-03-30 14:49:46.842 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:49:46.852 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:49:46.866 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:49:46.873 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.305 seconds (JVM running for 1723.015)
+2021-03-30 14:49:46.874 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:52:22.743 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 14:52:22.745 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-30 14:52:22.748 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-03-30 14:52:22.766 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2021-03-30 14:52:24.101 [Thread-74] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2021-03-30 14:52:24.367 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:52:24.367 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:52:24.658 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:52:24.658 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:52:24.659 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:52:24.659 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:52:24.673 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:52:24.673 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 304 ms
+2021-03-30 14:52:24.852 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:52:24.917 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:52:24.943 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:52:24.954 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.626 seconds (JVM running for 1881.095)
+2021-03-30 14:52:24.955 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:52:27.041 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:52:27.042 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:52:27.503 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:52:27.505 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:52:27.505 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:52:27.505 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:52:27.538 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:52:27.538 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 493 ms
+2021-03-30 14:52:27.710 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:52:27.723 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:52:27.744 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:52:27.755 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.76 seconds (JVM running for 1883.896)
+2021-03-30 14:52:27.757 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:52:31.917 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 14:52:31.918 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-30 14:52:31.920 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-03-30 14:52:31.929 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2021-03-30 14:55:30.420 [Thread-84] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closed
+2021-03-30 14:55:30.646 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 14:55:30.646 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 14:55:30.857 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 14:55:30.857 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:55:30.857 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 14:55:30.857 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:55:30.873 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 14:55:30.873 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 226 ms
+2021-03-30 14:55:31.022 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 14:55:31.037 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 14:55:31.056 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 14:55:31.067 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.451 seconds (JVM running for 2067.209)
+2021-03-30 14:55:31.069 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 14:55:32.507 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 14:55:32.508 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-30 14:55:32.509 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-03-30 14:55:32.518 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-4} inited
+2021-03-30 15:00:08.977 [Thread-89] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-4} closed
+2021-03-30 15:00:09.137 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:00:09.137 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:00:09.307 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:00:09.308 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:00:09.308 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:00:09.308 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:00:09.323 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:00:09.323 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 184 ms
+2021-03-30 15:00:09.354 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:03:00.529 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:03:00.529 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:03:00.780 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:03:00.781 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:03:00.781 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:03:00.781 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:03:00.801 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:03:00.801 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 270 ms
+2021-03-30 15:03:00.911 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:03:00.919 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:03:00.942 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:03:00.947 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.443 seconds (JVM running for 2517.088)
+2021-03-30 15:03:00.948 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:03:38.069 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:03:38.070 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:03:38.071 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-03-30 15:03:38.080 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-5} inited
+2021-03-30 15:05:05.359 [Thread-94] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-5} closed
+2021-03-30 15:05:05.559 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:05:05.560 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:05:05.795 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:05:05.795 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:05:05.795 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:05:05.795 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:05:05.811 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:05:05.812 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 250 ms
+2021-03-30 15:05:05.817 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:06:00.548 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:06:00.548 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:06:00.847 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:06:00.848 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:06:00.848 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:06:00.848 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:06:00.873 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:06:00.873 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 323 ms
+2021-03-30 15:06:01.052 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:06:01.062 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:06:01.081 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:06:01.090 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.571 seconds (JVM running for 2697.232)
+2021-03-30 15:06:01.092 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:09:20.993 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:09:20.993 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:09:21.216 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:09:21.217 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:09:21.217 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:09:21.217 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:09:21.230 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:09:21.230 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 235 ms
+2021-03-30 15:09:21.339 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:09:21.348 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:09:21.365 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:09:21.372 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.414 seconds (JVM running for 2897.514)
+2021-03-30 15:09:21.373 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:09:23.188 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:09:23.188 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:09:23.324 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:09:23.325 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:09:23.325 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:09:23.325 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:09:23.338 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:09:23.338 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 150 ms
+2021-03-30 15:09:23.423 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:09:23.430 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:09:23.444 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:09:23.452 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.284 seconds (JVM running for 2899.593)
+2021-03-30 15:09:23.453 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:09:49.576 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:09:49.577 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:09:49.735 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:09:49.735 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:09:49.736 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:09:49.736 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:09:49.749 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:09:49.749 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 170 ms
+2021-03-30 15:09:49.828 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:09:49.835 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:09:49.848 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:09:49.854 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.305 seconds (JVM running for 2925.996)
+2021-03-30 15:09:49.855 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:09:51.735 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:09:51.735 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:09:51.895 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:09:51.895 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:09:51.895 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:09:51.895 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:09:51.907 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:09:51.908 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 172 ms
+2021-03-30 15:09:51.991 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:09:51.998 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:09:52.012 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:09:52.019 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.304 seconds (JVM running for 2928.16)
+2021-03-30 15:09:52.019 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:24:33.516 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:24:33.516 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:24:33.921 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:24:33.921 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:24:33.922 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:24:33.922 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:24:33.965 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:24:33.965 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 447 ms
+2021-03-30 15:24:34.118 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:24:34.131 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:24:34.152 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:24:34.163 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.676 seconds (JVM running for 3810.305)
+2021-03-30 15:24:34.164 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:24:36.058 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:24:36.059 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:24:36.278 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:24:36.279 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:24:36.279 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:24:36.279 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:24:36.295 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:24:36.295 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 234 ms
+2021-03-30 15:24:36.397 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:24:36.404 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:24:36.419 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:24:36.426 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.397 seconds (JVM running for 3812.567)
+2021-03-30 15:24:36.427 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:30:15.176 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-5].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:30:15.176 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:30:15.177 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-03-30 15:30:15.191 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-6} inited
+2021-03-30 15:32:34.133 [Thread-135] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-6} closed
+2021-03-30 15:32:34.288 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:32:34.289 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:32:34.503 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:32:34.504 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:32:34.504 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:32:34.504 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:32:34.519 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:32:34.520 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 230 ms
+2021-03-30 15:32:34.529 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:33:01.099 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:33:01.099 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:33:01.275 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:33:01.276 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:33:01.276 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:33:01.276 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:33:01.291 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:33:01.291 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 190 ms
+2021-03-30 15:33:01.297 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:33:02.759 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:33:02.759 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:33:02.942 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:33:02.943 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:33:02.943 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:33:02.943 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:33:02.957 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-7].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:33:02.957 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 196 ms
+2021-03-30 15:33:02.961 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:33:09.428 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:33:09.428 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:33:09.649 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:33:09.650 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:33:09.650 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:33:09.650 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:33:09.667 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-8].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:33:09.667 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 237 ms
+2021-03-30 15:33:09.673 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:33:11.128 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:33:11.128 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:33:11.313 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:33:11.313 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:33:11.313 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:33:11.313 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:33:11.329 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-9].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:33:11.329 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 199 ms
+2021-03-30 15:33:11.336 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:33:49.929 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:33:49.929 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:33:50.139 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:33:50.139 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:33:50.140 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:33:50.140 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:33:50.156 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-10].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:33:50.156 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 226 ms
+2021-03-30 15:33:50.163 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:33:51.626 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:33:51.626 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:33:51.807 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:33:51.807 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:33:51.807 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:33:51.807 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:33:51.830 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-11].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:33:51.831 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 202 ms
+2021-03-30 15:33:51.846 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:34:14.376 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:34:14.377 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:34:14.586 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:34:14.586 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:34:14.586 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:34:14.586 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:34:14.600 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-12].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:34:14.600 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 222 ms
+2021-03-30 15:34:14.605 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:34:16.049 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:34:16.049 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:34:16.223 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:34:16.224 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:34:16.224 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:34:16.224 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:34:16.240 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-13].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:34:16.240 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 190 ms
+2021-03-30 15:34:16.244 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:34:52.837 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:34:52.837 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:34:53.203 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:34:53.204 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:34:53.204 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:34:53.204 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:34:53.230 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-14].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:34:53.230 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 391 ms
+2021-03-30 15:34:53.240 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-30 15:34:54.702 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:34:54.702 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:34:54.855 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:34:54.856 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:34:54.856 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:34:54.856 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:34:54.873 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:34:54.873 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 170 ms
+2021-03-30 15:34:54.981 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:34:54.995 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:34:55.012 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:34:55.020 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.336 seconds (JVM running for 4431.162)
+2021-03-30 15:34:55.021 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:34:57.062 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:34:57.062 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:34:57.282 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:34:57.282 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:34:57.282 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:34:57.282 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:34:57.304 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:34:57.305 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 241 ms
+2021-03-30 15:34:57.445 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:34:57.458 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:34:57.475 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:34:57.485 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.45 seconds (JVM running for 4433.627)
+2021-03-30 15:34:57.486 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:34:57.832 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:34:57.834 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:34:57.836 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-03-30 15:34:57.856 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-7} inited
+2021-03-30 15:36:35.974 [Thread-175] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-7} closed
+2021-03-30 15:36:36.152 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:36:36.152 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:36:36.435 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:36:36.435 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:36:36.435 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:36:36.436 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:36:36.454 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:36:36.454 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 299 ms
+2021-03-30 15:36:36.614 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:36:36.629 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:36:36.647 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:36:36.658 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.543 seconds (JVM running for 4532.8)
+2021-03-30 15:36:36.659 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:36:39.006 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:36:39.006 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:36:39.192 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:36:39.192 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:36:39.192 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:36:39.193 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:36:39.209 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:36:39.210 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 202 ms
+2021-03-30 15:36:39.334 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:36:39.348 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:36:39.364 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:36:39.373 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.396 seconds (JVM running for 4535.515)
+2021-03-30 15:36:39.375 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:37:34.371 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:37:34.372 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:37:34.373 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-03-30 15:37:34.382 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-8} inited
+2021-03-30 15:41:59.672 [Thread-185] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-8} closed
+2021-03-30 15:41:59.827 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:41:59.828 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:42:00.281 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:42:00.282 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:42:00.282 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:42:00.282 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:42:00.321 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:42:00.321 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 487 ms
+2021-03-30 15:42:00.504 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:42:00.514 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:42:00.533 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:42:00.545 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.767 seconds (JVM running for 4856.687)
+2021-03-30 15:42:00.547 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:47:38.286 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:47:38.286 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:47:38.496 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:47:38.496 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:47:38.496 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:47:38.497 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:47:38.514 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:47:38.514 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 226 ms
+2021-03-30 15:47:38.656 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:47:38.665 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:47:38.684 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:47:38.692 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.432 seconds (JVM running for 5194.834)
+2021-03-30 15:47:38.693 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:58:12.152 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:58:12.153 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:58:12.472 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:58:12.472 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:58:12.473 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:58:12.473 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:58:12.488 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:58:12.488 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 333 ms
+2021-03-30 15:58:12.612 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:58:12.620 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:58:12.641 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:58:12.653 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.532 seconds (JVM running for 5828.795)
+2021-03-30 15:58:12.654 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:58:14.601 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 28296 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-03-30 15:58:14.602 [restartedMain] INFO  com.brt.oa.OaApplication - No active profile set, falling back to default profiles: default
+2021-03-30 15:58:14.768 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-03-30 15:58:14.768 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:58:14.769 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-30 15:58:14.769 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:58:14.838 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-30 15:58:14.838 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 235 ms
+2021-03-30 15:58:14.971 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-03-30 15:58:14.984 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-03-30 15:58:15.006 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-03-30 15:58:15.017 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.439 seconds (JVM running for 5831.158)
+2021-03-30 15:58:15.018 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-03-30 15:58:15.077 [http-nio-8060-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-15].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:58:15.078 [http-nio-8060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:58:15.079 [http-nio-8060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-03-30 15:58:15.089 [http-nio-8060-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-9} inited
