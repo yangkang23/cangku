@@ -52,7 +52,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
             if (userLoginToken.required()) {
                 // 执行认证
                 if (token == null) {
-                    throw new RuntimeException("无token，请重新登录");
+                    throw new RuntimeException("401");
                 }
                 // 获取 token 中的 username
                 String username;
@@ -64,7 +64,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                 }
                 User user = userService.findUserByUsername(username);
                 if (user == null) {
-                    throw new RuntimeException("用户不存在，请重新登录");
+                    throw new RuntimeException("401");
                 }
                 // 验证 token
                 JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(user.getPassword())).build();

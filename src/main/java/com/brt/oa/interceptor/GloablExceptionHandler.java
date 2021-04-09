@@ -17,7 +17,7 @@ public class GloablExceptionHandler {
     public ApiResult handleException(Exception e) {
         String msg = e.getMessage();
         if (msg.equals("401")) {
-            return ApiResult.error(401,"token错误");
+            return ApiResult.error(401,"未登录");
         }
         return ApiResult.error(msg);
     }

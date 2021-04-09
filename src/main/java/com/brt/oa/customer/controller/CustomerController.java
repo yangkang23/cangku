@@ -99,7 +99,7 @@ public class CustomerController {
     }
 
     /**
-     * 管理员 和普通用户 查询饼状图
+     * 管理员和普通用户 查询饼状图
      *
      * @param storeid
      * @param Authorization 获取token中的信息 不用管
