@@ -1,0 +1,394 @@
+2021-04-10 00:05:29.349 [Thread-11] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2021-04-10 00:05:33.257 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 32092 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-10 00:05:33.257 [restartedMain] INFO  com.brt.oa.OaApplication - The following profiles are active: dev
+2021-04-10 00:05:33.427 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-10 00:05:33.428 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-10 00:05:33.428 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-10 00:05:33.580 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-10 00:05:33.580 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 320 ms
+2021-04-10 00:05:33.630 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 00:05:33.720 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 00:05:33.720 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-10 00:05:39.155 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 32092 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-10 00:05:39.156 [restartedMain] INFO  com.brt.oa.OaApplication - The following profiles are active: dev
+2021-04-10 00:05:39.381 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-10 00:05:39.382 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-10 00:05:39.382 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-10 00:05:39.426 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-10 00:05:39.426 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 268 ms
+2021-04-10 00:05:39.711 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-10 00:05:39.740 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-04-10 00:05:39.771 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.647 seconds (JVM running for 408.161)
+2021-04-10 00:05:39.774 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-04-10 00:05:39.776 [restartedMain] INFO  global - info: find java src paths:  [E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\]
+2021-04-10 00:05:39.776 [restartedMain] INFO  global - info: project type not set, try to figure out...
+2021-04-10 00:05:39.782 [restartedMain] INFO  global - info: start find controllers in path : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\
+2021-04-10 00:05:39.854 [restartedMain] INFO  global - info: find controller file : CustomerController.java
+2021-04-10 00:05:39.855 [restartedMain] INFO  global - info: find controller file : EmpController.java
+2021-04-10 00:05:39.855 [restartedMain] INFO  global - info: find controller file : ProductController.java
+2021-04-10 00:05:39.855 [restartedMain] INFO  global - info: find controller file : RecordController.java
+2021-04-10 00:05:39.856 [restartedMain] INFO  global - info: find controller file : StoreController.java
+2021-04-10 00:05:39.856 [restartedMain] INFO  global - info: find controller file : UserController.java
+2021-04-10 00:05:39.864 [restartedMain] INFO  global - info: start to parse controller file : CustomerController.java
+2021-04-10 00:05:40.043 [restartedMain] INFO  global - info: success to parse controller file : CustomerController.java
+2021-04-10 00:05:40.044 [restartedMain] INFO  global - info: start to parse controller file : EmpController.java
+2021-04-10 00:05:40.095 [restartedMain] INFO  global - info: success to parse controller file : EmpController.java
+2021-04-10 00:05:40.095 [restartedMain] INFO  global - info: start to parse controller file : ProductController.java
+2021-04-10 00:05:40.290 [restartedMain] INFO  global - info: success to parse controller file : ProductController.java
+2021-04-10 00:05:40.290 [restartedMain] INFO  global - info: start to parse controller file : RecordController.java
+2021-04-10 00:05:40.402 [restartedMain] INFO  global - info: success to parse controller file : RecordController.java
+2021-04-10 00:05:40.403 [restartedMain] INFO  global - info: start to parse controller file : StoreController.java
+2021-04-10 00:05:40.476 [restartedMain] INFO  global - info: success to parse controller file : StoreController.java
+2021-04-10 00:05:40.476 [restartedMain] INFO  global - info: start to parse controller file : UserController.java
+2021-04-10 00:05:40.647 [restartedMain] INFO  global - info: success to parse controller file : UserController.java
+2021-04-10 00:05:40.648 [restartedMain] INFO  global - info: generate api docs start...
+2021-04-10 00:05:40.648 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:05:40.724 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:05:40.725 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:05:40.846 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:05:40.847 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:05:40.897 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:05:40.898 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:05:40.961 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:05:40.961 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:05:41.014 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:05:41.015 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:05:41.087 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:05:41.087 [restartedMain] INFO  global - info: generate index start !!!
+2021-04-10 00:05:41.094 [restartedMain] INFO  global - info: generate index done !!!
+2021-04-10 00:05:41.097 [restartedMain] INFO  global - info: generate api docs done !!!
+2021-04-10 00:09:00.718 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
+2021-04-10 00:09:00.725 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 41108 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-10 00:09:00.725 [restartedMain] INFO  com.brt.oa.OaApplication - The following profiles are active: dev
+2021-04-10 00:09:00.789 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 00:09:00.789 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 00:09:02.165 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-10 00:09:02.178 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:09:02.179 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-10 00:09:02.179 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-10 00:09:02.272 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-10 00:09:02.272 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1482 ms
+2021-04-10 00:09:03.010 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-10 00:09:03.025 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:09:03.048 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-04-10 00:09:03.077 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 2.723 seconds (JVM running for 4.086)
+2021-04-10 00:09:03.288 [restartedMain] INFO  global - info: find java src paths:  [E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\]
+2021-04-10 00:09:03.288 [restartedMain] INFO  global - info: project type not set, try to figure out...
+2021-04-10 00:09:03.349 [restartedMain] INFO  global - info: start find controllers in path : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\
+2021-04-10 00:09:03.803 [restartedMain] INFO  global - info: find controller file : CustomerController.java
+2021-04-10 00:09:03.805 [restartedMain] INFO  global - info: find controller file : EmpController.java
+2021-04-10 00:09:03.806 [restartedMain] INFO  global - info: find controller file : ProductController.java
+2021-04-10 00:09:03.806 [restartedMain] INFO  global - info: find controller file : RecordController.java
+2021-04-10 00:09:03.807 [restartedMain] INFO  global - info: find controller file : StoreController.java
+2021-04-10 00:09:03.807 [restartedMain] INFO  global - info: find controller file : UserController.java
+2021-04-10 00:09:03.813 [restartedMain] INFO  global - info: start to parse controller file : CustomerController.java
+2021-04-10 00:09:04.148 [restartedMain] INFO  global - info: success to parse controller file : CustomerController.java
+2021-04-10 00:09:04.148 [restartedMain] INFO  global - info: start to parse controller file : EmpController.java
+2021-04-10 00:09:04.204 [restartedMain] INFO  global - info: success to parse controller file : EmpController.java
+2021-04-10 00:09:04.204 [restartedMain] INFO  global - info: start to parse controller file : ProductController.java
+2021-04-10 00:09:04.267 [restartedMain] INFO  global - info: success to parse controller file : ProductController.java
+2021-04-10 00:09:04.268 [restartedMain] INFO  global - info: start to parse controller file : RecordController.java
+2021-04-10 00:09:04.303 [restartedMain] INFO  global - info: success to parse controller file : RecordController.java
+2021-04-10 00:09:04.303 [restartedMain] INFO  global - info: start to parse controller file : StoreController.java
+2021-04-10 00:09:04.330 [restartedMain] INFO  global - info: success to parse controller file : StoreController.java
+2021-04-10 00:09:04.330 [restartedMain] INFO  global - info: start to parse controller file : UserController.java
+2021-04-10 00:09:04.426 [restartedMain] INFO  global - info: success to parse controller file : UserController.java
+2021-04-10 00:09:04.426 [restartedMain] INFO  global - info: generate api docs start...
+2021-04-10 00:09:04.426 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:09:04.717 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:09:04.717 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:09:04.742 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:09:04.742 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:09:04.771 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:09:04.771 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:09:04.802 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:09:04.802 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:09:04.831 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:09:04.831 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:09:04.861 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:09:04.862 [restartedMain] INFO  global - info: generate index start !!!
+2021-04-10 00:09:04.866 [restartedMain] INFO  global - info: generate index done !!!
+2021-04-10 00:09:04.868 [restartedMain] INFO  global - info: generate api docs done !!!
+2021-04-10 00:09:15.197 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 00:09:15.197 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-10 00:09:15.198 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-04-10 00:09:15.297 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-04-10 00:14:14.705 [Thread-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2021-04-10 00:14:14.957 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 41108 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-10 00:14:14.957 [restartedMain] INFO  com.brt.oa.OaApplication - The following profiles are active: dev
+2021-04-10 00:14:15.241 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-10 00:14:15.241 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:14:15.241 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-10 00:14:15.241 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-10 00:14:15.255 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-10 00:14:15.256 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 296 ms
+2021-04-10 00:14:15.320 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-10 00:14:17.054 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 41108 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-10 00:14:17.054 [restartedMain] INFO  com.brt.oa.OaApplication - The following profiles are active: dev
+2021-04-10 00:14:17.333 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-10 00:14:17.334 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:14:17.334 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-10 00:14:17.334 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-10 00:14:17.355 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-10 00:14:17.355 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 297 ms
+2021-04-10 00:14:17.617 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-10 00:14:17.630 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:14:17.646 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-04-10 00:14:17.665 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.662 seconds (JVM running for 318.673)
+2021-04-10 00:14:17.666 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-04-10 00:14:17.668 [restartedMain] INFO  global - info: find java src paths:  [E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\]
+2021-04-10 00:14:17.668 [restartedMain] INFO  global - info: project type not set, try to figure out...
+2021-04-10 00:14:17.674 [restartedMain] INFO  global - info: start find controllers in path : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\
+2021-04-10 00:14:17.761 [restartedMain] INFO  global - info: find controller file : CustomerController.java
+2021-04-10 00:14:17.762 [restartedMain] INFO  global - info: find controller file : EmpController.java
+2021-04-10 00:14:17.762 [restartedMain] INFO  global - info: find controller file : ProductController.java
+2021-04-10 00:14:17.763 [restartedMain] INFO  global - info: find controller file : RecordController.java
+2021-04-10 00:14:17.764 [restartedMain] INFO  global - info: find controller file : StoreController.java
+2021-04-10 00:14:17.764 [restartedMain] INFO  global - info: find controller file : UserController.java
+2021-04-10 00:14:17.768 [restartedMain] INFO  global - info: start to parse controller file : CustomerController.java
+2021-04-10 00:14:17.773 [http-nio-8060-exec-4] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 00:14:17.775 [http-nio-8060-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-10 00:14:17.776 [http-nio-8060-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-04-10 00:14:17.794 [http-nio-8060-exec-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2021-04-10 00:14:18.005 [restartedMain] INFO  global - info: success to parse controller file : CustomerController.java
+2021-04-10 00:14:18.005 [restartedMain] INFO  global - info: start to parse controller file : EmpController.java
+2021-04-10 00:14:18.048 [restartedMain] INFO  global - info: success to parse controller file : EmpController.java
+2021-04-10 00:14:18.048 [restartedMain] INFO  global - info: start to parse controller file : ProductController.java
+2021-04-10 00:14:18.138 [restartedMain] INFO  global - info: success to parse controller file : ProductController.java
+2021-04-10 00:14:18.139 [restartedMain] INFO  global - info: start to parse controller file : RecordController.java
+2021-04-10 00:14:18.239 [restartedMain] INFO  global - info: success to parse controller file : RecordController.java
+2021-04-10 00:14:18.244 [restartedMain] INFO  global - info: start to parse controller file : StoreController.java
+2021-04-10 00:14:18.297 [restartedMain] INFO  global - info: success to parse controller file : StoreController.java
+2021-04-10 00:14:18.297 [restartedMain] INFO  global - info: start to parse controller file : UserController.java
+2021-04-10 00:14:18.484 [restartedMain] INFO  global - info: success to parse controller file : UserController.java
+2021-04-10 00:14:18.484 [restartedMain] INFO  global - info: generate api docs start...
+2021-04-10 00:14:18.484 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:14:18.516 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:14:18.516 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:14:18.538 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:14:18.539 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:14:18.572 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:14:18.573 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:14:18.604 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:14:18.604 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:14:18.637 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:14:18.638 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:14:18.667 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:14:18.667 [restartedMain] INFO  global - info: generate index start !!!
+2021-04-10 00:14:18.671 [restartedMain] INFO  global - info: generate index done !!!
+2021-04-10 00:14:18.672 [restartedMain] INFO  global - info: generate api docs done !!!
+2021-04-10 00:16:06.529 [Thread-16] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2021-04-10 00:16:06.752 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 41108 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-10 00:16:06.752 [restartedMain] INFO  com.brt.oa.OaApplication - The following profiles are active: dev
+2021-04-10 00:16:07.102 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-10 00:16:07.103 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:16:07.103 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-10 00:16:07.103 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-10 00:16:07.145 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-10 00:16:07.145 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 391 ms
+2021-04-10 00:16:07.464 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-10 00:16:07.479 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:16:07.498 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-04-10 00:16:07.514 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.796 seconds (JVM running for 428.521)
+2021-04-10 00:16:07.516 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-04-10 00:16:07.519 [restartedMain] INFO  global - info: find java src paths:  [E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\]
+2021-04-10 00:16:07.519 [restartedMain] INFO  global - info: project type not set, try to figure out...
+2021-04-10 00:16:07.524 [restartedMain] INFO  global - info: start find controllers in path : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\
+2021-04-10 00:16:07.602 [restartedMain] INFO  global - info: find controller file : CustomerController.java
+2021-04-10 00:16:07.603 [restartedMain] INFO  global - info: find controller file : EmpController.java
+2021-04-10 00:16:07.603 [restartedMain] INFO  global - info: find controller file : ProductController.java
+2021-04-10 00:16:07.603 [restartedMain] INFO  global - info: find controller file : RecordController.java
+2021-04-10 00:16:07.603 [restartedMain] INFO  global - info: find controller file : StoreController.java
+2021-04-10 00:16:07.603 [restartedMain] INFO  global - info: find controller file : UserController.java
+2021-04-10 00:16:07.610 [restartedMain] INFO  global - info: start to parse controller file : CustomerController.java
+2021-04-10 00:16:07.674 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 00:16:07.676 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-10 00:16:07.678 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-04-10 00:16:07.701 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2021-04-10 00:16:07.858 [restartedMain] INFO  global - info: success to parse controller file : CustomerController.java
+2021-04-10 00:16:07.859 [restartedMain] INFO  global - info: start to parse controller file : EmpController.java
+2021-04-10 00:16:07.903 [restartedMain] INFO  global - info: success to parse controller file : EmpController.java
+2021-04-10 00:16:07.903 [restartedMain] INFO  global - info: start to parse controller file : ProductController.java
+2021-04-10 00:16:07.991 [restartedMain] INFO  global - info: success to parse controller file : ProductController.java
+2021-04-10 00:16:07.991 [restartedMain] INFO  global - info: start to parse controller file : RecordController.java
+2021-04-10 00:16:08.056 [restartedMain] INFO  global - info: success to parse controller file : RecordController.java
+2021-04-10 00:16:08.056 [restartedMain] INFO  global - info: start to parse controller file : StoreController.java
+2021-04-10 00:16:08.105 [restartedMain] INFO  global - info: success to parse controller file : StoreController.java
+2021-04-10 00:16:08.105 [restartedMain] INFO  global - info: start to parse controller file : UserController.java
+2021-04-10 00:16:08.245 [restartedMain] INFO  global - info: success to parse controller file : UserController.java
+2021-04-10 00:16:08.245 [restartedMain] INFO  global - info: generate api docs start...
+2021-04-10 00:16:08.245 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:16:08.289 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:16:08.289 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:16:08.322 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:16:08.322 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:16:08.354 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:16:08.354 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:16:08.387 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:16:08.387 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:16:08.414 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:16:08.414 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:16:08.443 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:16:08.443 [restartedMain] INFO  global - info: generate index start !!!
+2021-04-10 00:16:08.447 [restartedMain] INFO  global - info: generate index done !!!
+2021-04-10 00:16:08.448 [restartedMain] INFO  global - info: generate api docs done !!!
+2021-04-10 00:16:09.463 [Thread-24] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closed
+2021-04-10 00:16:09.702 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 41108 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-10 00:16:09.702 [restartedMain] INFO  com.brt.oa.OaApplication - The following profiles are active: dev
+2021-04-10 00:16:10.503 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-10 00:16:10.504 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:16:10.504 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-10 00:16:10.504 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-10 00:16:10.526 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-10 00:16:10.526 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 822 ms
+2021-04-10 00:16:10.799 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-10 00:16:10.813 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:16:10.828 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-04-10 00:16:10.843 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 1.172 seconds (JVM running for 431.85)
+2021-04-10 00:16:10.844 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-04-10 00:16:10.846 [restartedMain] INFO  global - info: find java src paths:  [E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\]
+2021-04-10 00:16:10.846 [restartedMain] INFO  global - info: project type not set, try to figure out...
+2021-04-10 00:16:10.849 [restartedMain] INFO  global - info: start find controllers in path : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\
+2021-04-10 00:16:10.894 [restartedMain] INFO  global - info: find controller file : CustomerController.java
+2021-04-10 00:16:10.895 [restartedMain] INFO  global - info: find controller file : EmpController.java
+2021-04-10 00:16:10.895 [restartedMain] INFO  global - info: find controller file : ProductController.java
+2021-04-10 00:16:10.895 [restartedMain] INFO  global - info: find controller file : RecordController.java
+2021-04-10 00:16:10.895 [restartedMain] INFO  global - info: find controller file : StoreController.java
+2021-04-10 00:16:10.895 [restartedMain] INFO  global - info: find controller file : UserController.java
+2021-04-10 00:16:10.898 [restartedMain] INFO  global - info: start to parse controller file : CustomerController.java
+2021-04-10 00:16:11.110 [restartedMain] INFO  global - info: success to parse controller file : CustomerController.java
+2021-04-10 00:16:11.111 [restartedMain] INFO  global - info: start to parse controller file : EmpController.java
+2021-04-10 00:16:11.174 [restartedMain] INFO  global - info: success to parse controller file : EmpController.java
+2021-04-10 00:16:11.175 [restartedMain] INFO  global - info: start to parse controller file : ProductController.java
+2021-04-10 00:16:11.270 [restartedMain] INFO  global - info: success to parse controller file : ProductController.java
+2021-04-10 00:16:11.270 [restartedMain] INFO  global - info: start to parse controller file : RecordController.java
+2021-04-10 00:16:11.319 [restartedMain] INFO  global - info: success to parse controller file : RecordController.java
+2021-04-10 00:16:11.319 [restartedMain] INFO  global - info: start to parse controller file : StoreController.java
+2021-04-10 00:16:11.356 [restartedMain] INFO  global - info: success to parse controller file : StoreController.java
+2021-04-10 00:16:11.357 [restartedMain] INFO  global - info: start to parse controller file : UserController.java
+2021-04-10 00:16:11.463 [restartedMain] INFO  global - info: success to parse controller file : UserController.java
+2021-04-10 00:16:11.463 [restartedMain] INFO  global - info: generate api docs start...
+2021-04-10 00:16:11.463 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:16:11.499 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:16:11.499 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:16:11.540 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:16:11.540 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:16:11.584 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:16:11.584 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:16:11.619 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:16:11.619 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:16:11.659 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:16:11.659 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:16:11.703 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:16:11.703 [restartedMain] INFO  global - info: generate index start !!!
+2021-04-10 00:16:11.714 [restartedMain] INFO  global - info: generate index done !!!
+2021-04-10 00:16:11.715 [restartedMain] INFO  global - info: generate api docs done !!!
+2021-04-10 00:16:13.246 [http-nio-8060-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 00:16:13.247 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-10 00:16:13.248 [http-nio-8060-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-04-10 00:16:13.271 [http-nio-8060-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-4} inited
+2021-04-10 00:16:54.084 [Thread-29] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-4} closed
+2021-04-10 00:16:54.202 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 41108 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-10 00:16:54.202 [restartedMain] INFO  com.brt.oa.OaApplication - The following profiles are active: dev
+2021-04-10 00:16:54.481 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-10 00:16:54.482 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:16:54.482 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-10 00:16:54.482 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-10 00:16:54.494 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-10 00:16:54.494 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 289 ms
+2021-04-10 00:16:54.668 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-10 00:16:54.677 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:16:54.688 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-04-10 00:16:54.694 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.521 seconds (JVM running for 475.702)
+2021-04-10 00:16:54.695 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-04-10 00:16:54.697 [restartedMain] INFO  global - info: find java src paths:  [E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\]
+2021-04-10 00:16:54.697 [restartedMain] INFO  global - info: project type not set, try to figure out...
+2021-04-10 00:16:54.700 [restartedMain] INFO  global - info: start find controllers in path : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\
+2021-04-10 00:16:54.756 [restartedMain] INFO  global - info: find controller file : CustomerController.java
+2021-04-10 00:16:54.756 [restartedMain] INFO  global - info: find controller file : EmpController.java
+2021-04-10 00:16:54.756 [restartedMain] INFO  global - info: find controller file : ProductController.java
+2021-04-10 00:16:54.756 [restartedMain] INFO  global - info: find controller file : RecordController.java
+2021-04-10 00:16:54.757 [restartedMain] INFO  global - info: find controller file : StoreController.java
+2021-04-10 00:16:54.757 [restartedMain] INFO  global - info: find controller file : UserController.java
+2021-04-10 00:16:54.759 [restartedMain] INFO  global - info: start to parse controller file : CustomerController.java
+2021-04-10 00:16:54.873 [restartedMain] INFO  global - info: success to parse controller file : CustomerController.java
+2021-04-10 00:16:54.873 [restartedMain] INFO  global - info: start to parse controller file : EmpController.java
+2021-04-10 00:16:54.897 [restartedMain] INFO  global - info: success to parse controller file : EmpController.java
+2021-04-10 00:16:54.897 [restartedMain] INFO  global - info: start to parse controller file : ProductController.java
+2021-04-10 00:16:54.955 [restartedMain] INFO  global - info: success to parse controller file : ProductController.java
+2021-04-10 00:16:54.955 [restartedMain] INFO  global - info: start to parse controller file : RecordController.java
+2021-04-10 00:16:54.995 [restartedMain] INFO  global - info: success to parse controller file : RecordController.java
+2021-04-10 00:16:54.995 [restartedMain] INFO  global - info: start to parse controller file : StoreController.java
+2021-04-10 00:16:55.021 [restartedMain] INFO  global - info: success to parse controller file : StoreController.java
+2021-04-10 00:16:55.021 [restartedMain] INFO  global - info: start to parse controller file : UserController.java
+2021-04-10 00:16:55.099 [restartedMain] INFO  global - info: success to parse controller file : UserController.java
+2021-04-10 00:16:55.099 [restartedMain] INFO  global - info: generate api docs start...
+2021-04-10 00:16:55.099 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:16:55.126 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:16:55.126 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:16:55.154 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:16:55.154 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:16:55.186 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:16:55.186 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:16:55.212 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:16:55.212 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:16:55.241 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:16:55.242 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:16:55.277 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:16:55.277 [restartedMain] INFO  global - info: generate index start !!!
+2021-04-10 00:16:55.285 [restartedMain] INFO  global - info: generate index done !!!
+2021-04-10 00:16:55.287 [restartedMain] INFO  global - info: generate api docs done !!!
+2021-04-10 00:16:56.727 [restartedMain] INFO  com.brt.oa.OaApplication - Starting OaApplication using Java 1.8.0_131 on LAPTOP-5D8T0UO2 with PID 41108 (E:\User\ASUS\Desktop\IDEAworkspace\oa\target\classes started by ASUS in E:\User\ASUS\Desktop\IDEAworkspace\oa)
+2021-04-10 00:16:56.727 [restartedMain] INFO  com.brt.oa.OaApplication - The following profiles are active: dev
+2021-04-10 00:16:56.961 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8060 (http)
+2021-04-10 00:16:56.962 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:16:56.962 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-10 00:16:56.963 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-10 00:16:56.984 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-10 00:16:56.984 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 255 ms
+2021-04-10 00:16:57.233 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-10 00:16:57.248 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8060"]
+2021-04-10 00:16:57.261 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8060 (http) with context path ''
+2021-04-10 00:16:57.269 [restartedMain] INFO  com.brt.oa.OaApplication - Started OaApplication in 0.578 seconds (JVM running for 478.277)
+2021-04-10 00:16:57.270 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-04-10 00:16:57.272 [restartedMain] INFO  global - info: find java src paths:  [E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\]
+2021-04-10 00:16:57.272 [restartedMain] INFO  global - info: project type not set, try to figure out...
+2021-04-10 00:16:57.275 [restartedMain] INFO  global - info: start find controllers in path : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\
+2021-04-10 00:16:57.317 [restartedMain] INFO  global - info: find controller file : CustomerController.java
+2021-04-10 00:16:57.317 [restartedMain] INFO  global - info: find controller file : EmpController.java
+2021-04-10 00:16:57.317 [restartedMain] INFO  global - info: find controller file : ProductController.java
+2021-04-10 00:16:57.317 [restartedMain] INFO  global - info: find controller file : RecordController.java
+2021-04-10 00:16:57.317 [restartedMain] INFO  global - info: find controller file : StoreController.java
+2021-04-10 00:16:57.317 [restartedMain] INFO  global - info: find controller file : UserController.java
+2021-04-10 00:16:57.320 [restartedMain] INFO  global - info: start to parse controller file : CustomerController.java
+2021-04-10 00:16:57.454 [restartedMain] INFO  global - info: success to parse controller file : CustomerController.java
+2021-04-10 00:16:57.454 [restartedMain] INFO  global - info: start to parse controller file : EmpController.java
+2021-04-10 00:16:57.489 [restartedMain] INFO  global - info: success to parse controller file : EmpController.java
+2021-04-10 00:16:57.489 [restartedMain] INFO  global - info: start to parse controller file : ProductController.java
+2021-04-10 00:16:57.523 [http-nio-8060-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 00:16:57.524 [http-nio-8060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-10 00:16:57.525 [http-nio-8060-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-04-10 00:16:57.534 [http-nio-8060-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-5} inited
+2021-04-10 00:16:57.541 [restartedMain] INFO  global - info: success to parse controller file : ProductController.java
+2021-04-10 00:16:57.541 [restartedMain] INFO  global - info: start to parse controller file : RecordController.java
+2021-04-10 00:16:57.582 [restartedMain] INFO  global - info: success to parse controller file : RecordController.java
+2021-04-10 00:16:57.582 [restartedMain] INFO  global - info: start to parse controller file : StoreController.java
+2021-04-10 00:16:57.614 [restartedMain] INFO  global - info: success to parse controller file : StoreController.java
+2021-04-10 00:16:57.614 [restartedMain] INFO  global - info: start to parse controller file : UserController.java
+2021-04-10 00:16:57.711 [restartedMain] INFO  global - info: success to parse controller file : UserController.java
+2021-04-10 00:16:57.711 [restartedMain] INFO  global - info: generate api docs start...
+2021-04-10 00:16:57.711 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:16:57.745 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\customer\controller\CustomerController.java
+2021-04-10 00:16:57.745 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:16:57.783 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\emp\controller\EmpController.java
+2021-04-10 00:16:57.784 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:16:57.812 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\product\controller\ProductController.java
+2021-04-10 00:16:57.813 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:16:57.855 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\record\controller\RecordController.java
+2021-04-10 00:16:57.855 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:16:57.886 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\store\controller\StoreController.java
+2021-04-10 00:16:57.886 [restartedMain] INFO  global - info: start to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:16:57.906 [restartedMain] INFO  global - info: success to generate docs for controller file : E:\User\ASUS\Desktop\IDEAworkspace\oa\src\main\java\com\brt\oa\user\controller\UserController.java
+2021-04-10 00:16:57.907 [restartedMain] INFO  global - info: generate index start !!!
+2021-04-10 00:16:57.910 [restartedMain] INFO  global - info: generate index done !!!
+2021-04-10 00:16:57.911 [restartedMain] INFO  global - info: generate api docs done !!!

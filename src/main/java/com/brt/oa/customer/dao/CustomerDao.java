@@ -20,5 +20,7 @@ public interface CustomerDao {
 
     List<String> findChannelList(@Param(value = "storeid") Integer storeid);
 
-    Integer findChannelAmount(@Param("s") String s, @Param(value = "storeid") Integer storeid);
+    Integer findChannelAmount(@Param("channelname") String channelname, @Param(value = "storeid") Integer storeid);
+
+    Integer findChannelDealAmount(@Param("channelname") String channelname, @Param(value = "storeid") Integer storeid);
 }

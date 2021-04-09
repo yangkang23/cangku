@@ -21,8 +21,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Integer findProductByName(String product_name) {
-        return productDao.findProductByName(product_name);
+    public Integer findProductByName(String product_name,Integer storeid) {
+        return productDao.findProductByName(product_name,storeid);
     }
 
     @Override
@@ -31,8 +31,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void addInventory(String product_name,Integer amount) {
-        productDao.addInventory(product_name,amount);
+    public void addInventory(String product_name,Integer amount,Integer storeid) {
+        productDao.addInventory(product_name,amount,storeid);
     }
 
     @Override

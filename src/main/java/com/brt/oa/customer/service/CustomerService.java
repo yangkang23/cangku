@@ -18,5 +18,7 @@ public interface CustomerService {
 
     List findChannelList(Integer storeid);
 
-    Integer findChannelAmount(String s, Integer storeid);
+    Integer findChannelAmount(String channelname, Integer storeid);
+
+    Integer findChannelDealAmount(String channelname, Integer storeid);
 }

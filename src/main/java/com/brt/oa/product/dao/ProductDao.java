@@ -8,15 +8,19 @@ import java.util.List;
 
 @Mapper
 public interface ProductDao {
-    public void insertProduct(Product product);
+    void insertProduct(Product product);
 
-    Integer findProductByName(String product_name);
+    Integer findProductByName(@Param("product_name") String product_name,
+                              @Param("storeid") Integer storeid);
 
     List<Product> findProductByStoreid(Integer storeid);
 
-    void addInventory(@Param("product_name") String product_name,@Param("amount") Integer amount);
+    void addInventory(@Param("product_name") String product_name,
+                      @Param("amount") Integer amount,
+                      @Param("storeid") Integer storeid);
 
-    void reduceInventory(@Param("product_name") String product_name,@Param("amount") Integer amount);
+    void reduceInventory(@Param("product_name") String product_name,
+                         @Param("amount") Integer amount);
 
     List<Product> findProduct(Integer sotreid);
 

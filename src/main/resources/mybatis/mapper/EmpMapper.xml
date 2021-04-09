@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.brt.oa.emp.dao.EmpDao">
+
+<!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.brt.oa.emp.pojo.Emp">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="entry_time" property="entry_time"/>
+        <result column="sex" property="sex"/>
+        <result column="position_level" property="position_level"/>
+        <result column="storeid" property="storeid"/>
+    </resultMap>
+
+<!--auto generated Code-->
+    <sql id="all_column">
+        id,
+        name,
+        phone,
+        entry_time,
+        sex,
+        position_level,
+        storeid
+    </sql>
+
+<!--auto generated Code-->
+    <insert id="insertemp">
+        INSERT INTO emp
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> id, </if>
+            <if test="pojo.name != null"> name, </if>
+            <if test="pojo.phone != null"> phone, </if>
+            <if test="pojo.entry_time != null"> entry_time, </if>
+            <if test="pojo.sex != null"> sex, </if>
+            <if test="pojo.position_level != null"> position_level, </if>
+            <if test="pojo.storeid != null"> storeid, </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> #{pojo.id}, </if>
+            <if test="pojo.name != null"> #{pojo.name}, </if>
+            <if test="pojo.phone != null"> #{pojo.phone}, </if>
+            <if test="pojo.entry_time != null"> #{pojo.entry_time}, </if>
+            <if test="pojo.sex != null"> #{pojo.sex}, </if>
+            <if test="pojo.position_level != null"> #{pojo.position_level}, </if>
+            <if test="pojo.storeid != null"> #{pojo.storeid}, </if>
+        </trim>
+    </insert>
+
+<!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO emp(
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.name},
+            #{pojo.phone},
+            #{pojo.entry_time},
+            #{pojo.sex},
+            #{pojo.position_level},
+            #{pojo.storeid}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE emp
+        <set>
+            <if test="pojo.id != null"> id = #{pojo.id}, </if>
+            <if test="pojo.name != null"> name = #{pojo.name}, </if>
+            <if test="pojo.phone != null"> phone = #{pojo.phone}, </if>
+            <if test="pojo.entry_time != null"> entry_time = #{pojo.entry_time}, </if>
+            <if test="pojo.sex != null"> sex = #{pojo.sex}, </if>
+            <if test="pojo.position_level != null"> position_level = #{pojo.position_level}, </if>
+            <if test="pojo.storeid != null"> storeid = #{pojo.storeid} </if>
+        </set>
+         WHERE id = #{pojo.id}
+    </update>
+
+<!--auto generated Code-->
+    <select id="findemp" resultMap="AllColumnMap">
+        SELECT <include refid="all_column"/>
+        FROM emp
+        <where>
+            <if test="storeid != null"> AND storeid = #{pojo.storeid} </if>
+        </where>
+        LIMIT 1000 
+    </select>
+
+<!--auto generated Code-->
+    <delete id="delete">
+        DELETE FROM emp where id = #{id}
+    </delete>
+</mapper>

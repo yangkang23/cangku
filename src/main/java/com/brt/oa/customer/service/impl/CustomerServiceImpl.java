@@ -45,7 +45,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Integer findChannelAmount(String s, Integer storeid) {
-        return customerDao.findChannelAmount(s, storeid);
+    public Integer findChannelAmount(String channelname, Integer storeid) {
+        return customerDao.findChannelAmount(channelname, storeid);
     }
+
+    @Override
+    public Integer findChannelDealAmount(String channelname, Integer storeid) {
+        return customerDao.findChannelDealAmount(channelname,storeid);
+    }
+
+
 }

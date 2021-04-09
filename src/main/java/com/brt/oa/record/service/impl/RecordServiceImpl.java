@@ -16,4 +16,9 @@ public class RecordServiceImpl implements RecordService {
     public void insertRecord(Record record) {
         recordDao.insertRecord(record);
     }
+
+    @Override
+    public Integer findTurnover(Long startTime, Long endTime, Integer storeid) {
+        return recordDao.findTurnover(startTime,endTime,storeid);
+    }
 }

@@ -40,8 +40,10 @@ public class CustomerController {
      */
     @UserLoginToken
     @PostMapping("/createCustomerInfo")
-    public ApiResult createCustomerInfo(@RequestBody Customer customer) {
-
+    public ApiResult createCustomerInfo(@RequestBody Customer customer,
+                                        @RequestHeader String Authorization) {
+        String token = Authorization.replaceAll("Bearer ", "");
+        Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
         //校验顾客姓名是否为空
         if (StringUtils.isBlank(customer.getCustomer_name())) {
             return ApiResult.error("顾客姓名为空");
@@ -64,6 +66,7 @@ public class CustomerController {
 
         //创建顾客时 默认未成交
         customer.setDeal("0");
+        customer.setStoreid(storeid);
         customerService.createCustomerInfo(customer);
 
 
@@ -73,52 +76,57 @@ public class CustomerController {
     }
 
     /**
-     * @param customer_name
+     * 普通用户查询本门店顾客
+     * @param customer_name 不填时为不用姓名搜索
      * @return
      */
     @UserLoginToken
     @GetMapping("/findCustomer")
-    public ApiResult findCustomer(@RequestParam String customer_name) {
-
-        List<Customer> list = customerService.findCustomer(customer_name, 2);
+    public ApiResult findCustomer(@RequestParam String customer_name ,
+                                  @RequestHeader String Authorization) {
+        String token = Authorization.replaceAll("Bearer ", "");
+        Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
+        List<Customer> list = customerService.findCustomer(customer_name, storeid);
         return ApiResult.success(list);
     }
 
     /**
-     * 客户名字 管理输入  门店名称下拉框获取门店列表获取id  动态sql （没过滤门店是 门店id为0 + 客户名字不填时） 查全部客户
+     * 管理员查询客户
      *
-     * @param customer_name
-     * @param storeid
+     * @param customer_name 不填时为不用姓名搜索
+     * @param storeid 传1时 为全部客户
      * @return
      */
     @UserLoginToken
     @GetMapping("/findAllCustomer")
-    public ApiResult findAllCustomer(@RequestParam String customer_name, @RequestParam Integer storeid) {
+    public ApiResult findAllCustomer(@RequestParam String customer_name,
+                                     @RequestParam Integer storeid) {
         List<Customer> list = customerService.findAllCustomer(customer_name, storeid);
         return ApiResult.success(list);
     }
 
     /**
-     * 管理员和普通用户 查询饼状图
+     * 查询引流渠道饼状图
      *
-     * @param storeid
+     * @param storeid 管理员需传 普通用户不用
      * @param Authorization 获取token中的信息 不用管
      * @return
      */
     @UserLoginToken
     @GetMapping(value = "/findChannel")
-    public ApiResult findChannel(@RequestParam Integer storeid, @RequestHeader String Authorization) {
+    public ApiResult findChannel(@RequestParam Integer storeid,
+                                 @RequestHeader String Authorization) {
         String token = Authorization.replaceAll("Bearer ", "");
         if (userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getJurisdiction() == 2) {
             storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
         }
         Integer toatal = customerService.findTotal(storeid);
         List<String> nameList = customerService.findChannelList(storeid);
-        List amountList = new ArrayList();
+        List<Integer> amountList = new ArrayList();
         if (nameList.size() != 0) {
-            for (String s : nameList) {
-                if (s != "null") {
-                    Integer amount = customerService.findChannelAmount(s, storeid);
+            for (String channelname : nameList) {
+                if (channelname != null) {
+                    Integer amount = customerService.findChannelAmount(channelname, storeid);
                     amountList.add(amount);
                 }
             }
@@ -131,11 +139,39 @@ public class CustomerController {
         return ApiResult.success(map);
     }
 
+    /**
+     * 查询引流渠道成交率
+     * @param storeid 管理员需传 普通用户不用
+     * @param Authorization 获取token中的信息 不用管
+     * @return
+     */
     @UserLoginToken
     @GetMapping("/turnoverRate")
-    public ApiResult turnoverRate() {
+    public ApiResult turnoverRate(@RequestParam Integer storeid,
+                                  @RequestHeader String Authorization) {
+        String token = Authorization.replaceAll("Bearer ", "");
+        if (userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getJurisdiction() == 2) {
+            storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
+        }
+        List<String> nameList = customerService.findChannelList(storeid);
+        List<Integer> totalList = new ArrayList<Integer>();
+        List<Integer> dealList = new ArrayList<Integer>();
+        if (nameList.size() != 0) {
+            for (String channelname : nameList) {
+                if (channelname != null) {
+                   Integer total = customerService.findChannelAmount(channelname,storeid);
+                   totalList.add(total);
+                   Integer dealamount = customerService.findChannelDealAmount(channelname,storeid);
+                    dealList.add(dealamount);
+                }
+            }
+        }
 
-        return ApiResult.success();
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put("totalList", totalList);
+        map.put("nameList", nameList);
+        map.put("amountList", dealList);
+        return ApiResult.success(map);
     }
 
 }

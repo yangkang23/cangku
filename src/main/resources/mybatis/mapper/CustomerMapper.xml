@@ -20,28 +20,39 @@
 
     <select id="findAllCustomer" resultType="com.brt.oa.customer.pojo.Customer">
         select * from customer where 1=1
-        <if test="storeid != 0">
+        <if test="storeid != 1">
            and storeid = #{storeid}
         </if>
         <if test="customer_name != ''">
             and  customer_name = #{customer_name};
         </if>
     </select>
+
     <select id="findTotal" resultType="java.lang.Integer">
         select count(1) from customer where 1=1
-        <if test="storeid != 0">
+        <if test="storeid != 1">
             and storeid = #{storeid}
         </if>
     </select>
+
     <select id="findChannelList" resultType="java.lang.String">
         select distinct drainage_channel from customer where 1= 1
-        <if test="storeid != 0">
+        <if test="storeid != 1">
             and storeid = #{storeid}
         </if>
     </select>
+
     <select id="findChannelAmount" resultType="java.lang.Integer">
-        select count(1) from customer where drainage_channel = #{s}
-        <if test="storeid != 0">
+        select count(1) from customer where drainage_channel = #{channelname}
+        <if test="storeid != 1">
+            and storeid = #{storeid}
+        </if>
+    </select>
+
+    <select id="findChannelDealAmount" resultType="java.lang.Integer">
+        select count(1) from customer where drainage_channel = #{channelname}
+        and deal = 1
+        <if test="storeid != 1">
             and storeid = #{storeid}
         </if>
     </select>
