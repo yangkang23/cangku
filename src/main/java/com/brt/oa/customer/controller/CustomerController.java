@@ -6,7 +6,6 @@ import com.brt.oa.customer.pojo.Customer;
 import com.brt.oa.customer.service.CustomerService;
 import com.brt.oa.user.service.UserService;
 import com.brt.oa.utils.ApiResult;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,25 +43,6 @@ public class CustomerController {
                                         @RequestHeader String Authorization) {
         String token = Authorization.replaceAll("Bearer ", "");
         Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
-        //校验顾客姓名是否为空
-        if (StringUtils.isBlank(customer.getCustomer_name())) {
-            return ApiResult.error("顾客姓名为空");
-        }
-
-        //校验顾客性别否为空
-        if (StringUtils.isBlank((customer.getSex()))) {
-            return ApiResult.error("顾客性别为空");
-        }
-
-        //校验顾客手机号是否为空
-        if (StringUtils.isBlank((customer.getPhone()))) {
-            return ApiResult.error("顾客手机号为空");
-        }
-
-        //校验引流渠道是否为空
-        if (StringUtils.isBlank(customer.getDrainage_channel())) {
-            return ApiResult.error("引流渠道为空");
-        }
 
         //创建顾客时 默认未成交
         customer.setDeal("0");
@@ -75,32 +55,24 @@ public class CustomerController {
 
     }
 
-    /**
-     * 普通用户查询本门店顾客
-     * @param customer_name 不填时为不用姓名搜索
-     * @return
-     */
-    @UserLoginToken
-    @GetMapping("/findCustomer")
-    public ApiResult findCustomer(@RequestParam String customer_name ,
-                                  @RequestHeader String Authorization) {
-        String token = Authorization.replaceAll("Bearer ", "");
-        Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
-        List<Customer> list = customerService.findCustomer(customer_name, storeid);
-        return ApiResult.success(list);
-    }
+
 
     /**
-     * 管理员查询客户
+     * 查询客户
      *
      * @param customer_name 不填时为不用姓名搜索
-     * @param storeid 传1时 为全部客户
+     * @param storeid 管理员传1时 为全部客户  普通用户传0
      * @return
      */
     @UserLoginToken
     @GetMapping("/findAllCustomer")
     public ApiResult findAllCustomer(@RequestParam String customer_name,
-                                     @RequestParam Integer storeid) {
+                                     @RequestParam Integer storeid,
+                                     @RequestHeader String Authorization) {
+        String token = Authorization.replaceAll("Bearer ", "");
+        if (userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getJurisdiction() == 2) {
+            storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
+        }
         List<Customer> list = customerService.findAllCustomer(customer_name, storeid);
         return ApiResult.success(list);
     }
@@ -108,8 +80,7 @@ public class CustomerController {
     /**
      * 查询引流渠道饼状图
      *
-     * @param storeid 管理员需传 普通用户不用
-     * @param Authorization 获取token中的信息 不用管
+     * @param storeid 管理员需传 普通用户传0
      * @return
      */
     @UserLoginToken
@@ -141,8 +112,7 @@ public class CustomerController {
 
     /**
      * 查询引流渠道成交率
-     * @param storeid 管理员需传 普通用户不用
-     * @param Authorization 获取token中的信息 不用管
+     * @param storeid 管理员需传 普通用户传0
      * @return
      */
     @UserLoginToken

@@ -3,8 +3,8 @@
 <mapper namespace="com.brt.oa.customer.dao.CustomerDao">
 
     <insert id="createCustomerInfo" parameterType="com.brt.oa.customer.pojo.Customer">
-        insert into customer(customer_name,sex,phone,drainage_channel,deal,storeid)
-        values (#{customer_name},#{sex},#{phone},#{drainage_channel},#{deal},#{storeid})
+        insert into customer(customer_name,sex,phone,drainage_channel,deal,storeid,age)
+        values (#{customer_name},#{sex},#{phone},#{drainage_channel},#{deal},#{storeid},#{age})
     </insert>
 
     <select id="findCustomer" parameterType="java.lang.Integer" resultType="com.brt.oa.customer.pojo.Customer">

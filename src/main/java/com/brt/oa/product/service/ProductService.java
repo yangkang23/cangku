@@ -1,6 +1,7 @@
 package com.brt.oa.product.service;
 
 import com.brt.oa.product.pojo.Product;
+import com.brt.oa.product.pojo.ProductList;
 
 import java.util.List;
 
@@ -19,4 +20,7 @@ public interface ProductService {
 
     Integer findProductInventory(String product_name);
 
+    void insertList(List<ProductList> productLists);
+
+    List<ProductList> findProductList(Integer rid);
 }

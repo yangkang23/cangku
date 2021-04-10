@@ -3,6 +3,7 @@ package com.brt.oa.record.controller;
 import com.auth0.jwt.JWT;
 import com.brt.oa.annotation.UserLoginToken;
 import com.brt.oa.customer.service.CustomerService;
+import com.brt.oa.product.pojo.ProductList;
 import com.brt.oa.product.service.ProductService;
 import com.brt.oa.record.pojo.Record;
 import com.brt.oa.record.service.RecordService;
@@ -16,9 +17,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 消费记录接口
@@ -50,18 +49,40 @@ public class RecordController {
     @UserLoginToken
     @PostMapping("/insertRecord")
     @Transactional(propagation= Propagation.REQUIRED,isolation = Isolation.DEFAULT)
-    public ApiResult insertRecord(@RequestBody Record record){
-        record.setTotal_cost(record.getAmount() * record.getPrice() + record.getProject_cost());
-        record.setDeal_date(new Date().getTime());
+    public ApiResult insertRecord(@RequestBody Record record,
+                                  @RequestHeader String Authorization){
         try {
-
-            recordService.insertRecord(record);
-            if ((productService.findProductInventory(record.getProduct_name()) - record.getAmount()) < 0) {
-                int i = 1/0;
-                //return ApiResult.error("库存不足");
+            Double product_fee = 0.0 ;
+            List<ProductList> list = record.getProductLists();
+            if (list != null) {
+                if (!list.isEmpty() ) {
+                    for (ProductList productList: list) {
+                        Double total = productList.getPrice()*productList.getAmount();
+                        System.out.println(total);
+                        product_fee = product_fee+total;
+                        if ((productService.findProductInventory(productList.getProduct_name()) - productList.getAmount()) < 0) {
+                            int i = 1/0;
+                            //return ApiResult.error("库存不足");
+                        }
+                        productService.reduceInventory(productList.getProduct_name(), productList.getAmount());
+                    }
+                }
             }
-            productService.reduceInventory(record.getProduct_name(), record.getAmount());
             customerService.updateDeal(record.getCid(), "1");
+            record.setProduct_fee(product_fee);
+            record.setTotal_cost(product_fee+record.getProject_cost());
+            record.setDeal_date(new Date().getTime());
+            recordService.insertRecord(record);
+            if (list != null) {
+                if (!list.isEmpty()) {
+                    for (ProductList productList:list) {
+                        System.out.println(record.getDeal_date());
+                        productList.setRid(recordService.findId(record.getCid(),record.getDeal_date()));
+                    }
+                    productService.insertList(list);
+                }
+            }
+
 
         } catch (Exception e) {
             throw new RuntimeException("库存不足");
@@ -73,8 +94,7 @@ public class RecordController {
      * 查询营业额
      * @param startTime 开始时间
      * @param endTime 结束时间
-     * @param storeid 门店id  管理要传 普通用户不用传
-     * @param Authorization
+     * @param storeid 门店id  管理要传 普通用户传0
      * @return
      */
     @UserLoginToken
@@ -93,6 +113,32 @@ public class RecordController {
         map.put("endtTime",endTime);
         map.put("turnover",turnover);
         return ApiResult.success(map);
+    }
+
+    /**
+     *  查询消费记录
+     * @param id  顾客id
+     * @return
+     */
+    @UserLoginToken
+    @GetMapping("findRecord")
+    public ApiResult findRecord(@RequestParam Integer id,
+                                @RequestHeader String Authorization) {
+        List<Record> list = recordService.findRecord(id);
+        Map<String,Object> map = new HashMap<String, Object>();
+        List list2 = new ArrayList();
+        if (!list.isEmpty()) {
+            for (Record record:list) {
+                List<ProductList> list1 = productService.findProductList(record.getId());
+                record.setProductLists(list1);
+                System.out.println(record);
+
+                list2.add(record);
+            }
+            System.out.println(list2);
+        }
+
+        return  ApiResult.success(list2);
     }
 
 }

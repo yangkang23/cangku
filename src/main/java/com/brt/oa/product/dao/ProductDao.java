@@ -1,6 +1,7 @@
 package com.brt.oa.product.dao;
 
 import com.brt.oa.product.pojo.Product;
+import com.brt.oa.product.pojo.ProductList;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -25,4 +26,8 @@ public interface ProductDao {
     List<Product> findProduct(Integer sotreid);
 
     Integer findProductInventory(String product_name);
+
+    void insertList(@Param("pojos") List<ProductList> pojo);
+
+    List<ProductList> findProductList(Integer rid);
 }

@@ -2,6 +2,7 @@ package com.brt.oa.product.service.impl;
 
 import com.brt.oa.product.dao.ProductDao;
 import com.brt.oa.product.pojo.Product;
+import com.brt.oa.product.pojo.ProductList;
 import com.brt.oa.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,5 +49,15 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Integer findProductInventory(String product_name) {
         return productDao.findProductInventory(product_name);
+    }
+
+    @Override
+    public void insertList(List<ProductList> productLists) {
+        productDao.insertList(productLists);
+    }
+
+    @Override
+    public List<ProductList> findProductList(Integer rid) {
+        return productDao.findProductList(rid);
     }
 }

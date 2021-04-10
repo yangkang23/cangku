@@ -86,7 +86,7 @@
         SELECT <include refid="all_column"/>
         FROM emp
         <where>
-            <if test="storeid != null"> AND storeid = #{pojo.storeid} </if>
+            <if test="storeid != null and storeid != 1"> AND storeid = #{storeid} </if>
         </where>
         LIMIT 1000 
     </select>

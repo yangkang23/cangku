@@ -13,7 +13,7 @@ public interface EmpDao {
 
     int insertList(@Param("pojos") List< Emp> pojo);
 
-    List<Emp> findemp(@Param("sotreid") Integer storeid);
+    List<Emp> findemp(@Param("storeid") Integer storeid);
 
     int update(@Param("pojo") Emp pojo);
 

@@ -48,18 +48,18 @@ public class UserController {
     @UserLoginToken
     @PostMapping(value = "/register")
     public ApiResult register(@RequestParam String username,
-                              @RequestParam Integer storeid) throws IOException {
-        //校验用户名是否为空
-        if (StringUtils.isBlank(username)) {
-            return ApiResult.error("用户名为空");
-        }
+                              @RequestParam Integer storeid,
+                              @RequestHeader String Authorization) throws IOException {
 
+        String token = Authorization.replaceAll("Bearer ", "");
+        if (us.findUserByUsername(JWT.decode(token).getAudience().get(0)).getJurisdiction() == 2) {
+            return ApiResult.error("您没有权限创建用户");
+        }
         //校验用户名中是否含有空格
         String s = username.replaceAll(" ", "");
         if (!s.equals(username)) {
             return ApiResult.error("用户名中含有空格");
         }
-
 
 
         //校验用户是否存在
@@ -92,7 +92,7 @@ public class UserController {
             user.setJurisdiction(2);
             user.setStoreid(storeid);
         }
-
+        user.setUsername(username);
         //插入用户
         us.insertUser(user);
 
@@ -107,7 +107,8 @@ public class UserController {
      * @throws IOException
      */
     @PostMapping(value = "/login")
-    public ApiResult login(@RequestParam String username,@RequestParam String password) throws IOException {
+    public ApiResult login(@RequestParam String username,
+                           @RequestParam String password) throws IOException {
         User userForBase = us.findUserByUsername(username);
         if (userForBase == null) {
             return ApiResult.error("用户不存在");
@@ -125,10 +126,9 @@ public class UserController {
     }
 
     /**
-     * 管理员修改密码
+     * 修改密码
      * @param password
      * @param repassword
-     * @param Authorization
      * @return
      * @throws IOException
      */

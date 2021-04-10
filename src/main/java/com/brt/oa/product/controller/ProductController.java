@@ -6,7 +6,6 @@ import com.brt.oa.product.pojo.Product;
 import com.brt.oa.product.service.ProductService;
 import com.brt.oa.user.service.UserService;
 import com.brt.oa.utils.ApiResult;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,6 @@ public class ProductController {
     /**
      * 录入产品库存信息
      * @param product
-     * @param Authorization
      * @return
      */
     @UserLoginToken
@@ -44,11 +42,9 @@ public class ProductController {
                                    @RequestHeader String Authorization){
         String token = Authorization.replaceAll("Bearer ", "");
         Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
-        if (StringUtils.isBlank(product.getProduct_name())){
-            return ApiResult.error("产品名字不能为空");
-        }
 
-        //校验用户名中是否含有空格
+
+        //校验产品名中是否含有空格
         String s = product.getProduct_name().replaceAll(" ", "");
         if (!s.equals(product.getProduct_name())) {
             return ApiResult.error("产品名中含有空格");
@@ -64,8 +60,7 @@ public class ProductController {
 
     /**
      * 查询库存
-     * @param storeid 管理员传 普通用户不传
-     * @param Authorization
+     * @param storeid 管理员传 普通用户传0
      * @return
      */
     @UserLoginToken
@@ -84,7 +79,6 @@ public class ProductController {
      * 增加库存
      * @param product_name
      * @param amount
-     * @param Authorization
      * @return
      */
     @UserLoginToken

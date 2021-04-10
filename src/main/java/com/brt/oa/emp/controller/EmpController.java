@@ -31,7 +31,6 @@ public class EmpController {
     /**
      * 员工信息录入
      * @param emp
-     * @param Authorization
      * @return
      */
     @UserLoginToken
@@ -48,8 +47,7 @@ public class EmpController {
 
     /**
      * 查询员工
-     * @param storeid  管理员传  普通用户不传
-     * @param Authorization
+     * @param storeid  管理员传  普通用户传0
      * @return
      */
     @UserLoginToken
@@ -60,6 +58,7 @@ public class EmpController {
         if (userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getJurisdiction() == 2) {
             storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
         }
+        System.out.println(storeid);
         List<Emp> list = empService.findemp(storeid);
         return ApiResult.success(list);
     }
