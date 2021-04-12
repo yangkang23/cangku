@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.brt.oa.product.dao.ProductDao">
-
     <resultMap id="AllColumnMap" type="com.brt.oa.product.pojo.ProductList">
         <result column="id" property="id"/>
         <result column="product_name" property="product_name"/>
@@ -18,35 +17,50 @@
         rid
     </sql>
 
-    <insert id="insertProduct" parameterType="com.brt.oa.product.pojo.Product" >
-        insert into product (product_name,inventory,storeid) values
-        (#{product_name},#{inventory},#{storeid});
+    <insert id="insertProduct" parameterType="com.brt.oa.product.pojo.Product">
+        insert into product (product_name, inventory, storeid)
+        values (#{product_name}, #{inventory}, #{storeid});
     </insert>
 
     <select id="findProductByName" parameterType="java.lang.String" resultType="java.lang.Integer">
-        select count(1) from product where product_name = #{product_name} and storeid = #{storeid};
+        select count(1)
+        from product
+        where product_name = #{product_name}
+          and storeid = #{storeid};
     </select>
 
     <select id="findProductByStoreid" parameterType="java.lang.Integer" resultType="com.brt.oa.product.pojo.Product">
-        select * from product where storeid = #{storeid};
+        select *
+        from product
+        where storeid = #{storeid};
     </select>
 
     <select id="findProduct" parameterType="java.lang.Integer" resultType="com.brt.oa.product.pojo.Product">
-        select * from product where storeid = #{storeid};
+        select *
+        from product
+        where storeid = #{storeid};
     </select>
     <select id="findProductInventory" resultType="java.lang.Integer">
-        select inventory from product where product_name = #{product_name};
+        select inventory
+        from product
+        where product_name = #{product_name};
     </select>
     <select id="findProductList" resultType="com.brt.oa.product.pojo.ProductList">
-        select * from product_list where rid = #{rid}
+        select *
+        from product_list
+        where rid = #{rid}
     </select>
 
-    <update id="addInventory" >
-        update product set inventory = inventory + #{amount} where product_name = #{product_name};
+    <update id="addInventory">
+        update product
+        set inventory = inventory + #{amount}
+        where product_name = #{product_name};
     </update>
 
-    <update id="reduceInventory" >
-        update product set inventory = inventory - #{amount} where product_name = #{product_name};
+    <update id="reduceInventory">
+        update product
+        set inventory = inventory - #{amount}
+        where product_name = #{product_name};
     </update>
 
     <insert id="insertList">
@@ -54,15 +68,11 @@
         <include refid="all_column"/>
         )VALUES
         <foreach collection="pojos" item="pojo" index="index" separator=",">
-            (
-            #{pojo.id},
-            #{pojo.product_name},
-            #{pojo.price},
-            #{pojo.amount},
-            #{pojo.rid}
-            )
+            (#{pojo.id},
+             #{pojo.product_name},
+             #{pojo.price},
+             #{pojo.amount},
+             #{pojo.rid})
         </foreach>
     </insert>
-
-
 </mapper>

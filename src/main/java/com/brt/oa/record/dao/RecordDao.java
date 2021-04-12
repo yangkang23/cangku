@@ -10,7 +10,7 @@ import java.util.List;
 public interface RecordDao {
     void insertRecord(Record record);
 
-    Integer findTurnover(@Param("startTime") Long startTime,@Param("endTime") Long endTime, @Param("storeid") Integer storeid);
+    Double findTurnover(@Param("startTime") Long startTime,@Param("endTime") Long endTime, @Param("storeid") Integer storeid);
 
 
     Integer findId(@Param("cid") Integer cid, @Param("deal_date") Long deal_date);

@@ -106,6 +106,7 @@ public class UserController {
      * @return
      * @throws IOException
      */
+
     @PostMapping(value = "/login")
     public ApiResult login(@RequestParam String username,
                            @RequestParam String password) throws IOException {
@@ -117,8 +118,12 @@ public class UserController {
                 return ApiResult.error("密码错误");
             } else {
                 String token = tokenService.getToken(userForBase);
-                Map<String, String> map = new HashMap<>(16);
+                Map<String, Object> map = new HashMap<>(16);
                 map.put("token", token);
+                map.put("id", userForBase.getId());
+                map.put("username", userForBase.getUsername());
+                map.put("jurisdiction", userForBase.getJurisdiction());
+                map.put("storeid", userForBase.getStoreid());
                 return ApiResult.success(map);
             }
         }

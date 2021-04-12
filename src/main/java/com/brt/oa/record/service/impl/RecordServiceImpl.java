@@ -20,7 +20,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public Integer findTurnover(Long startTime, Long endTime, Integer storeid) {
+    public Double findTurnover(Long startTime, Long endTime, Integer storeid) {
         return recordDao.findTurnover(startTime,endTime,storeid);
     }
 

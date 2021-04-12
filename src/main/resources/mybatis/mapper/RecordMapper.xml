@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.brt.oa.record.dao.RecordDao">
-   <insert id="insertRecord" parameterType="com.brt.oa.record.pojo.Record">
-       insert into record(project_name,project_cost,total_cost,deal_date,product_fee,cid)
-       values (#{project_name},#{project_cost},#{total_cost},#{deal_date},#{product_fee},#{cid});
-   </insert>
+    <insert id="insertRecord" parameterType="com.brt.oa.record.pojo.Record">
+        insert into record(project_name, project_cost, total_cost, deal_date, product_fee, cid, storeid)
+        values (#{project_name}, #{project_cost}, #{total_cost}, #{deal_date}, #{product_fee}, #{cid}, #{storeid});
+    </insert>
 
-    <select id="findTurnover" resultType="java.lang.Integer">
-        select sum(total_cost) from record where storeid = #{storeid} and deal_date between #{startTime} and #{endTime}
+    <select id="findTurnover" resultType="java.lang.Double">
+        select sum(total_cost)
+        from record
+        where storeid = #{storeid}
+          and deal_date between #{startTime} and #{endTime}
     </select>
 
     <select id="findId" resultType="java.lang.Integer">
-        select id from record where cid = #{cid} and deal_date = #{deal_date}
+        select id
+        from record
+        where cid = #{cid}
+          and deal_date = #{deal_date}
     </select>
     <select id="findRecord" resultType="com.brt.oa.record.pojo.Record">
-        select * from record  where cid = #{id}
+        select *
+        from record
+        where cid = #{id}
     </select>
-
-
 </mapper>

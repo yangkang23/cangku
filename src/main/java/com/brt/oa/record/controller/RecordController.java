@@ -9,6 +9,7 @@ import com.brt.oa.record.pojo.Record;
 import com.brt.oa.record.service.RecordService;
 import com.brt.oa.user.service.UserService;
 import com.brt.oa.utils.ApiResult;
+import com.brt.oa.utils.DateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +52,11 @@ public class RecordController {
     @Transactional(propagation= Propagation.REQUIRED,isolation = Isolation.DEFAULT)
     public ApiResult insertRecord(@RequestBody Record record,
                                   @RequestHeader String Authorization){
+        Integer storeid = 1;
+        String token = Authorization.replaceAll("Bearer ", "");
+        if (userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getJurisdiction() == 2) {
+            storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
+        }
         try {
             Double product_fee = 0.0 ;
             List<ProductList> list = record.getProductLists();
@@ -72,6 +78,7 @@ public class RecordController {
             record.setProduct_fee(product_fee);
             record.setTotal_cost(product_fee+record.getProject_cost());
             record.setDeal_date(new Date().getTime());
+            record.setStoreid(storeid);
             recordService.insertRecord(record);
             if (list != null) {
                 if (!list.isEmpty()) {
@@ -107,11 +114,25 @@ public class RecordController {
         if (userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getJurisdiction() == 2) {
             storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
         }
-        Integer turnover = recordService.findTurnover(startTime, endTime, storeid);
+        List<Map<String,Object>> list = DateUtil.getDatelist(startTime,endTime);
+        List turnoverList = new ArrayList();
+        List dateList = new ArrayList();
+        for (Map<String,Object> map:list) {
+
+            Double turnover = recordService.findTurnover((Long) map.get("starttime"), (Long) map.get("endtime"), storeid);
+            if (turnover == null) {
+                turnover = 0.0;
+                turnoverList.add(turnover);
+                dateList.add(map.get("starttime"));
+            } else {
+                turnoverList.add(turnover);
+                dateList.add(map.get("starttime"));
+            }
+        }
+
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("startTime",startTime);
-        map.put("endtTime",endTime);
-        map.put("turnover",turnover);
+        map.put("dateList",dateList);
+        map.put("turnoverList",turnoverList);
         return ApiResult.success(map);
     }
 

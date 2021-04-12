@@ -16,4 +16,5 @@ public class Record {
     private  Integer cid;//顾客id 通过查询用户所在门店的顾客获得
     private List<ProductList> productLists;//消费产品列表 没有就不传
     private Double product_fee;//消费产品费用  不用传
+    private Integer storeid;//归属门店 统计营业额要用
 }

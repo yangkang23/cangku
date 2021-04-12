@@ -7,7 +7,7 @@ import java.util.List;
 public interface RecordService {
     void insertRecord(Record record);
 
-    Integer findTurnover(Long startTime, Long endTime, Integer storeid);
+    Double findTurnover(Long startTime, Long endTime, Integer storeid);
 
     Integer findId(Integer cid, Long deal_date);
 
