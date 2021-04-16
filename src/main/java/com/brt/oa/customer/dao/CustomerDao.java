@@ -14,7 +14,8 @@ public interface CustomerDao {
 
     void updateDeal(@Param("cid") Integer cid, @Param("deal") String deal);
 
-    List<Customer> findAllCustomer(@Param("customer_name") String customer_name, @Param("storeid") Integer storeid);
+    List<Customer> findAllCustomer(@Param("customer_name") String customer_name, @Param("storeid") Integer storeid,
+                                   @Param("start") Integer start, @Param("size") Integer size);
 
     Integer findTotal(@Param(value = "storeid") Integer storeid);
 
@@ -23,4 +24,9 @@ public interface CustomerDao {
     Integer findChannelAmount(@Param("channelname") String channelname, @Param(value = "storeid") Integer storeid);
 
     Integer findChannelDealAmount(@Param("channelname") String channelname, @Param(value = "storeid") Integer storeid);
+
+
+    void updateCustomerById(@Param("customer") Customer customer, @Param("id") Integer id);
+
+    void deleteCustomerById(@Param("id") Integer id, @Param("state") Integer state);
 }

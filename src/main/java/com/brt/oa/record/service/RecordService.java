@@ -11,5 +11,11 @@ public interface RecordService {
 
     Integer findId(Integer cid, Long deal_date);
 
-    List<Record> findRecord(Integer id);
+    List<Record> findRecord(Integer store,Integer pageIndex,Integer pageSize);
+
+    void findRecordLimt(Integer storeid, int i);
+
+    Integer findTotal(Integer storeid);
+
+    void deleteRecordById(Integer id,Integer state);
 }

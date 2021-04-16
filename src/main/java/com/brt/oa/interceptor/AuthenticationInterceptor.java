@@ -32,6 +32,11 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object object) throws Exception {
         // 从 http 请求头中取出 token
+        try {
+            String s = httpServletRequest.getHeader("Authorization").replaceAll("Bearer ","");
+        }catch (RuntimeException r){
+            throw new RuntimeException("401");
+        }
         String token = httpServletRequest.getHeader("Authorization").replaceAll("Bearer ","");
         // 如果不是映射到方法直接通过
         if(!(object instanceof HandlerMethod)){

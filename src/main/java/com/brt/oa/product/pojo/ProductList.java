@@ -1,18 +1,25 @@
 package com.brt.oa.product.pojo;
 
+import io.github.yedaxia.apidocs.Ignore;
 import lombok.Data;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
+import javax.persistence.Table;
 
 @Data
+@Table(name = "product_list")
 public class ProductList {
+    @Ignore
     private Integer id; //主键
-    @NotBlank(message = "员工姓名为空")
+    @Ignore
     private String product_name;//产品名字
-
+    @Ignore
     private Double price;//产品价格
-   @Min(1)
-    private Integer amount;//购买数量
+
+    private Integer amount;//增加数量
+    @Ignore
     private Integer rid; //外键 与记录关联
+    @Ignore
+    private Integer state;
+
+    private Integer pid;//外键 与产品关联
 }

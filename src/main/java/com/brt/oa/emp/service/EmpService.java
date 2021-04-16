@@ -8,5 +8,11 @@ public interface EmpService {
 
     void insertemp(Emp emp);
 
-    List<Emp> findemp(Integer storeid);
+    List<Emp> findemp(Integer storeid,Integer pageIndex, Integer pageSize);
+
+    void deleteEmpById(Integer id,Integer state);
+
+    void updateEmpById(Emp emp, Integer id);
+
+    Integer findTotal(Integer storeid);
 }

@@ -1,5 +1,6 @@
 package com.brt.oa.store.controller;
 
+import com.brt.oa.annotation.UserLoginToken;
 import com.brt.oa.store.pojo.Store;
 import com.brt.oa.store.service.StoreService;
 import com.brt.oa.utils.ApiResult;
@@ -8,7 +9,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 门店接口
@@ -16,7 +20,8 @@ import java.util.List;
  * @author yangkang
  */
 @RestController
-@RequestMapping("/store")
+@CrossOrigin
+@RequestMapping("/api/store")
 public class StoreController {
     //日志
     private static Logger logger = LoggerFactory.getLogger(StoreController.class);
@@ -33,7 +38,7 @@ public class StoreController {
      * @return
      */
     @PostMapping(value = "/insertStore")
-    public ApiResult insertStore(@RequestBody Store store){
+    public ApiResult insertStore(@RequestBody @Valid Store store){
         if (storeService.findStoreByName(store.getStore_name()) != 0){
             return ApiResult.error("门店名称已存在");
         }
@@ -41,30 +46,71 @@ public class StoreController {
         if (storeService.findStoreByAddress(store.getAddress()) != 0){
             return ApiResult.error("门店地址已存在");
         }
-
+        store.setState(1);
         storeService.insertStore(store);
         return ApiResult.success();
     }
 
     /**
-     * 按照城市找门店
-     * @param city
+     * 城市列表
      * @return
      */
-    @GetMapping(value = "/groupByCity")
-    public ApiResult groupByCity (@RequestParam String city){
+    @GetMapping(value = "/findCity")
+    public ApiResult findCityList(){
 
-      List list = storeService.findStoreByCity(city);
+      List list = storeService.findCity();
       return ApiResult.success(list);
     }
 
     /**
      * 门店列表
+     * @param city
+     * @param store_name
+     * @return
      */
-    @PostMapping(value = "/findStore")
-    public ApiResult findStore (){
-        List list = storeService.findStore();
-        return ApiResult.success(list);
+    @GetMapping(value = "/findStore")
+    public ApiResult findStore (@RequestParam(required = false) String city,
+                                @RequestParam(required = false) String store_name,
+                                @RequestParam(required = false) Integer pageIndex,
+                                @RequestParam(required = false) Integer pageSize){
+        if (pageIndex == null || pageSize== null){
+            pageIndex = 1;
+            pageSize =20;
+        }
+        Integer total = storeService.findTotal();
+        List list = storeService.findStore(city,store_name,pageIndex,pageSize);
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("list",list);
+        map.put("pageIndex",pageIndex);
+        map.put("pageSize",pageSize);
+        map.put("total", total);
+        return ApiResult.success(map);
     }
+
+    /**
+     * 编辑门店信息
+     * @param store
+     * @return
+     */
+    @PostMapping("/updateStoreById")
+    @UserLoginToken
+    public ApiResult updateStoreById(@RequestBody Store store) {
+        storeService.updateStoreById(store, store.getId());
+        return ApiResult.success();
+    }
+
+    /**
+     * 删除门店
+     * @param id
+     * @return
+     */
+    @GetMapping("/deleteStoreById")
+    @UserLoginToken
+    public ApiResult deleteStoreById(@RequestParam Integer id){
+        Integer state = 0;
+        storeService.deleteStoreById(id,state);
+        return ApiResult.success();
+    }
+
 
 }

@@ -1,39 +1,31 @@
 package com.brt.oa.store.dao;
 
-import com.brt.oa.store.mapper.StoreMapper;
 import com.brt.oa.store.pojo.Store;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-@Service
-public class StoreDao {
+@Mapper
+public interface StoreDao {
+    void insertStore(@Param("store") Store store);
 
-    @Autowired
-    StoreMapper storeMapper;
+    Integer findStoreByName(@Param("store_name") String store_name);
 
-    public void insertStore(Store store){
-        storeMapper.insertStore(store);
-    }
+    Integer findStoreByAddress(@Param("address") String address);
 
-    public Integer findStoreByName(String name){
-        return storeMapper.findStoreByName(name);
-    }
+    List<String> findCity();
 
-    public Integer findStoreByAddress(String address){
-        return storeMapper.findStoreByAddress(address);
-    }
+    List<Store> findStore(@Param("city") String city, @Param("store_name") String store_name,
+                          @Param("start") Integer start, @Param("size") Integer size);
 
-    public List<Store> findStoreByCity(String city){
-        return storeMapper.findStoreByCity(city);
-    }
+    Integer findStoreById(@Param("id") Integer id);
 
-    public List<Store> findStore(){
-        return storeMapper.findStore();
-    }
+    String findNameById(@Param("storeid") Integer storeid);
 
-    public Integer findStoreById(Integer id ){
-        return  storeMapper.findStoreById(id);
-    }
+    void updateStoreById(@Param("store") Store store, @Param("id") Integer id);
+
+    void deleteStoreById(@Param("id") Integer id, @Param("state") Integer state);
+
+    Integer findTotal();
 }

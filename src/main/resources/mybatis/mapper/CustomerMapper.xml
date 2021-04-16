@@ -1,76 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.brt.oa.customer.dao.CustomerDao">
+    <sql id="Base_Column_List">
+        id,
+        customer_name,
+        sex,
+        birthday,
+        phone,
+        drainage_channel,
+        deal,
+        storeid,
+        `state`
+    </sql>
     <resultMap id="BaseResultMap" type="com.brt.oa.customer.pojo.Customer">
         <result column="id" property="id"/>
         <result column="customer_name" property="customer_name"/>
         <result column="sex" property="sex"/>
-        <result column="age" property="age"/>
+        <result column="birthday" property="birthday"/>
         <result column="phone" property="phone"/>
         <result column="drainage_channel" property="drainage_channel"/>
         <result column="deal" property="deal"/>
         <result column="storeid" property="storeid"/>
+        <result column="state" property="state"/>
     </resultMap>
     <insert id="createCustomerInfo" parameterType="com.brt.oa.customer.pojo.Customer">
-        insert into customer(customer_name, sex, phone, drainage_channel, deal, storeid, age)
-        values (#{customer_name}, #{sex}, #{phone}, #{drainage_channel}, #{deal}, #{storeid}, #{age})
+        insert into customer(customer_name, sex, phone, drainage_channel, deal, storeid, birthday,state )
+        values (#{customer_name}, #{sex}, #{phone}, #{drainage_channel}, #{deal}, #{storeid}, #{birthday},#{state})
     </insert>
 
     <select id="findCustomer" parameterType="java.lang.Integer" resultType="com.brt.oa.customer.pojo.Customer">
         select *
         from customer where storeid = #{storeid}
-        <if test="customer_name != ''">
+        <if test="customer_name != '' and customer_name != null">
             and customer_name = #{customer_name}
         </if>
+        and state = 1;
     </select>
 
     <update id="updateDeal">
         update customer
         set deal = #{deal}
-        where id = #{cid};
+        where id = #{cid} and state = 1;
     </update>
 
     <select id="findAllCustomer" resultType="com.brt.oa.customer.pojo.Customer">
         select *
         from customer where 1 = 1
-        <if test="storeid != 1">
+        <if test="storeid != 0">
             and storeid = #{storeid}
         </if>
-        <if test="customer_name != ''">
-            and customer_name = #{customer_name};
+        <if test="customer_name != '' and  customer_name != null">
+            and customer_name = #{customer_name}
         </if>
+        and state = 1 limit #{start},#{size};
     </select>
 
     <select id="findTotal" resultType="java.lang.Integer">
         select count(1)
         from customer where 1 = 1
-        <if test="storeid != 1">
+        <if test="storeid != 0 and storeid != null">
             and storeid = #{storeid}
         </if>
+        and state = 1;
     </select>
 
     <select id="findChannelList" resultType="java.lang.String">
         select distinct drainage_channel
         from customer where 1 = 1
-        <if test="storeid != 1">
+        <if test="storeid != 0">
             and storeid = #{storeid}
         </if>
+        and state = 1;
     </select>
 
     <select id="findChannelAmount" resultType="java.lang.Integer">
         select count(1)
         from customer where drainage_channel = #{channelname}
-        <if test="storeid != 1">
+        <if test="storeid != 0">
             and storeid = #{storeid}
         </if>
+        and state = 1;
     </select>
 
     <select id="findChannelDealAmount" resultType="java.lang.Integer">
         select count(1)
         from customer where drainage_channel = #{channelname}
                         and deal = 1
-        <if test="storeid != 1">
+        <if test="storeid != 0">
             and storeid = #{storeid}
         </if>
+        and state = 1;
     </select>
+
+    <update id="updateCustomerById">
+        update customer set
+        <if test="customer.customer_name != null and customer.customer_name != ''">
+            customer_name =#{customer.customer_name},
+        </if>
+        <if test="customer.birthday != null">
+            birthday = #{customer.birthday},
+        </if>
+        <if test="customer.drainage_channel != null and customer.drainage_channel != ''">
+            drainage_channel = #{customer.drainage_channel},
+        </if>
+        <if test="customer.phone != null and customer.phone != ''">
+            phone = #{customer.phone},
+        </if>
+        <if test="customer.sex != null">
+            sex = #{customer.sex},
+        </if>
+        <if test="customer.storeid != null">
+            storeid = #{customer.storeid}
+        </if>
+        where id = #{id} and state = 1;
+    </update>
+
+    <update id="deleteCustomerById">
+        update  customer set
+        <if test="state != null  ">
+            state = #{state}
+        </if>
+        where id = #{id}
+    </update>
 </mapper>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.brt.oa.store.dao.StoreDao">
+    <sql id="Base_Column_List">
+        id,
+        city,
+        store_name,
+        address,
+        manager_name,
+        phone,
+        state
+    </sql>
+    <resultMap id="BaseResultMap" type="com.brt.oa.store.pojo.Store">
+        <result column="id" property="id"/>
+        <result column="city" property="city"/>
+        <result column="store_name" property="store_name"/>
+        <result column="address" property="address"/>
+        <result column="manager_name" property="manager_name"/>
+        <result column="phone" property="phone"/>
+        <result column="state" property="state"/>
+    </resultMap>
+    <insert id="insertStore">
+        insert into store(city, store_name, address, manager_name, phone, state)
+        VALUES (#{store.city}, #{store.store_name}, #{store.address}, #{store.manager_name},
+                #{store.phone},#{store.state})
+    </insert>
+
+    <select id="findStoreByName" resultType="java.lang.Integer">
+        select count(1)
+        from store
+        <where>
+            <if test="store_name != null and store_name != ''">
+                and store_name = #{store_name}
+            </if>
+            and state = 1;
+        </where>
+    </select>
+
+    <select id="findStoreByAddress" resultType="java.lang.Integer">
+        select count(1)
+        from store
+        <where>
+            <if test="address != null  and address != ''">
+                and store_name = #{address}
+            </if>
+            and state = 1;
+        </where>
+    </select>
+
+    <select id="findCity" resultType="java.lang.String">
+        select distinct city
+        from store
+        where state = 1;
+    </select>
+
+    <select id="findStore" resultMap="BaseResultMap">
+        select *
+        from store
+        <where>
+            <if test="city != null and city != ''">
+                and city = #{city}
+            </if>
+            <if test="store_name != null and store_name != ''">
+                and store_name like concat('%', #{store_name}, '%')
+            </if>
+            and state = 1 limit #{start},#{size};
+        </where>
+    </select>
+
+    <select id="findStoreById" resultType="java.lang.Integer">
+        select count(1)
+        from store
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            and state = 1;
+        </where>
+    </select>
+
+    <select id="findNameById" resultType="java.lang.String">
+        select store_name
+        from store
+        <where>
+            <if test="storeid != null">
+                and id = #{storeid}
+            </if>
+            and state = 1;
+        </where>
+    </select>
+
+    <update id="updateStoreById">
+        update store set
+        <if test="store.city != null and store.city != ''">
+            city = #{store.city},
+        </if>
+        <if test="store.store_name != null and store.store_name != ''">
+            store_name = #{store.store_name},
+        </if>
+        <if test="store.manager_name != null and store.manager_name != ''">
+            manager_name = #{store.manager_name},
+        </if>
+        <if test="store.phone != null and store.phone != ''">
+            phone = #{store.phone}
+        </if>
+        where id = #{id}
+          and state = 1;
+    </update>
+
+    <!--create on 2021-04-14-->
+    <update id="deleteStoreById">
+        update store set
+        <if test="state != null">
+            state = #{state}
+        </if>
+        where id = #{id}
+          and state = 1;
+    </update>
+
+    <select id="findTotal" resultType="java.lang.Integer">
+        select count(1) from store where state =1 ;
+    </select>
+</mapper>

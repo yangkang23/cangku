@@ -10,6 +10,7 @@
         <result column="sex" property="sex"/>
         <result column="position_level" property="position_level"/>
         <result column="storeid" property="storeid"/>
+        <result column="state" property="state"/>
     </resultMap>
 
     <!--auto generated Code-->
@@ -20,7 +21,8 @@
         entry_time,
         sex,
         position_level,
-        storeid
+        storeid,
+        state
     </sql>
 
     <!--auto generated Code-->
@@ -48,6 +50,9 @@
             <if test="pojo.storeid != null">
                 storeid,
             </if>
+            <if test="pojo.state != null">
+                state,
+            </if>
         </trim>
         VALUES
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -72,71 +77,63 @@
             <if test="pojo.storeid != null">
                 #{pojo.storeid},
             </if>
+            <if test="pojo.storeid != null">
+                #{pojo.state},
+            </if>
         </trim>
     </insert>
 
-    <!--auto generated Code-->
-    <insert id="insertList">
-        INSERT INTO emp(
-        <include refid="all_column"/>
-        )VALUES
-        <foreach collection="pojos" item="pojo" index="index" separator=",">
-            (#{pojo.id},
-             #{pojo.name},
-             #{pojo.phone},
-             #{pojo.entry_time},
-             #{pojo.sex},
-             #{pojo.position_level},
-             #{pojo.storeid})
-        </foreach>
-    </insert>
-
-    <!--auto generated Code-->
-    <update id="update">
-        UPDATE emp
-        <set>
-            <if test="pojo.id != null">
-                id = #{pojo.id},
-            </if>
-            <if test="pojo.name != null">
-                name = #{pojo.name},
-            </if>
-            <if test="pojo.phone != null">
-                phone = #{pojo.phone},
-            </if>
-            <if test="pojo.entry_time != null">
-                entry_time = #{pojo.entry_time},
-            </if>
-            <if test="pojo.sex != null">
-                sex = #{pojo.sex},
-            </if>
-            <if test="pojo.position_level != null">
-                position_level = #{pojo.position_level},
-            </if>
-            <if test="pojo.storeid != null">
-                storeid = #{pojo.storeid}
-            </if>
-        </set>
-        WHERE id = #{pojo.id}
-    </update>
-
-    <!--auto generated Code-->
+    
     <select id="findemp" resultMap="AllColumnMap">
         SELECT
         <include refid="all_column"/>
         FROM emp
         <where>
-            <if test="storeid != null and storeid != 1">
+            <if test="storeid != null and storeid != 0">
                 AND storeid = #{storeid}
             </if>
+            and state = 1 limit #{start},#{size} ;
         </where>
-        LIMIT 1000
     </select>
 
-    <!--auto generated Code-->
-    <delete id="delete">
-        DELETE
-        FROM emp
+
+    <update id="deleteEmpById">
+        update emp
+        set state = #{state}
+        where id = #{id} and state = 1;
+    </update>
+
+    <update id="updateEmpById">
+        update emp set
+        <if test="emp.name != null and emp.name != ''">
+            name = #{emp.name},
+        </if>
+        <if test="emp.phone != null and emp.phone != ''">
+            phone = #{emp.phone},
+        </if>
+        <if test="emp.position_level != null and emp.position_level != ''">
+            position_level = #{emp.position_level},
+        </if>
+        <if test="emp.entry_time != null">
+            entry_time = #{emp.entry_time},
+        </if>
+        <if test="emp.sex != null">
+            sex = #{emp.sex},
+        </if>
+        <if test="emp.storeid != null">
+            storeid = #{emp.storeid}
+        </if>
         where id = #{id}
-    </delete>
+          and state = 1;
+    </update>
+
+    <select id="findTotal" resultType="java.lang.Integer">
+        select count(1) from emp
+        <where>
+            <if test="storeid != null and storeid != 0">
+                storeid = #{storeid}
+            </if>
+            and state= 1;
+        </where>
+    </select>
 </mapper>

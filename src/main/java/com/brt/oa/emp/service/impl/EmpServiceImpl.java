@@ -22,12 +22,33 @@ public class EmpServiceImpl implements EmpService {
         return empDao.insertList(pojos);
     }
 
-    public List<Emp> findemp(Integer storeid){
-        return empDao.findemp(storeid);
+    public List<Emp> findemp(Integer storeid,Integer pageIndex, Integer pageSize){
+
+        Integer start = (pageIndex-1)*pageSize;
+        Integer size = pageSize;
+
+        return empDao.findemp(storeid,start,size);
+    }
+
+    @Override
+    public void deleteEmpById(Integer id,Integer state) {
+        empDao.deleteEmpById(id,state);
+    }
+
+    @Override
+    public void updateEmpById(Emp emp, Integer id) {
+        empDao.updateEmpById(emp, id);
+    }
+
+    @Override
+    public Integer findTotal(Integer storeid) {
+        return empDao.findTotal(storeid);
     }
 
     public int update(Emp pojo){
         return empDao.update(pojo);
     }
+
+
 
 }

@@ -30,7 +30,26 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public List<Record> findRecord(Integer id) {
-        return recordDao.findRecord(id);
+    public List<Record> findRecord(Integer storid,Integer pageIndex,Integer pageSize) {
+        Integer start = (pageIndex-1)*pageSize;
+        Integer size = pageSize;
+        return recordDao.findRecord(storid,start,size);
+    }
+
+    @Override
+    public void findRecordLimt(Integer storeid, int i) {
+
+    }
+
+    @Override
+    public Integer findTotal(Integer storeid) {
+
+        return recordDao.findTotal(storeid);
+    }
+
+    @Override
+    public void deleteRecordById(Integer id,Integer state) {
+        recordDao.deleteRecordById(id,state);
+
     }
 }

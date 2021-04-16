@@ -7,6 +7,8 @@
         <result column="price" property="price"/>
         <result column="amount" property="amount"/>
         <result column="rid" property="rid"/>
+        <result column="state" property="state"/>
+        <result column="pid" property="pid"/>
     </resultMap>
 
     <sql id="all_column">
@@ -14,36 +16,45 @@
         product_name,
         price,
         amount,
-        rid
+        rid,
+        state,
+        pid
     </sql>
 
     <insert id="insertProduct" parameterType="com.brt.oa.product.pojo.Product">
-        insert into product (product_name, inventory, storeid)
-        values (#{product_name}, #{inventory}, #{storeid});
+        insert into product (product_name, inventory, price, storeid, state)
+        values (#{product_name}, #{inventory}, #{price}, #{storeid}, #{state});
     </insert>
 
-    <select id="findProductByName" parameterType="java.lang.String" resultType="java.lang.Integer">
+    <select id="findProductById" resultType="java.lang.Integer">
         select count(1)
         from product
-        where product_name = #{product_name}
-          and storeid = #{storeid};
+        where id = #{id}
+          and state = 1;
     </select>
 
     <select id="findProductByStoreid" parameterType="java.lang.Integer" resultType="com.brt.oa.product.pojo.Product">
         select *
         from product
-        where storeid = #{storeid};
+        <where>
+            <if test="storeid != null and storeid != 0">
+                storeid = #{storeid}
+            </if>
+            and state = 1 limit #{start},#{size};
+        </where>
     </select>
 
     <select id="findProduct" parameterType="java.lang.Integer" resultType="com.brt.oa.product.pojo.Product">
         select *
         from product
-        where storeid = #{storeid};
+        where storeid = #{storeid}
+          and state = 1;
     </select>
     <select id="findProductInventory" resultType="java.lang.Integer">
         select inventory
         from product
-        where product_name = #{product_name};
+        where product_name = #{product_name}
+          and state = 1;
     </select>
     <select id="findProductList" resultType="com.brt.oa.product.pojo.ProductList">
         select *
@@ -54,25 +65,188 @@
     <update id="addInventory">
         update product
         set inventory = inventory + #{amount}
-        where product_name = #{product_name};
+        where id = #{id}
+          and state = 1;
     </update>
 
     <update id="reduceInventory">
         update product
         set inventory = inventory - #{amount}
-        where product_name = #{product_name};
+        where id = #{id}
+          and state = 1;
+    </update>
+
+
+    <select id="findProductByName" resultType="java.lang.Integer">
+        select count(1)
+        from product
+        where product_name = #{product_name}
+          and storeid = #{storeid}
+          and state = 1;
+    </select>
+
+    <update id="updateProductById">
+        update product set
+        <if test="product.product_name != null and product.product_name != ''">
+            product.product_name = #{product.product_name},
+        </if>
+        <if test="param1.price != null">
+            price = #{product.price},
+        </if>
+        <if test="product.storeid != null">
+            storeid = #{product.storeid}
+        </if>
+        where id = #{id}
+          and state = 1;
     </update>
 
     <insert id="insertList">
         INSERT INTO product_list(
         <include refid="all_column"/>
         )VALUES
-        <foreach collection="pojos" item="pojo" index="index" separator=",">
+        <foreach collection="productLists" item="pojo" index="index" separator=",">
             (#{pojo.id},
              #{pojo.product_name},
              #{pojo.price},
              #{pojo.amount},
-             #{pojo.rid})
+             #{pojo.rid},
+            #{pojo.state},
+            #{pojo.pid}
+            )
         </foreach>
     </insert>
+
+    <update id="deleteProductById">
+        update product set
+        <if test="state != null">
+            state = #{state}
+        </if>
+        where id = #{id}
+          and state = 1;
+    </update>
+
+    <select id="findIdByProductNameAndStoreid" resultType="java.lang.Integer">
+        select id
+        from product
+        <where>
+            <if test="storeid != null">
+                and storeid = #{storeid}
+            </if>
+            <if test="product_name != null and product_name != ''">
+                and product_name = #{product_name}
+            </if>
+            and state = 1;
+        </where>
+    </select>
+
+    <insert id="insertAddRecord">
+        INSERT INTO add_record
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="addRecord.id != null">
+                id,
+            </if>
+            <if test="addRecord.operator != null">
+                operator,
+            </if>
+            <if test="addRecord.amount != null">
+                amount,
+            </if>
+            <if test="addRecord.deal_date != null">
+                deal_date,
+            </if>
+            <if test="addRecord.pid != null">
+                pid,
+            </if>
+            <if test="addRecord.storeid != null">
+                storeid,
+            </if>
+            <if test="addRecord.product_name != null">
+                product_name,
+            </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="addRecord.id != null">
+                #{addRecord.id},
+            </if>
+            <if test="addRecord.operator != null">
+                #{addRecord.operator},
+            </if>
+            <if test="addRecord.amount != null">
+                #{addRecord.amount},
+            </if>
+            <if test="addRecord.deal_date != null">
+                #{addRecord.deal_date},
+            </if>
+            <if test="addRecord.pid != null">
+                #{addRecord.pid},
+            </if>
+            <if test="addRecord.storeid != null">
+                #{addRecord.storeid},
+            </if>
+            <if test="addRecord.product_name != null">
+                #{addRecord.product_name},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="findAddrecord" resultType="com.brt.oa.product.pojo.AddRecord">
+        select *  from add_record
+        <where>
+            <if test="pid != null">
+                pid = #{pid}
+            </if>
+        </where>
+        limit #{start},#{size}
+    </select>
+
+    <select id="findTotal" resultType="java.lang.Integer">
+        select count(1) from product
+        <where>
+            <if test="storeid != null and storeid != 0">
+                storeid = #{storeid}
+            </if>
+            and state=1;
+        </where>
+    </select>
+
+    <select id="findProductByIdA" resultType="com.brt.oa.product.pojo.Product">
+        select * from product where id = #{id} and state =1;
+    </select>
+
+    <select id="findAmountByRid" resultType="com.brt.oa.product.pojo.ProductList">
+        select * from product_list
+        <where>
+            <if test="rid != null">
+                rid = #{rid}
+            </if>
+
+        </where>
+        and state = 1;
+    </select>
+
+    <update id="AddInventory">
+        update product set
+        <if test="amount != null">
+            inventory = inventory+ #{amount}
+        </if>
+        where id = #{pid} and state =1;
+    </update>
+
+    <update id="deleteProductByRid">
+        update product_list set
+        <if test="state != null">
+            state = #{state}
+        </if>
+        where rid = #{rid} and state =1;
+    </update>
+
+    <select id="findTotals" resultType="java.lang.Integer">
+        select count(1) from add_record
+        <where>
+            <if test="pid != null">
+                pid = #{pid}
+            </if>
+        </where>
+    </select>
 </mapper>

@@ -1,7 +1,7 @@
 package com.brt.oa.emp.pojo;
 
+import io.github.yedaxia.apidocs.Ignore;
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
 import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotBlank;
@@ -12,19 +12,20 @@ public class Emp {
     private Integer id;
 
     @NotBlank(message = "员工姓名为空")
-    private String name;
+    private String name;//员工姓名
 
-    @NotBlank(message = "手机号为空")
-    @Length(min = 11 ,max = 11)
-    private String phone;
 
-    private Long entry_time;
+    private String phone;//手机号
 
-    @NotBlank(message = "性别为空")
-    private String sex;
+    private Long entry_time;//入职时间
 
-    @NotBlank(message = "职位级别为空")
-    private String position_level;
+    private Integer sex;//性别 1男 0女
 
-    private Integer storeid;
+    private String position_level;//职级
+
+    private Integer storeid;//所属门店
+    @Ignore
+    private Integer state;
+    @Ignore
+    private String store_name;
 }

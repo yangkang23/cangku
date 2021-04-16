@@ -2,21 +2,115 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.brt.oa.user.dao.UserDao">
 
+    <sql id="Base_Column_List">
+        id,
+        username,
+        `password`,
+        jurisdiction,
+        storeid,
+        state,
+        realname
+    </sql>
+    <resultMap id="BaseResultMap" type="com.brt.oa.user.pojo.User">
+        <result column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="jurisdiction" property="jurisdiction"/>
+        <result column="storeid" property="storeid"/>
+        <result column="state" property="state"/>
+        <result column="realname" property="realname"></result>
+    </resultMap>
     <insert id="insertUser" parameterType="com.brt.oa.user.pojo.User">
-        insert into user(username,password,jurisdiction,storeid) values (#{username},#{password},#{jurisdiction},#{storeid});
+        insert into user(username, password, jurisdiction, storeid,state,realname)
+        values (#{user.username}, #{user.password}, #{user.jurisdiction}, #{user.storeid},#{user.state},#{user.realname});
     </insert>
 
-    <select id="duplicateChecking" parameterType="java.lang.String" resultType="java.lang.Integer">
-        select count(1) from user where  username = #{usernme};
+    <select id="duplicateChecking" resultType="java.lang.Integer">
+        select count(1)
+        from user
+        <where>
+            <if test="username != null">
+                and username = #{username}
+            </if>
+            and state = 1;
+        </where>
     </select>
 
-    <select id="findUser" parameterType="java.lang.String" resultType="com.brt.oa.user.pojo.User">
-        select * from user where  username = #{usernme};
+    <select id="findUser" parameterType="java.lang.Integer" resultType="com.brt.oa.user.pojo.User">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        <where>
+            <if test="realname != null and realname != ''">
+                and realname like concat('%', #{realname}, '%')
+            </if>
+            and state =1 limit #{start},#{size};
+        </where>
     </select>
 
-    <update id="updatePwd" parameterType="com.brt.oa.user.pojo.User" >
-        update user set password = #{password} where username = #{username};
+    <update id="updatePwd" parameterType="com.brt.oa.user.pojo.User">
+        update user
+        set `password`=#{user.password}
+        <where>
+            <if test="user.username != null and user.username != ''">
+                and username = #{user.username}
+            </if>
+            and state =1;
+        </where>
     </update>
 
+    <select id="findUserByUsername" resultMap="BaseResultMap">
+        select *  from user
+        <where>
+            <if test="username != null and username != ''">
+                and username = #{username}
+            </if>
+            and state = 1;
+        </where>
+    </select>
 
+    <select id="findUserById" resultMap="BaseResultMap">
+        select * from user
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            and state =1;
+        </where>
+    </select>
+
+    <update id="updateUserById">
+        update user set
+        <if test="user.username != null and user.username != ''">
+            username = #{user.username},
+        </if>
+        <if test="user.jurisdiction != null">
+            jurisdiction = #{user.jurisdiction},
+        </if>
+        <if test="user.realname != null and user.realname != ''">
+            realname = #{user.realname},
+        </if>
+        <if test="user.storeid != null">
+            storeid = #{user.storeid}
+        </if>
+        where id = #{id} and state =1;
+    </update>
+
+    <update id="deleteUserById">
+        update user set
+            <if test="state != null">
+                state = #{state}
+            </if>
+        where id = #{id} and state =1;
+    </update>
+
+    <select id="findTotal" resultType="java.lang.Integer">
+        select count(1) from user
+        <where>
+            <if test="realname != null and realname != ''">
+                and realname like concat('%', #{realname}, '%')
+            </if>
+            and state =1 ;
+        </where>
+    </select>
 </mapper>

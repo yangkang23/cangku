@@ -1,37 +1,27 @@
 package com.brt.oa.store.service;
 
-import com.brt.oa.store.dao.StoreDao;
 import com.brt.oa.store.pojo.Store;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class StoreService {
+public interface StoreService {
+    void insertStore(Store store);
 
-    @Autowired
-    StoreDao storeDao;
+    Integer findStoreByAddress(String address);
 
-    public void insertStore(Store store){
-        storeDao.insertStore(store);
-    }
+    Integer findStoreById(Integer storeid);
 
-    public Integer findStoreByName(String name){
-        return  storeDao.findStoreByName(name);
-    }
+    Integer findStoreByName(String store_name);
 
-    public Integer findStoreByAddress(String address){
-        return storeDao.findStoreByAddress(address);
-    }
+    List<String> findCity();
 
-    public List<Store> findStoreByCity(String city){
-        return storeDao.findStoreByCity(city);
-    }
+    List<Store> findStore(String city,String storename,Integer pageIndex,Integer pageSize);
 
-    public List<Store> findStore(){
-        return storeDao.findStore();
-    }
+    String findNameById(Integer storeid);
 
-    public Integer findStoreById(Integer id){return  storeDao.findStoreById(id);}
+    void updateStoreById(Store store, Integer id);
+
+    void deleteStoreById(Integer id ,Integer state);
+
+    Integer findTotal();
 }

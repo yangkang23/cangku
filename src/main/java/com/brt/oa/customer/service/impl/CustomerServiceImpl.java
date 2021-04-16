@@ -30,8 +30,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<Customer> findAllCustomer(String customer_name, Integer storeid) {
-        return customerDao.findAllCustomer(customer_name, storeid);
+    public List<Customer> findAllCustomer(String customer_name, Integer storeid,Integer pageIndex,Integer pageSize) {
+
+            Integer start = (pageIndex-1)*pageSize;
+            Integer size = pageSize;
+
+        return customerDao.findAllCustomer(customer_name, storeid,start,size);
     }
 
     @Override
@@ -53,6 +57,18 @@ public class CustomerServiceImpl implements CustomerService {
     public Integer findChannelDealAmount(String channelname, Integer storeid) {
         return customerDao.findChannelDealAmount(channelname,storeid);
     }
+
+    @Override
+    public void updateCustomerById(Customer customer,Integer id) {
+        customerDao.updateCustomerById(customer,id);
+    }
+
+    @Override
+    public void deleteCustomerById(Integer id, Integer state) {
+        customerDao.deleteCustomerById(id,state);
+    }
+
+
 
 
 }

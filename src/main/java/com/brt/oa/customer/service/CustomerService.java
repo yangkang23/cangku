@@ -12,7 +12,7 @@ public interface CustomerService {
 
     void updateDeal(Integer cid, String deal);
 
-    List<Customer> findAllCustomer(String customer_name, Integer storeid);
+    List<Customer> findAllCustomer(String customer_name, Integer storeid,Integer pageIndex,Integer pageSize);
 
     Integer findTotal(Integer storeid);
 
@@ -21,4 +21,10 @@ public interface CustomerService {
     Integer findChannelAmount(String channelname, Integer storeid);
 
     Integer findChannelDealAmount(String channelname, Integer storeid);
+
+    void updateCustomerById(Customer customer,Integer id);
+
+    void deleteCustomerById(Integer id, Integer state);
+
+
 }
