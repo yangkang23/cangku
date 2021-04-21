@@ -25,4 +25,6 @@ public class Record {
     private String store_name;
     @Ignore
     private  Integer state;
+    @Ignore
+    private String customer_name;
 }

@@ -40,7 +40,11 @@
             <if test="storeid != null and storeid != 0">
                 storeid = #{storeid}
             </if>
-            and state = 1 limit #{start},#{size};
+            <if test="product_name != null and product_name != ''">
+                and product_name like concat('%', #{product_name}, '%')
+            </if>
+            and state = 1
+                    limit #{start},#{size};
         </where>
     </select>
 
@@ -110,9 +114,8 @@
              #{pojo.price},
              #{pojo.amount},
              #{pojo.rid},
-            #{pojo.state},
-            #{pojo.pid}
-            )
+             #{pojo.state},
+             #{pojo.pid})
         </foreach>
     </insert>
 
@@ -191,7 +194,8 @@
     </insert>
 
     <select id="findAddrecord" resultType="com.brt.oa.product.pojo.AddRecord">
-        select *  from add_record
+        select *
+        from add_record
         <where>
             <if test="pid != null">
                 pid = #{pid}
@@ -201,26 +205,33 @@
     </select>
 
     <select id="findTotal" resultType="java.lang.Integer">
-        select count(1) from product
+        select count(1)
+        from product
         <where>
             <if test="storeid != null and storeid != 0">
                 storeid = #{storeid}
             </if>
-            and state=1;
+            <if test="product_name != null and product_name != ''">
+                and product_name like concat('%', #{product_name}, '%')
+            </if>
+            and state = 1 ;
         </where>
     </select>
 
     <select id="findProductByIdA" resultType="com.brt.oa.product.pojo.Product">
-        select * from product where id = #{id} and state =1;
+        select *
+        from product
+        where id = #{id}
+          and state = 1;
     </select>
 
     <select id="findAmountByRid" resultType="com.brt.oa.product.pojo.ProductList">
-        select * from product_list
+        select *
+        from product_list
         <where>
             <if test="rid != null">
                 rid = #{rid}
             </if>
-
         </where>
         and state = 1;
     </select>
@@ -228,9 +239,10 @@
     <update id="AddInventory">
         update product set
         <if test="amount != null">
-            inventory = inventory+ #{amount}
+            inventory = inventory + #{amount}
         </if>
-        where id = #{pid} and state =1;
+        where id = #{pid}
+          and state = 1;
     </update>
 
     <update id="deleteProductByRid">
@@ -238,11 +250,13 @@
         <if test="state != null">
             state = #{state}
         </if>
-        where rid = #{rid} and state =1;
+        where rid = #{rid}
+          and state = 1;
     </update>
 
     <select id="findTotals" resultType="java.lang.Integer">
-        select count(1) from add_record
+        select count(1)
+        from add_record
         <where>
             <if test="pid != null">
                 pid = #{pid}

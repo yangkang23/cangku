@@ -68,7 +68,15 @@ public class CustomerServiceImpl implements CustomerService {
         customerDao.deleteCustomerById(id,state);
     }
 
+    @Override
+    public String findNameById(Integer cid) {
+        return customerDao.findNameById(cid);
+    }
 
+    @Override
+    public Integer findTotals(Integer storeid, String customer_name) {
+        return customerDao.findTotals(storeid,customer_name);
+    }
 
 
 }

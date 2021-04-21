@@ -106,12 +106,14 @@ public class UserController {
                 return ApiResult.error("密码错误");
             } else {
                 String token = tokenService.getToken(userForBase);
+                String store_name = storeService.findNameById(userForBase.getStoreid());
                 Map<String, Object> map = new HashMap<>(16);
                 map.put("token", token);
                 map.put("id", userForBase.getId());
                 map.put("username", userForBase.getUsername());
                 map.put("jurisdiction", userForBase.getJurisdiction());
                 map.put("storeid", userForBase.getStoreid());
+                map.put("store_name", store_name);
                 return ApiResult.success(map);
             }
         }

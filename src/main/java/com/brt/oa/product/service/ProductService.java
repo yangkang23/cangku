@@ -11,7 +11,7 @@ public interface ProductService {
 
     Integer findProductById(Integer id);
 
-    List<Product> findProductByStoreid(Integer i,Integer pageIndex,Integer pageSize);
+    List<Product> findProductByStoreid(Integer i,Integer pageIndex,Integer pageSize,String product_name);
 
     void addInventory(Integer id,Integer amount,Integer storeid);
 
@@ -37,7 +37,7 @@ public interface ProductService {
 
     List<AddRecord> findAddrecord(Integer pid,Integer pageIndex,Integer pageSize);
 
-    Integer findTotal(Integer storeid);
+    Integer findTotal(Integer storeid, String proudct_name);
 
     Product findProductByIdA(Integer id);
 

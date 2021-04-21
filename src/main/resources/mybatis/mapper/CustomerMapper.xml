@@ -24,8 +24,8 @@
         <result column="state" property="state"/>
     </resultMap>
     <insert id="createCustomerInfo" parameterType="com.brt.oa.customer.pojo.Customer">
-        insert into customer(customer_name, sex, phone, drainage_channel, deal, storeid, birthday,state )
-        values (#{customer_name}, #{sex}, #{phone}, #{drainage_channel}, #{deal}, #{storeid}, #{birthday},#{state})
+        insert into customer(customer_name, sex, phone, drainage_channel, deal, storeid, birthday, state)
+        values (#{customer_name}, #{sex}, #{phone}, #{drainage_channel}, #{deal}, #{storeid}, #{birthday}, #{state})
     </insert>
 
     <select id="findCustomer" parameterType="java.lang.Integer" resultType="com.brt.oa.customer.pojo.Customer">
@@ -40,7 +40,8 @@
     <update id="updateDeal">
         update customer
         set deal = #{deal}
-        where id = #{cid} and state = 1;
+        where id = #{cid}
+          and state = 1;
     </update>
 
     <select id="findAllCustomer" resultType="com.brt.oa.customer.pojo.Customer">
@@ -49,10 +50,12 @@
         <if test="storeid != 0">
             and storeid = #{storeid}
         </if>
-        <if test="customer_name != '' and  customer_name != null">
-            and customer_name = #{customer_name}
+        <if test="customer_name != '' and customer_name != null">
+            and customer_name like concat('%', #{customer_name}, '%')
+                    or phone like concat('%', #{customer_name}, '%')
         </if>
-        and state = 1 limit #{start},#{size};
+        and state = 1
+                limit #{start},#{size}
     </select>
 
     <select id="findTotal" resultType="java.lang.Integer">
@@ -112,14 +115,38 @@
         <if test="customer.storeid != null">
             storeid = #{customer.storeid}
         </if>
-        where id = #{id} and state = 1;
+        where id = #{id}
+          and state = 1;
     </update>
 
     <update id="deleteCustomerById">
-        update  customer set
-        <if test="state != null  ">
+        update customer set
+        <if test="state != null">
             state = #{state}
         </if>
         where id = #{id}
     </update>
+
+    <select id="findNameById" resultType="java.lang.String">
+        select customer_name
+        from customer
+        <where>
+            <if test="cid != null">
+                and id = #{cid}
+            </if>
+            and state = 1;
+        </where>
+    </select>
+
+    <select id="findTotals" resultType="java.lang.Integer">
+        select count(1)
+        from customer where 1 = 1
+        <if test="storeid != 0 and storeid != null">
+            and storeid = #{storeid}
+        </if>
+        <if test="customer_name != '' and customer_name != null">
+            and customer_name like concat('%', #{customer_name}, '%')
+        </if>
+        and state = 1;
+    </select>
 </mapper>

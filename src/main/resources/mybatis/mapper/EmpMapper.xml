@@ -83,7 +83,7 @@
         </trim>
     </insert>
 
-    
+
     <select id="findemp" resultMap="AllColumnMap">
         SELECT
         <include refid="all_column"/>
@@ -92,7 +92,11 @@
             <if test="storeid != null and storeid != 0">
                 AND storeid = #{storeid}
             </if>
-            and state = 1 limit #{start},#{size} ;
+            <if test="name != null and name != ''">
+                and name like concat('%', #{name}, '%')
+            </if>
+            and state = 1
+                    limit #{start},#{size} ;
         </where>
     </select>
 
@@ -100,7 +104,8 @@
     <update id="deleteEmpById">
         update emp
         set state = #{state}
-        where id = #{id} and state = 1;
+        where id = #{id}
+          and state = 1;
     </update>
 
     <update id="updateEmpById">
@@ -128,12 +133,16 @@
     </update>
 
     <select id="findTotal" resultType="java.lang.Integer">
-        select count(1) from emp
+        select count(1)
+        from emp
         <where>
             <if test="storeid != null and storeid != 0">
                 storeid = #{storeid}
             </if>
-            and state= 1;
+            <if test="name != null and name != ''">
+                and name like concat('%', #{name}, '%')
+            </if>
+            and state = 1;
         </where>
     </select>
 </mapper>

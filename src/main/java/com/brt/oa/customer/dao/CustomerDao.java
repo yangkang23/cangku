@@ -29,4 +29,8 @@ public interface CustomerDao {
     void updateCustomerById(@Param("customer") Customer customer, @Param("id") Integer id);
 
     void deleteCustomerById(@Param("id") Integer id, @Param("state") Integer state);
+
+    String findNameById(@Param("cid") Integer cid);
+
+    Integer findTotals(@Param("storeid") Integer storeid, @Param("customer_name") String customer_name);
 }

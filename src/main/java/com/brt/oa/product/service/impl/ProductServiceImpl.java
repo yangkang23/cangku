@@ -28,10 +28,10 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> findProductByStoreid(Integer storeid,Integer pageIndex,Integer pageSize) {
+    public List<Product> findProductByStoreid(Integer storeid,Integer pageIndex,Integer pageSize,String product_name) {
         Integer start = (pageIndex-1)*pageSize;
         Integer size = pageSize;
-        return productDao.findProductByStoreid(storeid,start,size);
+        return productDao.findProductByStoreid(storeid,start,size,product_name);
     }
 
     @Override
@@ -97,8 +97,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Integer findTotal(Integer storeid) {
-        return productDao.findTotal(storeid);
+    public Integer findTotal(Integer storeid, String proudct_name) {
+        return productDao.findTotal(storeid,proudct_name);
     }
 
     @Override

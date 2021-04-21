@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 /**
@@ -90,6 +91,10 @@ public class RecordController {
             String store_name = storeService.findNameById(storeid);
             customerService.updateDeal(record.getCid(), "1");
             record.setProduct_fee(product_fee);
+            System.out.println("2222222");
+            if (record.getProject_cost() == null){
+                record.setProject_cost(0.0);
+            }
             record.setTotal_cost(product_fee + record.getProject_cost());
             record.setDeal_date(new Date().getTime());
             record.setStore_name(store_name);
@@ -114,23 +119,30 @@ public class RecordController {
     }
 
     /**
-     * 查询营业额
+     * 查询营业额  年月周
      *
-     * @param startTime 开始时间
-     * @param endTime   结束时间
+     * @param time_range  年  月  周
      * @param storeid   门店id  传0为查全部
      * @return
      */
     @UserLoginToken
     @GetMapping("/findTurnover")
-    public ApiResult findTurnover(@RequestParam(required = false) Long startTime,
-                                  @RequestParam(required = false) Long endTime,
+    public ApiResult findTurnover(@RequestParam(required = false) String time_range,
                                   @RequestParam Integer storeid) {
 
-        List<Map<String, Object>> list = DateUtil.getDatelist(startTime, endTime);
+        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+        if (time_range.equals("week")){
+            list = DateUtil.getWeek();
+        }
+        if (time_range.equals("month")) {
+            list = DateUtil.getMonth();
+        }
+        if (time_range.equals("year")) {
+            list = DateUtil.getYear();
+        }
         List turnoverList = new ArrayList();
         List dateList = new ArrayList();
-        for (Map<String, Object> map : list) {
+        for (Map<String, Object> map :  list) {
 
             Double turnover = recordService.findTurnover((Long) map.get("starttime"), (Long) map.get("endtime"), storeid);
             if (turnover == null) {
@@ -142,7 +154,39 @@ public class RecordController {
                 dateList.add(map.get("starttime"));
             }
         }
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("dateList", dateList);
+        map.put("turnoverList", turnoverList);
+        return ApiResult.success(map);
+    }
 
+    /**
+     * 查询营业额  天
+     * @param startTime
+     * @param endTime
+     * @param storeid
+     * @return
+     */
+    @GetMapping("/findTurnoverDay")
+    @UserLoginToken
+    public  ApiResult findTurnoverDay(@RequestParam(required = false)Long startTime,
+                                      @RequestParam(required = false)Long endTime,
+                                      @RequestParam Integer storeid) {
+        List<Map<String, Object>> list = DateUtil.getDatelist(startTime, endTime);
+        List turnoverList = new ArrayList();
+        List dateList = new ArrayList();
+        for (Map<String, Object> map :  list) {
+
+            Double turnover = recordService.findTurnover((Long) map.get("starttime"), (Long) map.get("endtime"), storeid);
+            if (turnover == null) {
+                turnover = 0.0;
+                turnoverList.add(turnover);
+                dateList.add(map.get("starttime"));
+            } else {
+                turnoverList.add(turnover);
+                dateList.add(map.get("starttime"));
+            }
+        }
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("dateList", dateList);
         map.put("turnoverList", turnoverList);
@@ -161,11 +205,15 @@ public class RecordController {
     public ApiResult findRecord(@RequestParam Integer storeid,
                                 @RequestParam(required = false) String customer_name,
                                 @RequestParam(required = false) Integer pageIndex,
-                                @RequestParam(required = false) Integer pageSize) {
+                                @RequestParam(required = false) Integer pageSize) throws UnsupportedEncodingException {
         if (pageIndex == null || pageSize == null) {
             pageIndex = 1;
             pageSize = 20;
         }
+        if (customer_name != null) {
+            customer_name = java.net.URLDecoder.decode(customer_name,"UTF-8");
+        }
+        System.out.println(customer_name);
         String store_name = storeService.findNameById(storeid);
         Integer total = recordService.findTotal(storeid);
         List<Record> list = recordService.findRecord(storeid, pageIndex, pageSize);
@@ -173,8 +221,11 @@ public class RecordController {
         if (!list.isEmpty()) {
             for (Record record : list) {
                 List<ProductList> list1 = productService.findProductList(record.getId());
+
+                String s =customerService.findNameById(record.getCid());
                 record.setProductLists(list1);
                 record.setStore_name(store_name);
+                record.setCustomer_name(s);
                 list2.add(record);
             }
         }

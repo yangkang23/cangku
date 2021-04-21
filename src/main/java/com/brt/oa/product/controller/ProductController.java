@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -67,20 +68,22 @@ public class ProductController {
 
     /**
      * 查询库存
-     * @param storeid 传0为查全部
+     * @param storeid
      * @return
      */
     @UserLoginToken
     @GetMapping(value = "findProductByStoreid")
-    public  ApiResult findProduct(@RequestParam Integer storeid,
+    public  ApiResult findProduct(@RequestParam(required = false) String product_name,
                                   @RequestParam(required = false) Integer pageIndex,
-                                  @RequestParam(required = false) Integer pageSize){
+                                  @RequestParam(required = false) Integer pageSize,
+                                  @RequestParam Integer storeid) throws UnsupportedEncodingException {
+
         if (pageIndex == null || pageSize== null){
             pageIndex = 1;
             pageSize =20;
         }
-        Integer total =  productService.findTotal(storeid);
-        List<Product> list = productService.findProductByStoreid(storeid,pageIndex,pageSize);
+        Integer total =  productService.findTotal(storeid,product_name);
+        List<Product> list = productService.findProductByStoreid(storeid,pageIndex,pageSize,product_name);
         Map<String,Object> map = new HashMap<String,Object>();
         map.put("list",list);
         map.put("pageIndex",pageIndex);
@@ -103,6 +106,9 @@ public class ProductController {
         Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
         if (productService.findProductById(productList.getPid()) != 1){
             return  ApiResult.error("产品不存在");
+        }
+        if ((0-productList.getAmount())> productService.findProductById(productList.getPid())){
+            return ApiResult.error("库存不足");
         }
 
         productService.addInventory(productList.getPid(),productList.getAmount(),storeid);
@@ -160,10 +166,17 @@ public class ProductController {
             pageIndex = 1;
             pageSize =20;
         }
-        Integer toatl = productService.findTotals(pid);
+        Integer total = productService.findTotals(pid);
 
         List<AddRecord> list = productService.findAddrecord(pid,pageIndex,pageSize);
-        return ApiResult.success(list);
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("list",list);
+        map.put("pageIndex",pageIndex);
+        map.put("pageSize",pageSize);
+        map.put("total", total);
+
+        return ApiResult.success(map);
+
 
     }
 

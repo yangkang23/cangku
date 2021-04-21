@@ -27,4 +27,7 @@ public interface CustomerService {
     void deleteCustomerById(Integer id, Integer state);
 
 
+    String findNameById(Integer cid);
+
+    Integer findTotals(Integer storeid, String customer_name);
 }

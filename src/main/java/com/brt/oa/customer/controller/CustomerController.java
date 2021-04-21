@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -76,15 +77,17 @@ public class CustomerController {
     public ApiResult findAllCustomer(@RequestParam(required = false) String customer_name,
                                      @RequestParam Integer storeid,
                                      @RequestParam(required = false) Integer pageIndex,
-                                     @RequestParam(required = false) Integer pageSize) {
+                                     @RequestParam(required = false) Integer pageSize) throws UnsupportedEncodingException {
        if (pageIndex == null || pageSize== null){
            pageIndex = 1;
            pageSize =20;
        }
-
+        if (customer_name != null) {
+            customer_name = java.net.URLDecoder.decode(customer_name,"UTF-8");
+        }
         // List list1 = new ArrayList();
         List<Customer> list = customerService.findAllCustomer(customer_name, storeid,pageIndex,pageSize);
-        Integer total = customerService.findTotal(storeid);
+        Integer total = customerService.findTotals(storeid,customer_name);
         for (Customer customer : list) {
             String store_name = storeService.findNameById(customer.getStoreid());
             customer.setStore_name(store_name);

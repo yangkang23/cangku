@@ -22,7 +22,7 @@
     <insert id="insertStore">
         insert into store(city, store_name, address, manager_name, phone, state)
         VALUES (#{store.city}, #{store.store_name}, #{store.address}, #{store.manager_name},
-                #{store.phone},#{store.state})
+                #{store.phone}, #{store.state})
     </insert>
 
     <select id="findStoreByName" resultType="java.lang.Integer">
@@ -63,7 +63,8 @@
             <if test="store_name != null and store_name != ''">
                 and store_name like concat('%', #{store_name}, '%')
             </if>
-            and state = 1 limit #{start},#{size};
+            and state = 1
+                    limit #{start},#{size};
         </where>
     </select>
 
@@ -118,6 +119,8 @@
     </update>
 
     <select id="findTotal" resultType="java.lang.Integer">
-        select count(1) from store where state =1 ;
+        select count(1)
+        from store
+        where state = 1;
     </select>
 </mapper>

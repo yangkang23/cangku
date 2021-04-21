@@ -38,12 +38,13 @@ public class EmpController {
 
     /**
      * 员工信息录入
+     *
      * @param emp
      * @return
      */
     @UserLoginToken
     @PostMapping("/insertemp")
-    public ApiResult insertemp(@RequestBody @Valid Emp emp ,
+    public ApiResult insertemp(@RequestBody @Valid Emp emp,
                                @RequestHeader String Authorization) {
         String token = Authorization.replaceAll("Bearer ", "");
         Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
@@ -55,36 +56,39 @@ public class EmpController {
 
     /**
      * 查询员工
-     * @param storeid  传0为查全部
+     *
+     * @param storeid 传0为查全部
      * @return
      */
     @UserLoginToken
     @GetMapping("/findemp")
     public ApiResult findemp(@RequestParam Integer storeid,
+                             @RequestParam(required = false) String name,
                              @RequestParam(required = false) Integer pageIndex,
                              @RequestParam(required = false) Integer pageSize) {
-        if (pageIndex == null || pageSize== null){
+        if (pageIndex == null || pageSize == null) {
             pageIndex = 1;
-            pageSize =20;
+            pageSize = 20;
         }
-        Integer total = empService.findTotal(storeid);
+        Integer total = empService.findTotal(storeid, name);
         List list1 = new ArrayList();
-        List<Emp> list = empService.findemp(storeid,pageIndex,pageSize);
-        for (Emp emp:list) {
+        List<Emp> list = empService.findemp(storeid, pageIndex, pageSize, name);
+        for (Emp emp : list) {
             String store_name = storeService.findNameById(emp.getStoreid());
             emp.setStore_name(store_name);
 
         }
-        Map<String,Object> map = new HashMap<String,Object>();
-        map.put("list",list);
-        map.put("pageIndex",pageIndex);
-        map.put("pageSize",pageSize);
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("list", list);
+        map.put("pageIndex", pageIndex);
+        map.put("pageSize", pageSize);
         map.put("total", total);
         return ApiResult.success(map);
     }
 
     /**
      * 删除员工
+     *
      * @param id
      * @return
      */
@@ -92,12 +96,13 @@ public class EmpController {
     @UserLoginToken
     public ApiResult deleteEmpById(@RequestParam Integer id) {
         Integer state = 0;
-        empService.deleteEmpById(id,state);
+        empService.deleteEmpById(id, state);
         return ApiResult.success();
     }
 
     /**
      * 编辑员工信息
+     *
      * @param emp
      * @return
      */

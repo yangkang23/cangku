@@ -14,7 +14,8 @@ public interface ProductDao {
 
     Integer findProductById(@Param("id") Integer id);
 
-    List<Product> findProductByStoreid(@Param("storeid") Integer storeid, @Param("start") Integer start, @Param("size") Integer size);
+    List<Product> findProductByStoreid(@Param("storeid") Integer storeid, @Param("start") Integer start,
+                                       @Param("size") Integer size, @Param("product_name") String product_name);
 
     void addInventory(@Param("id") Integer id,
                       @Param("amount") Integer amount,
@@ -44,7 +45,7 @@ public interface ProductDao {
 
     List<AddRecord> findAddrecord(@Param("pid") Integer pid, @Param("start") Integer start, @Param("size") Integer size);
 
-    Integer findTotal(@Param("storeid") Integer storeid);
+    Integer findTotal(@Param("storeid") Integer storeid, @Param("product_name") String product_name);
 
     Product findProductByIdA(@Param("id") Integer id);
 

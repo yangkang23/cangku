@@ -13,7 +13,7 @@ public interface EmpDao {
 
     int insertList(@Param("pojos") List<Emp> pojo);
 
-    List<Emp> findemp(@Param("storeid") Integer storeid, @Param("start") Integer start, @Param("size") Integer size);
+    List<Emp> findemp(@Param("storeid") Integer storeid, @Param("start") Integer start, @Param("size") Integer size, @Param("name") String name);
 
     int update(@Param("pojo") Emp pojo);
 
@@ -21,5 +21,5 @@ public interface EmpDao {
 
     void updateEmpById(@Param("emp") Emp emp, @Param("id") Integer id);
 
-    Integer findTotal(@Param("storeid") Integer storeid);
+    Integer findTotal(@Param("storeid") Integer storeid, @Param("name") String name);
 }
