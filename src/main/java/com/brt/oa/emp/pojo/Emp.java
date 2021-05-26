@@ -28,4 +28,8 @@ public class Emp {
     private Integer state;
     @Ignore
     private String store_name;
+
+    private Long birthday;//生日
+
+    private String hometown;//籍贯
 }

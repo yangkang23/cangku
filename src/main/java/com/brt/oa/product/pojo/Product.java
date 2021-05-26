@@ -18,5 +18,11 @@ public class Product {
     @Ignore
     private Integer state; //1为生效 0为删除
 
+    @Ignore
+    private String remarks;//备注
+
+
+    private Integer tag;// 1 内服调理  0 其他调理
+
 
 }

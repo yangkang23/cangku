@@ -15,7 +15,7 @@ public interface ProductDao {
     Integer findProductById(@Param("id") Integer id);
 
     List<Product> findProductByStoreid(@Param("storeid") Integer storeid, @Param("start") Integer start,
-                                       @Param("size") Integer size, @Param("product_name") String product_name);
+                                       @Param("size") Integer size, @Param("product_name") String product_name, @Param("tag") Integer tag);
 
     void addInventory(@Param("id") Integer id,
                       @Param("amount") Integer amount,
@@ -45,7 +45,7 @@ public interface ProductDao {
 
     List<AddRecord> findAddrecord(@Param("pid") Integer pid, @Param("start") Integer start, @Param("size") Integer size);
 
-    Integer findTotal(@Param("storeid") Integer storeid, @Param("product_name") String product_name);
+    Integer findTotal(@Param("storeid") Integer storeid, @Param("product_name") String product_name, @Param("tag") Integer tag);
 
     Product findProductByIdA(@Param("id") Integer id);
 
@@ -56,4 +56,12 @@ public interface ProductDao {
     void deleteProductByRid(@Param("rid") Integer rid, @Param("state") Integer state);
 
     Integer findTotals(@Param("pid") Integer pid);
+
+    List<Product> findProductByTag(@Param("storeid") Integer storeid, @Param("tag") Integer tag);
+
+    Double findPriceById(Integer id);
+
+    String findNameById(Integer inside);
+
+    String findRemarksById(Integer inside);
 }

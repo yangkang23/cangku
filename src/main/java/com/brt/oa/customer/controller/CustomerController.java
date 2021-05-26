@@ -2,6 +2,7 @@ package com.brt.oa.customer.controller;
 
 import com.auth0.jwt.JWT;
 import com.brt.oa.annotation.UserLoginToken;
+import com.brt.oa.channel.service.ChannelService;
 import com.brt.oa.customer.pojo.Customer;
 import com.brt.oa.customer.service.CustomerService;
 import com.brt.oa.store.service.StoreService;
@@ -39,6 +40,9 @@ public class CustomerController {
     @Autowired
     private StoreService storeService;
 
+    @Autowired
+    private ChannelService channelService;
+
     /**
      * 创建顾客
      *
@@ -50,6 +54,7 @@ public class CustomerController {
     public ApiResult createCustomerInfo(@RequestBody @Valid Customer customer,
                                         @RequestHeader String Authorization) {
         String token = Authorization.replaceAll("Bearer ", "");
+        logger.info("请求参数为：" + customer.toString());
         Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
 
         //创建顾客时 默认未成交
@@ -78,25 +83,27 @@ public class CustomerController {
                                      @RequestParam Integer storeid,
                                      @RequestParam(required = false) Integer pageIndex,
                                      @RequestParam(required = false) Integer pageSize) throws UnsupportedEncodingException {
-       if (pageIndex == null || pageSize== null){
-           pageIndex = 1;
-           pageSize =20;
-       }
+        logger.info("请求参数为：门店id" + storeid+"顾客姓名"+customer_name);
+        if (pageIndex == null || pageSize == null) {
+            pageIndex = 1;
+            pageSize = 20;
+        }
         if (customer_name != null) {
-            customer_name = java.net.URLDecoder.decode(customer_name,"UTF-8");
+            customer_name = java.net.URLDecoder.decode(customer_name, "UTF-8");
         }
         // List list1 = new ArrayList();
-        List<Customer> list = customerService.findAllCustomer(customer_name, storeid,pageIndex,pageSize);
-        Integer total = customerService.findTotals(storeid,customer_name);
+        List<Customer> list = customerService.findAllCustomer(customer_name, storeid, pageIndex, pageSize);
+        Integer total = customerService.findTotals(storeid, customer_name);
         for (Customer customer : list) {
             String store_name = storeService.findNameById(customer.getStoreid());
+            customer.setChannelname(channelService.findNameById(customer.getChannelid()));
             customer.setStore_name(store_name);
 
         }
-        Map<String,Object> map = new  HashMap<String,Object>();
-        map.put("list",list);
-        map.put("pageIndex",pageIndex);
-        map.put("pageSize",pageSize);
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("list", list);
+        map.put("pageIndex", pageIndex);
+        map.put("pageSize", pageSize);
         map.put("total", total);
 
         return ApiResult.success(map);
@@ -111,14 +118,18 @@ public class CustomerController {
     @UserLoginToken
     @GetMapping(value = "/findChannel")
     public ApiResult findChannel(@RequestParam Integer storeid) {
+        logger.info("请求参数为：" + storeid);
         Integer toatal = customerService.findTotal(storeid);
-        List<String> nameList = customerService.findChannelList(storeid);
+        List<Integer> list = customerService.findChannelList(storeid);
+        List<String> nameList = new ArrayList();
         List<Integer> amountList = new ArrayList();
-        if (nameList.size() != 0) {
-            for (String channelname : nameList) {
-                if (channelname != null) {
-                    Integer amount = customerService.findChannelAmount(channelname, storeid);
+        if (list.size() != 0) {
+            for (Integer channelid : list) {
+                if (channelid != null) {
+                    Integer amount = customerService.findChannelAmount(channelid, storeid);
                     amountList.add(amount);
+                    String name = channelService.findNameById(channelid);
+                    nameList.add(name);
                 }
             }
         }
@@ -140,15 +151,19 @@ public class CustomerController {
     @GetMapping("/turnoverRate")
     public ApiResult turnoverRate(@RequestParam Integer storeid
     ) {
-        List<String> nameList = customerService.findChannelList(storeid);
+        logger.info("请求参数为：" + storeid);
+        List<Integer> list = customerService.findChannelList(storeid);
         List<Integer> totalList = new ArrayList<Integer>();
         List<Integer> dealList = new ArrayList<Integer>();
-        if (nameList.size() != 0) {
-            for (String channelname : nameList) {
-                if (channelname != null) {
-                    Integer total = customerService.findChannelAmount(channelname, storeid);
+        List<String> nameList = new ArrayList();
+        if (list.size() != 0) {
+            for (Integer channelid : list) {
+                if (channelid != null) {
+                    String name = channelService.findNameById(channelid);
+                    nameList.add(name);
+                    Integer total = customerService.findChannelAmount(channelid, storeid);
                     totalList.add(total);
-                    Integer dealamount = customerService.findChannelDealAmount(channelname, storeid);
+                    Integer dealamount = customerService.findChannelDealAmount(channelid, storeid);
                     dealList.add(dealamount);
                 }
             }
@@ -170,6 +185,7 @@ public class CustomerController {
     @PostMapping("/updateCustomer")
     @UserLoginToken
     public ApiResult updateCustomer(@RequestBody Customer customer) {
+        logger.info("请求参数为：" + customer.toString());
         customerService.updateCustomerById(customer, customer.getId());
         return ApiResult.success();
     }
@@ -183,9 +199,11 @@ public class CustomerController {
     @GetMapping("/deleteCustomer")
     @UserLoginToken
     public ApiResult deleteCustomer(@RequestParam Integer id) {
+        logger.info("请求参数为：" + id);
         Integer state = 0;
         customerService.deleteCustomerById(id, state);
         return ApiResult.success();
     }
+
 
 }

@@ -39,10 +39,10 @@ public class Plan {
     private List<Discomfort> discomfortList;
 
     //过敏史 1有 0无
-    private  String allergy;
+    private  Integer allergy;
 
     //感冒 1有 0无
-    private  String cold;
+    private  Integer cold;
 
     //不适程度
     private String degree;
@@ -57,7 +57,13 @@ public class Plan {
     private List<Conditioning> conditioningList;
 
     //时间
-    @Ignore
     private Long time;
+
+    // 外键顾客id
+    private Integer cid;
+
+    private String remark;
+
+    private String registrant;
 
 }

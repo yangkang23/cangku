@@ -1,41 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.brt.oa.plan.dao.PlanDao">
-  <resultMap id="BaseResultMap" type="com.brt.oa.plan.pojo.Plan">
-    <!--@mbg.generated-->
-    <!--@Table `plan`-->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="age" jdbcType="INTEGER" property="age" />
-    <result column="sex" jdbcType="INTEGER" property="sex" />
-    <result column="job" jdbcType="VARCHAR" property="job" />
-    <result column="address" jdbcType="VARCHAR" property="address" />
-    <result column="phone" jdbcType="VARCHAR" property="phone" />
-    <result column="disposal" jdbcType="VARCHAR" property="disposal" />
-    <result column="allergy" jdbcType="VARCHAR" property="allergy" />
-    <result column="cold" jdbcType="VARCHAR" property="cold" />
-    <result column="degree" jdbcType="VARCHAR" property="degree" />
-    <result column="opportunity" jdbcType="VARCHAR" property="opportunity" />
-    <result column="cycle" jdbcType="VARCHAR" property="cycle" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    id, `name`, age, sex, job, address, phone, disposal, allergy, cold, `degree`, opportunity, 
-    `cycle`
-  </sql>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.brt.oa.plan.pojo.Plan" useGeneratedKeys="true">
-    <!--@mbg.generated-->
-    insert into `plan` (`name`, age, sex, 
-      job, address, phone, 
-      disposal, allergy, cold, 
-      `degree`, opportunity, `cycle`
-      )
-    values (#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{sex,jdbcType=INTEGER}, 
-      #{job,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
-      #{disposal,jdbcType=VARCHAR}, #{allergy,jdbcType=VARCHAR}, #{cold,jdbcType=VARCHAR}, 
-      #{degree,jdbcType=VARCHAR}, #{opportunity,jdbcType=VARCHAR}, #{cycle,jdbcType=VARCHAR}
-      )
-  </insert>
+    <resultMap id="BaseResultMap" type="com.brt.oa.plan.pojo.Plan">
+        <!--@mbg.generated-->
+        <!--@Table `plan`-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+        <result column="sex" jdbcType="INTEGER" property="sex"/>
+        <result column="job" jdbcType="VARCHAR" property="job"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="disposal" jdbcType="VARCHAR" property="disposal"/>
+        <result column="allergy" jdbcType="VARCHAR" property="allergy"/>
+        <result column="cold" jdbcType="VARCHAR" property="cold"/>
+        <result column="degree" jdbcType="VARCHAR" property="degree"/>
+        <result column="opportunity" jdbcType="VARCHAR" property="opportunity"/>
+        <result column="cycle" jdbcType="VARCHAR" property="cycle"/>
+        <result column="time" jdbcType="BIGINT" property="time"/>
+        <result column="cid" jdbcType="INTEGER" property="cid"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="registrant" jdbcType="VARCHAR" property="registrant"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, `name`, age, sex, job, address, phone, disposal, allergy, cold, `degree`, opportunity,
+        `cycle`,time,cid,remark,registrant
+    </sql>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.brt.oa.plan.pojo.Plan"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into `plan` (`name`, age, sex,
+                            job, address, phone,
+                            disposal, allergy, cold,
+                            `degree`, opportunity, `cycle`, time, cid, remark, registrant)
+        values (#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{sex,jdbcType=INTEGER},
+                #{job,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR},
+                #{disposal,jdbcType=VARCHAR}, #{allergy,jdbcType=VARCHAR}, #{cold,jdbcType=VARCHAR},
+                #{degree,jdbcType=VARCHAR}, #{opportunity,jdbcType=VARCHAR}, #{cycle,jdbcType=VARCHAR},
+                #{time,jdbcType=BIGINT}, #{cid,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR},
+                #{registrant,jdbcType=VARCHAR})
+    </insert>
 
+    <insert id="insertEar">
+        insert into ear (id, deaf, deaf_time, tinnitus, tinnitus_time, other, other_time, planid) VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},
+             #{item.deaf},
+             #{item.deaf_time},
+             #{item.tinnitus},
+             #{item.tinnitus_time},
+             #{item.other},
+             #{item.other_time},
+             #{item.planid})
+        </foreach>
+    </insert>
 
+    <insert id="insertDiscomfort">
+        insert into discomfort(id, otherDiscomfort, otherDiscomfort_time, operation, planid) VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},
+             #{item.otherDiscomfort},
+             #{item.otherDiscomfort_time},
+             #{item.operation},
+             #{item.planid})
+        </foreach>
+    </insert>
+
+    <insert id="insertConditioning">
+        insert into conditioning(id, progress, direction, outside, inside, other, planid, fee, tag, rid, startTime,
+                                 endTime) VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},
+             #{item.progress},
+             #{item.direction},
+             #{item.outside},
+             #{item.inside},
+             #{item.other},
+             #{item.planid},
+             #{item.fee},
+             #{item.tag},
+             #{item.rid},
+             #{item.startTime},
+             #{item.endTime})
+        </foreach>
+    </insert>
+
+    <select id="findPlanByCid" resultType="com.brt.oa.plan.pojo.Plan">
+        select *
+        from plan
+        where cid = #{cid}
+        order by time desc
+    </select>
+
+    <select id="findConditioningByPlanid" resultType="com.brt.oa.plan.pojo.Conditioning">
+        select *
+        from conditioning
+        where planid = #{planid}
+    </select>
+
+    <update id="updateTagAndRidById">
+        update conditioning set
+        <if test="tag != null">
+            tag = #{tag},
+        </if>
+        <if test="rid != null">
+            rid = #{rid}
+        </if>
+        where id = #{id}
+    </update>
+
+    <select id="findConditioningByRid" resultType="com.brt.oa.plan.pojo.Conditioning">
+        select *
+        from conditioning
+        where rid = #{rid}
+    </select>
+
+    <select id="findDiscomfortByPlanid" resultType="com.brt.oa.plan.pojo.Discomfort">
+        select *
+        from discomfort
+        where planid = #{planid}
+    </select>
+
+    <select id="findEarByPlanid" resultType="com.brt.oa.plan.pojo.Ear">
+        select *
+        from ear
+        where planid = #{planid}
+    </select>
+
+    <update id="updateTimeById">
+        update conditioning
+        set startTime = #{startTime},
+            endTime   = #{endTime}
+        where id = #{id}
+    </update>
+
+    <update id="updateRemakeById">
+        update plan
+        set remark = #{remark}
+        where id = #{id}
+    </update>
 </mapper>

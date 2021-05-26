@@ -46,6 +46,7 @@ public class EmpController {
     @PostMapping("/insertemp")
     public ApiResult insertemp(@RequestBody @Valid Emp emp,
                                @RequestHeader String Authorization) {
+        logger.info("请求参数为：" + emp.toString());
         String token = Authorization.replaceAll("Bearer ", "");
         Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
         emp.setStoreid(storeid);
@@ -66,6 +67,7 @@ public class EmpController {
                              @RequestParam(required = false) String name,
                              @RequestParam(required = false) Integer pageIndex,
                              @RequestParam(required = false) Integer pageSize) {
+        logger.info("请求参数为：门店id:" + storeid+" 员工姓名:"+name);
         if (pageIndex == null || pageSize == null) {
             pageIndex = 1;
             pageSize = 20;
@@ -95,6 +97,7 @@ public class EmpController {
     @GetMapping("/deleteEmpById")
     @UserLoginToken
     public ApiResult deleteEmpById(@RequestParam Integer id) {
+        logger.info("请求参数为：" + id);
         Integer state = 0;
         empService.deleteEmpById(id, state);
         return ApiResult.success();
@@ -109,6 +112,7 @@ public class EmpController {
     @PostMapping("/updateEmpById")
     @UserLoginToken
     public ApiResult updateEmpById(@RequestBody Emp emp) {
+        logger.info("请求参数为：" + emp);
         empService.updateEmpById(emp, emp.getId());
         return ApiResult.success();
     }

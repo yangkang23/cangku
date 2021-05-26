@@ -11,7 +11,7 @@ public interface ProductService {
 
     Integer findProductById(Integer id);
 
-    List<Product> findProductByStoreid(Integer i,Integer pageIndex,Integer pageSize,String product_name);
+    List<Product> findProductByStoreid(Integer i,Integer pageIndex,Integer pageSize,String product_name,Integer tag);
 
     void addInventory(Integer id,Integer amount,Integer storeid);
 
@@ -37,7 +37,7 @@ public interface ProductService {
 
     List<AddRecord> findAddrecord(Integer pid,Integer pageIndex,Integer pageSize);
 
-    Integer findTotal(Integer storeid, String proudct_name);
+    Integer findTotal(Integer storeid, String proudct_name,Integer tag);
 
     Product findProductByIdA(Integer id);
 
@@ -50,4 +50,11 @@ public interface ProductService {
     Integer findTotals(Integer pid);
 
 
+    List<Product> findProductByTag(Integer storeid, Integer tag);
+
+    Double findPriceById(Integer id);
+
+    String findNameById(Integer inside);
+
+    String findRemarksById(Integer inside);
 }

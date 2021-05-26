@@ -34,7 +34,6 @@ public class CustomerServiceImpl implements CustomerService {
 
             Integer start = (pageIndex-1)*pageSize;
             Integer size = pageSize;
-
         return customerDao.findAllCustomer(customer_name, storeid,start,size);
     }
 
@@ -49,13 +48,13 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Integer findChannelAmount(String channelname, Integer storeid) {
-        return customerDao.findChannelAmount(channelname, storeid);
+    public Integer findChannelAmount(Integer channelid, Integer storeid) {
+        return customerDao.findChannelAmount(channelid, storeid);
     }
 
     @Override
-    public Integer findChannelDealAmount(String channelname, Integer storeid) {
-        return customerDao.findChannelDealAmount(channelname,storeid);
+    public Integer findChannelDealAmount(Integer channelid, Integer storeid) {
+        return customerDao.findChannelDealAmount(channelid,storeid);
     }
 
     @Override
@@ -77,6 +76,8 @@ public class CustomerServiceImpl implements CustomerService {
     public Integer findTotals(Integer storeid, String customer_name) {
         return customerDao.findTotals(storeid,customer_name);
     }
+
+
 
 
 }

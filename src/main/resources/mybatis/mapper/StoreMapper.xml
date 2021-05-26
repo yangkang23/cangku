@@ -8,7 +8,9 @@
         address,
         manager_name,
         phone,
-        state
+        state,
+        shopowner,
+        shopowner_phone
     </sql>
     <resultMap id="BaseResultMap" type="com.brt.oa.store.pojo.Store">
         <result column="id" property="id"/>
@@ -18,11 +20,13 @@
         <result column="manager_name" property="manager_name"/>
         <result column="phone" property="phone"/>
         <result column="state" property="state"/>
+        <result column="shopowner" property="shopowner"/>
+        <result column="shopowner_phone" property="shopowner_phone"/>
     </resultMap>
     <insert id="insertStore">
-        insert into store(city, store_name, address, manager_name, phone, state)
+        insert into store(city, store_name, address, manager_name, phone, state, shopowner, shopowner_phone)
         VALUES (#{store.city}, #{store.store_name}, #{store.address}, #{store.manager_name},
-                #{store.phone}, #{store.state})
+        #{store.phone}, #{store.state}, #{store.shopowner}, #{store.shopowner_phone})
     </insert>
 
     <select id="findStoreByName" resultType="java.lang.Integer">
@@ -57,14 +61,15 @@
         select *
         from store
         <where>
-            <if test="city != null and city != ''">
-                and city = #{city}
-            </if>
             <if test="store_name != null and store_name != ''">
                 and store_name like concat('%', #{store_name}, '%')
             </if>
+            <if test="city != null and city != ''">
+                and city = #{city}
+            </if>
+
             and state = 1
-                    limit #{start},#{size};
+            limit #{start},#{size};
         </where>
     </select>
 
@@ -102,10 +107,19 @@
             manager_name = #{store.manager_name},
         </if>
         <if test="store.phone != null and store.phone != ''">
-            phone = #{store.phone}
+            phone = #{store.phone},
+        </if>
+        <if test="store.shopowner != null and store.shopowner != ''">
+            shopowner = #{store.shopowner},
+        </if>
+        <if test="store.shopowner_phone != null and store.shopowner_phone != ''">
+            shopowner_phone = #{store.shopowner_phone},
+        </if>
+        <if test="store.address != null and store.address != ''">
+            address = #{store.address}
         </if>
         where id = #{id}
-          and state = 1;
+        and state = 1;
     </update>
 
     <!--create on 2021-04-14-->
@@ -115,7 +129,7 @@
             state = #{state}
         </if>
         where id = #{id}
-          and state = 1;
+        and state = 1;
     </update>
 
     <select id="findTotal" resultType="java.lang.Integer">

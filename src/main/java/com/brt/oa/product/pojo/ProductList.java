@@ -22,4 +22,9 @@ public class ProductList {
     private Integer state;
 
     private Integer pid;//外键 与产品关联
+    @Ignore
+    private String remarks;
+
+    @Ignore
+    private Integer tag;
 }

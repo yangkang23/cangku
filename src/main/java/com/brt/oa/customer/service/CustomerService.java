@@ -18,9 +18,9 @@ public interface CustomerService {
 
     List findChannelList(Integer storeid);
 
-    Integer findChannelAmount(String channelname, Integer storeid);
+    Integer findChannelAmount(Integer channelid, Integer storeid);
 
-    Integer findChannelDealAmount(String channelname, Integer storeid);
+    Integer findChannelDealAmount(Integer channelid, Integer storeid);
 
     void updateCustomerById(Customer customer,Integer id);
 
@@ -30,4 +30,6 @@ public interface CustomerService {
     String findNameById(Integer cid);
 
     Integer findTotals(Integer storeid, String customer_name);
+
+
 }

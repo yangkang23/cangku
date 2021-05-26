@@ -28,10 +28,10 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> findProductByStoreid(Integer storeid,Integer pageIndex,Integer pageSize,String product_name) {
+    public List<Product> findProductByStoreid(Integer storeid,Integer pageIndex,Integer pageSize,String product_name,Integer tag) {
         Integer start = (pageIndex-1)*pageSize;
         Integer size = pageSize;
-        return productDao.findProductByStoreid(storeid,start,size,product_name);
+        return productDao.findProductByStoreid(storeid,start,size,product_name,tag);
     }
 
     @Override
@@ -97,8 +97,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Integer findTotal(Integer storeid, String proudct_name) {
-        return productDao.findTotal(storeid,proudct_name);
+    public Integer findTotal(Integer storeid, String proudct_name,Integer tag) {
+        return productDao.findTotal(storeid,proudct_name,tag);
     }
 
     @Override
@@ -124,6 +124,26 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Integer findTotals(Integer pid) {
        return   productDao.findTotals(pid);
+    }
+
+    @Override
+    public List<Product> findProductByTag(Integer storeid, Integer tag) {
+        return productDao.findProductByTag(storeid,tag);
+    }
+
+    @Override
+    public Double findPriceById(Integer id) {
+        return productDao.findPriceById(id);
+    }
+
+    @Override
+    public String findNameById(Integer inside) {
+        return productDao.findNameById(inside);
+    }
+
+    @Override
+    public String findRemarksById(Integer inside) {
+        return productDao.findRemarksById(inside);
     }
 
 

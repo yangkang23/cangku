@@ -7,10 +7,11 @@
         sex,
         birthday,
         phone,
-        drainage_channel,
+        channelid,
         deal,
         storeid,
-        `state`
+        `state`,
+        address
     </sql>
     <resultMap id="BaseResultMap" type="com.brt.oa.customer.pojo.Customer">
         <result column="id" property="id"/>
@@ -18,14 +19,16 @@
         <result column="sex" property="sex"/>
         <result column="birthday" property="birthday"/>
         <result column="phone" property="phone"/>
-        <result column="drainage_channel" property="drainage_channel"/>
+        <result column="channelid" property="channelid"/>
         <result column="deal" property="deal"/>
         <result column="storeid" property="storeid"/>
         <result column="state" property="state"/>
+        <result column="address" property="address"/>
     </resultMap>
     <insert id="createCustomerInfo" parameterType="com.brt.oa.customer.pojo.Customer">
-        insert into customer(customer_name, sex, phone, drainage_channel, deal, storeid, birthday, state)
-        values (#{customer_name}, #{sex}, #{phone}, #{drainage_channel}, #{deal}, #{storeid}, #{birthday}, #{state})
+        insert into customer(customer_name, sex, phone, channelid, deal, storeid, birthday, state, address)
+        values (#{customer_name}, #{sex}, #{phone}, #{channelid}, #{deal}, #{storeid}, #{birthday}, #{state},
+        #{address})
     </insert>
 
     <select id="findCustomer" parameterType="java.lang.Integer" resultType="com.brt.oa.customer.pojo.Customer">
@@ -41,21 +44,23 @@
         update customer
         set deal = #{deal}
         where id = #{cid}
-          and state = 1;
+        and state = 1;
     </update>
 
     <select id="findAllCustomer" resultType="com.brt.oa.customer.pojo.Customer">
         select *
         from customer where 1 = 1
+        <if test="customer_name != '' and customer_name != null">
+            and customer_name like concat('%', #{customer_name}, '%')
+            or
+            phone like concat('%', #{customer_name}, '%')
+        </if>
         <if test="storeid != 0">
             and storeid = #{storeid}
         </if>
-        <if test="customer_name != '' and customer_name != null">
-            and customer_name like concat('%', #{customer_name}, '%')
-                    or phone like concat('%', #{customer_name}, '%')
-        </if>
+
         and state = 1
-                limit #{start},#{size}
+        limit #{start},#{size}
     </select>
 
     <select id="findTotal" resultType="java.lang.Integer">
@@ -67,8 +72,8 @@
         and state = 1;
     </select>
 
-    <select id="findChannelList" resultType="java.lang.String">
-        select distinct drainage_channel
+    <select id="findChannelList" resultType="java.lang.Integer">
+        select distinct channelid
         from customer where 1 = 1
         <if test="storeid != 0">
             and storeid = #{storeid}
@@ -78,7 +83,7 @@
 
     <select id="findChannelAmount" resultType="java.lang.Integer">
         select count(1)
-        from customer where drainage_channel = #{channelname}
+        from customer where channelid = #{channelid}
         <if test="storeid != 0">
             and storeid = #{storeid}
         </if>
@@ -87,8 +92,8 @@
 
     <select id="findChannelDealAmount" resultType="java.lang.Integer">
         select count(1)
-        from customer where drainage_channel = #{channelname}
-                        and deal = 1
+        from customer where channelid = #{channelid}
+        and deal = 1
         <if test="storeid != 0">
             and storeid = #{storeid}
         </if>
@@ -103,8 +108,8 @@
         <if test="customer.birthday != null">
             birthday = #{customer.birthday},
         </if>
-        <if test="customer.drainage_channel != null and customer.drainage_channel != ''">
-            drainage_channel = #{customer.drainage_channel},
+        <if test="customer.channelid != null">
+            channelid = #{customer.channelid},
         </if>
         <if test="customer.phone != null and customer.phone != ''">
             phone = #{customer.phone},
@@ -113,10 +118,13 @@
             sex = #{customer.sex},
         </if>
         <if test="customer.storeid != null">
-            storeid = #{customer.storeid}
+            storeid = #{customer.storeid},
+        </if>
+        <if test="customer.address != null and customer.address != ''">
+            address = #{customer.address}
         </if>
         where id = #{id}
-          and state = 1;
+        and state = 1;
     </update>
 
     <update id="deleteCustomerById">
@@ -141,12 +149,13 @@
     <select id="findTotals" resultType="java.lang.Integer">
         select count(1)
         from customer where 1 = 1
-        <if test="storeid != 0 and storeid != null">
-            and storeid = #{storeid}
-        </if>
         <if test="customer_name != '' and customer_name != null">
             and customer_name like concat('%', #{customer_name}, '%')
         </if>
+        <if test="storeid != 0 and storeid != null">
+            and storeid = #{storeid}
+        </if>
+
         and state = 1;
     </select>
 </mapper>

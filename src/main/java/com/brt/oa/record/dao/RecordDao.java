@@ -15,9 +15,9 @@ public interface RecordDao {
 
     Integer findId(@Param("cid") Integer cid, @Param("deal_date") Long deal_date);
 
-    List<Record> findRecord(@Param("storeid") Integer storeid, @Param("start") Integer start, @Param("size") Integer size);
+    List<Record> findRecord(@Param("storeid") Integer storeid, @Param("start") Integer start, @Param("size") Integer size, @Param("customer_name") String customer_name);
 
-    Integer findTotal(@Param("storeid") Integer storeid);
+    Integer findTotal(@Param("storeid") Integer storeid, @Param("customer_name") String customer_name);
 
     void deleteRecordById(@Param("id") Integer id, @Param("state") Integer state);
 }

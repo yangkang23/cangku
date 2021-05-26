@@ -19,11 +19,11 @@ public interface CustomerDao {
 
     Integer findTotal(@Param(value = "storeid") Integer storeid);
 
-    List<String> findChannelList(@Param(value = "storeid") Integer storeid);
+    List<Integer> findChannelList(@Param(value = "storeid") Integer storeid);
 
-    Integer findChannelAmount(@Param("channelname") String channelname, @Param(value = "storeid") Integer storeid);
+    Integer findChannelAmount(@Param("channelid") Integer channelid, @Param(value = "storeid") Integer storeid);
 
-    Integer findChannelDealAmount(@Param("channelname") String channelname, @Param(value = "storeid") Integer storeid);
+    Integer findChannelDealAmount(@Param("channelid") Integer channelid, @Param(value = "storeid") Integer storeid);
 
 
     void updateCustomerById(@Param("customer") Customer customer, @Param("id") Integer id);
@@ -33,4 +33,5 @@ public interface CustomerDao {
     String findNameById(@Param("cid") Integer cid);
 
     Integer findTotals(@Param("storeid") Integer storeid, @Param("customer_name") String customer_name);
+
 }

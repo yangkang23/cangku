@@ -22,7 +22,7 @@ public class Customer {
 
     private String phone;//客户手机
 
-    private String drainage_channel;//引流渠道
+    private Integer channelid;//引流渠道
     @Ignore
     private Integer state;//状态
     @Ignore
@@ -30,6 +30,10 @@ public class Customer {
     @Ignore
     private Integer storeid;//所属门店id  根据登录的用户所属门店id来获取
     @Ignore
-    @javax.persistence.Transient
     private String store_name;
+
+    @Ignore
+    private String channelname;//渠道名字
+
+    private String address;//住址
 }

@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.brt.oa.record.dao.RecordDao">
+    <resultMap id="BaseResultMap" type="com.brt.oa.record.pojo.Record">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="project_name" jdbcType="VARCHAR" property="project_name"/>
+        <result column="project_cost" jdbcType="DOUBLE" property="project_cost"/>
+        <result column="total_cost" jdbcType="DOUBLE" property="total_cost"/>
+        <result column="deal_date" jdbcType="BIGINT" property="deal_date"/>
+        <result column="product_fee" jdbcType="DOUBLE" property="product_fee"/>
+        <result column="cid" jdbcType="INTEGER" property="cid"/>
+        <result column="storeid" jdbcType="INTEGER" property="storeid"/>
+        <result column="state" jdbcType="INTEGER" property="state"/>
+        <result column="customer_name" jdbcType="VARCHAR" property="customer_name"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id,
+        project_name,
+        project_cost,
+        total_cost,
+        deal_date,
+        product_fee,
+        cid,
+        storeid,
+        state,
+        customer_name
+    </sql>
 
-    <insert id="insertRecord" parameterType="com.brt.oa.record.pojo.Record">
-        insert into record(project_name, project_cost, total_cost, deal_date, product_fee, cid, storeid, state)
+    <insert keyColumn="id" id="insertRecord" keyProperty="id" parameterType="com.brt.oa.record.pojo.Record"
+            useGeneratedKeys="true">
+        insert into record(project_name, project_cost, total_cost, deal_date, product_fee, cid, storeid, state,
+        customer_name)
         values (#{project_name}, #{project_cost}, #{total_cost}, #{deal_date}, #{product_fee}, #{cid}, #{storeid},
-                #{state});
+        #{state}, #{customer_name});
     </insert>
 
     <select id="findTurnover" resultType="java.lang.Double">
@@ -24,18 +50,22 @@
         select id
         from record
         where cid = #{cid}
-          and deal_date = #{deal_date}
-          and state = 1;
+        and deal_date = #{deal_date}
+        and state = 1;
     </select>
 
     <select id="findRecord" resultType="com.brt.oa.record.pojo.Record">
         select *
         from record
         <where>
-            <if test="storeid != null and storeid != 0">
-                storeid = #{storeid}
+            <if test="customer_name != null">
+                 customer_name like concat('%', #{customer_name}, '%')
             </if>
-            and state = 1
+            <if test="storeid != null and storeid != 0">
+                and  storeid = #{storeid}
+            </if>
+            and state = 1  order by deal_date desc
+
         </where>
         limit #{start},#{size}
     </select>
@@ -44,10 +74,14 @@
         select count(1)
         from record
         <where>
-            <if test="storeid != null and storeid != 0">
-                storeid = #{storeid}
+            <if test="customer_name != null">
+                 customer_name like concat('%', #{customer_name}, '%')
             </if>
-            and state = 1 ;
+            <if test="storeid != null and storeid != 0">
+                and storeid = #{storeid}
+            </if>
+            and state = 1
+
         </where>
     </select>
 

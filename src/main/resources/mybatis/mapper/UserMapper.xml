@@ -22,7 +22,7 @@
     <insert id="insertUser" parameterType="com.brt.oa.user.pojo.User">
         insert into user(username, password, jurisdiction, storeid, state, realname)
         values (#{user.username}, #{user.password}, #{user.jurisdiction}, #{user.storeid}, #{user.state},
-                #{user.realname});
+        #{user.realname});
     </insert>
 
     <select id="duplicateChecking" resultType="java.lang.Integer">
@@ -45,7 +45,7 @@
                 and realname like concat('%', #{realname}, '%')
             </if>
             and state = 1
-                    limit #{start},#{size};
+            limit #{start},#{size};
         </where>
     </select>
 
@@ -97,7 +97,7 @@
             storeid = #{user.storeid}
         </if>
         where id = #{id}
-          and state = 1;
+        and state = 1;
     </update>
 
     <update id="deleteUserById">
@@ -106,7 +106,7 @@
             state = #{state}
         </if>
         where id = #{id}
-          and state = 1;
+        and state = 1;
     </update>
 
     <select id="findTotal" resultType="java.lang.Integer">

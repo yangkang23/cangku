@@ -11,9 +11,10 @@
         <result column="position_level" property="position_level"/>
         <result column="storeid" property="storeid"/>
         <result column="state" property="state"/>
+        <result column="birthday" property="birthday"/>
+        <result column="hometown" property="hometown"/>
     </resultMap>
 
-    <!--auto generated Code-->
     <sql id="all_column">
         id,
         name,
@@ -22,7 +23,9 @@
         sex,
         position_level,
         storeid,
-        state
+        state,
+        birthday,
+        hometown
     </sql>
 
     <!--auto generated Code-->
@@ -53,6 +56,12 @@
             <if test="pojo.state != null">
                 state,
             </if>
+            <if test="pojo.birthday != null">
+                birthday,
+            </if>
+            <if test="pojo.hometown != null">
+                hometown,
+            </if>
         </trim>
         VALUES
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -80,6 +89,12 @@
             <if test="pojo.storeid != null">
                 #{pojo.state},
             </if>
+            <if test="pojo.birthday != null">
+                #{pojo.birthday},
+            </if>
+            <if test="pojo.hometown != null">
+                #{pojo.hometown},
+            </if>
         </trim>
     </insert>
 
@@ -89,14 +104,15 @@
         <include refid="all_column"/>
         FROM emp
         <where>
-            <if test="storeid != null and storeid != 0">
-                AND storeid = #{storeid}
-            </if>
             <if test="name != null and name != ''">
                 and name like concat('%', #{name}, '%')
             </if>
+            <if test="storeid != null and storeid != 0">
+                AND storeid = #{storeid}
+            </if>
+
             and state = 1
-                    limit #{start},#{size} ;
+            limit #{start},#{size} ;
         </where>
     </select>
 
@@ -105,7 +121,7 @@
         update emp
         set state = #{state}
         where id = #{id}
-          and state = 1;
+        and state = 1;
     </update>
 
     <update id="updateEmpById">
@@ -126,22 +142,29 @@
             sex = #{emp.sex},
         </if>
         <if test="emp.storeid != null">
-            storeid = #{emp.storeid}
+            storeid = #{emp.storeid},
+        </if>
+        <if test="param1.hometown != null and param1.hometown != ''">
+            hometown = #{emp.hometown},
+        </if>
+        <if test="emp.birthday != null">
+            birthday = #{emp.birthday}
         </if>
         where id = #{id}
-          and state = 1;
+        and state = 1;
     </update>
 
     <select id="findTotal" resultType="java.lang.Integer">
         select count(1)
         from emp
         <where>
-            <if test="storeid != null and storeid != 0">
-                storeid = #{storeid}
-            </if>
             <if test="name != null and name != ''">
-                and name like concat('%', #{name}, '%')
+                 name like concat('%', #{name}, '%')
             </if>
+            <if test="storeid != null and storeid != 0">
+                and storeid = #{storeid}
+            </if>
+
             and state = 1;
         </where>
     </select>

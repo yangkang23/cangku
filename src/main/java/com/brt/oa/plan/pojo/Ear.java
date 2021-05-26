@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class Ear {
     @Ignore
-    private String id;
+    private Integer id;
 
     private String deaf;//耳聋
 

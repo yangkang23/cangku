@@ -18,10 +18,14 @@ public class Store {
 
     private String address;//门店地址
 
-    private String manager_name;//门店负责人名字
+    private String manager_name;//区域经理
 
     private String phone;//电话号码
 
     @Ignore
     private Integer state;
+
+    private String shopowner;//店长
+
+    private String shopowner_phone;//店长手机号
 }

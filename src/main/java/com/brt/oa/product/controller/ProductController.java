@@ -39,13 +39,15 @@ public class ProductController {
 
     /**
      * 录入产品库存信息
+     *
      * @param product
      * @return
      */
     @UserLoginToken
     @PostMapping(value = "/insertProduct")
-    public ApiResult insertProduct(@RequestBody @Valid Product product ,
-                                   @RequestHeader String Authorization){
+    public ApiResult insertProduct(@RequestBody @Valid Product product,
+                                   @RequestHeader String Authorization) {
+        logger.info("请求参数为：" + product.toString());
         String token = Authorization.replaceAll("Bearer ", "");
         Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
 
@@ -68,32 +70,35 @@ public class ProductController {
 
     /**
      * 查询库存
+     *
      * @param storeid
      * @return
      */
     @UserLoginToken
     @GetMapping(value = "findProductByStoreid")
-    public  ApiResult findProduct(@RequestParam(required = false) String product_name,
-                                  @RequestParam(required = false) Integer pageIndex,
-                                  @RequestParam(required = false) Integer pageSize,
-                                  @RequestParam Integer storeid) throws UnsupportedEncodingException {
-
-        if (pageIndex == null || pageSize== null){
+    public ApiResult findProduct(@RequestParam(required = false) String product_name,
+                                 @RequestParam(required = false) Integer pageIndex,
+                                 @RequestParam(required = false) Integer pageSize,
+                                 @RequestParam(required = false) Integer tag,
+                                 @RequestParam Integer storeid) throws UnsupportedEncodingException {
+        logger.info("请求参数为：门店id" + storeid+"产品名"+product_name+"标识"+tag);
+        if (pageIndex == null || pageSize == null) {
             pageIndex = 1;
-            pageSize =20;
+            pageSize = 20;
         }
-        Integer total =  productService.findTotal(storeid,product_name);
-        List<Product> list = productService.findProductByStoreid(storeid,pageIndex,pageSize,product_name);
-        Map<String,Object> map = new HashMap<String,Object>();
-        map.put("list",list);
-        map.put("pageIndex",pageIndex);
-        map.put("pageSize",pageSize);
+        Integer total = productService.findTotal(storeid, product_name,tag);
+        List<Product> list = productService.findProductByStoreid(storeid, pageIndex, pageSize, product_name,tag);
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("list", list);
+        map.put("pageIndex", pageIndex);
+        map.put("pageSize", pageSize);
         map.put("total", total);
-        return  ApiResult.success(map);
+        return ApiResult.success(map);
     }
 
     /**
      * 增加库存
+     *
      * @param productList
      * @return
      */
@@ -101,17 +106,18 @@ public class ProductController {
     @PostMapping(value = "addInventory")
     public ApiResult addInventory(@RequestBody ProductList productList,
                                   @RequestHeader String Authorization
-                                  ){
+    ) {
+        logger.info("请求参数为：" + productList.toString());
         String token = Authorization.replaceAll("Bearer ", "");
         Integer storeid = userService.findUserByUsername(JWT.decode(token).getAudience().get(0)).getStoreid();
-        if (productService.findProductById(productList.getPid()) != 1){
-            return  ApiResult.error("产品不存在");
+        if (productService.findProductById(productList.getPid()) != 1) {
+            return ApiResult.error("产品不存在");
         }
-        if ((0-productList.getAmount())> productService.findProductById(productList.getPid())){
+        if ((0 - productList.getAmount()) > productService.findProductById(productList.getPid())) {
             return ApiResult.error("库存不足");
         }
 
-        productService.addInventory(productList.getPid(),productList.getAmount(),storeid);
+        productService.addInventory(productList.getPid(), productList.getAmount(), storeid);
 
         String product_name = productService.findProductByIdA(productList.getPid()).getProduct_name();
         AddRecord addRecord = new AddRecord();
@@ -129,24 +135,28 @@ public class ProductController {
 
     /**
      * 编辑产品信息
-     * @param product  id要传
+     *
+     * @param product id要传
      * @return
      */
     @PostMapping("/updateProductById")
     @UserLoginToken
     public ApiResult updateProductById(@RequestBody Product product) {
+        logger.info("请求参数为：" + product.toString());
         productService.updateProductById(product, product.getId());
         return ApiResult.success();
     }
 
     /**
      * 删除用户
+     *
      * @param id
      * @return
      */
     @GetMapping("/deleteProductById")
     @UserLoginToken
     public ApiResult deleteProductById(@RequestParam Integer id) {
+        logger.info("请求参数为：" + id);
         Integer state = 0;
         productService.deleteProductById(id, state);
         return ApiResult.success();
@@ -154,6 +164,7 @@ public class ProductController {
 
     /**
      * 查看增加库存记录
+     *
      * @param pid 产品id
      * @return
      */
@@ -162,17 +173,18 @@ public class ProductController {
     public ApiResult findAddrecord(@RequestParam Integer pid,
                                    @RequestParam(required = false) Integer pageIndex,
                                    @RequestParam(required = false) Integer pageSize) {
-        if (pageIndex == null || pageSize== null){
+        logger.info("请求参数为：pid" + pid);
+        if (pageIndex == null || pageSize == null) {
             pageIndex = 1;
-            pageSize =20;
+            pageSize = 20;
         }
         Integer total = productService.findTotals(pid);
 
-        List<AddRecord> list = productService.findAddrecord(pid,pageIndex,pageSize);
-        Map<String,Object> map = new HashMap<String,Object>();
-        map.put("list",list);
-        map.put("pageIndex",pageIndex);
-        map.put("pageSize",pageSize);
+        List<AddRecord> list = productService.findAddrecord(pid, pageIndex, pageSize);
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("list", list);
+        map.put("pageIndex", pageIndex);
+        map.put("pageSize", pageSize);
         map.put("total", total);
 
         return ApiResult.success(map);
@@ -180,5 +192,13 @@ public class ProductController {
 
     }
 
+    @GetMapping("/findProductByTag")
+    @UserLoginToken
+    public ApiResult findProductByTag(@RequestParam Integer storeid,
+                                      @RequestParam Integer tag) {
+        logger.info("请求参数为：门店id"+storeid +"标识:"+tag);
+        List<Product> list =  productService.findProductByTag(storeid, tag);
+        return ApiResult.success(list);
+    }
 
 }

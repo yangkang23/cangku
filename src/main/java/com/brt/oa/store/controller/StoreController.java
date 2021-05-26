@@ -39,6 +39,7 @@ public class StoreController {
      */
     @PostMapping(value = "/insertStore")
     public ApiResult insertStore(@RequestBody @Valid Store store){
+        logger.info("请求参数为：" + store.toString());
         if (storeService.findStoreByName(store.getStore_name()) != 0){
             return ApiResult.error("门店名称已存在");
         }
@@ -73,6 +74,7 @@ public class StoreController {
                                 @RequestParam(required = false) String store_name,
                                 @RequestParam(required = false) Integer pageIndex,
                                 @RequestParam(required = false) Integer pageSize){
+        logger.info("请求参数为：城市名" + city+"门店名"+store_name);
         if (pageIndex == null || pageSize== null){
             pageIndex = 1;
             pageSize =20;
@@ -95,6 +97,7 @@ public class StoreController {
     @PostMapping("/updateStoreById")
     @UserLoginToken
     public ApiResult updateStoreById(@RequestBody Store store) {
+        logger.info("请求参数为：" + store.toString());
         storeService.updateStoreById(store, store.getId());
         return ApiResult.success();
     }
@@ -107,6 +110,7 @@ public class StoreController {
     @GetMapping("/deleteStoreById")
     @UserLoginToken
     public ApiResult deleteStoreById(@RequestParam Integer id){
+        logger.info("请求参数为：" + id);
         Integer state = 0;
         storeService.deleteStoreById(id,state);
         return ApiResult.success();

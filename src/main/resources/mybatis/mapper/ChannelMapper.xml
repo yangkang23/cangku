@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.brt.oa.channel.dao.ChannelDao">
+    <resultMap id="BaseResultMap" type="com.brt.oa.channel.pojo.Channel">
+        <!--@mbg.generated-->
+        <!--@Table channel-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="tag" jdbcType="INTEGER" property="tag"/>
+        <result column="describe" jdbcType="VARCHAR" property="describe"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, `name`, tag, `describe`
+    </sql>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.brt.oa.channel.pojo.Channel"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into channel (`name`, tag, `describe`)
+        values (#{name,jdbcType=VARCHAR}, #{tag,jdbcType=INTEGER}, #{describe,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateTagById">
+        update channel set
+        <if test="tag != null">
+            tag = #{tag}
+        </if>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <select id="selectChannel" resultMap="BaseResultMap">
+        select *
+        from channel
+        <where>
+            <if test="name != null and name != ''">
+                name like concat('%', #{name}, '%')
+            </if>
+        </where>
+        order by tag desc
+        <!--        limit #{start},#{size}-->
+    </select>
+
+    <update id="updateById">
+        update channel set
+        <if test="channel.describe != null and channel.describe != ''">
+            `describe` = #{channel.describe},
+        </if>
+        <if test="channel.name != null and channel.name != ''">
+            name = #{channel.name},
+        </if>
+        <if test="channel.tag != null">
+            tag = #{channel.tag}
+        </if>
+        where id = #{id}
+    </update>
+
+    <select id="findNameById" resultType="java.lang.String">
+        select name
+        from channel
+        <where>
+            <if test="channelid != null">
+                id = #{channelid}
+            </if>
+        </where>
+    </select>
+</mapper>

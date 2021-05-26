@@ -50,6 +50,7 @@ public class UserController {
     @PostMapping(value = "/register")
     public ApiResult register(@RequestBody User user,
                               @RequestHeader String Authorization) throws IOException {
+        logger.info("请求参数为：" + user.toString());
 
         String token = Authorization.replaceAll("Bearer ", "");
         if (us.findUserByUsername(JWT.decode(token).getAudience().get(0)).getJurisdiction() == 2) {
@@ -76,14 +77,7 @@ public class UserController {
         properties.load(new FileInputStream("config/config.properties"));
         user.setPassword(properties.getProperty("password"));
 
-        //设置权限
-        if (user.getStoreid() == 1) {
-            user.setJurisdiction(1);
-            user.setStoreid(1);
-        } else {
-            user.setJurisdiction(2);
-            user.setStoreid(user.getStoreid());
-        }
+
         //插入用户
         user.setState(1);
         us.insertUser(user);
@@ -98,6 +92,7 @@ public class UserController {
      */
     @PostMapping(value = "/login")
     public ApiResult login(@RequestBody @Valid User user )  {
+        logger.info("请求参数为：" +user.toString());
         User userForBase = us.findUserByUsername(user.getUsername());
         if (userForBase == null) {
             return ApiResult.error("用户不存在");
@@ -128,6 +123,7 @@ public class UserController {
     @UserLoginToken
     @PostMapping(value = "/updatePwd")
     public ApiResult updatePwd(@RequestBody User user, @RequestHeader String Authorization) throws IOException {
+        logger.info("请求参数为：" +user.toString());
         String token = Authorization.replaceAll("Bearer ", "");
         User user1 = us.findUserByUsername(JWT.decode(token).getAudience().get(0));
             if (!user.getPassword().matches(pattern)) {
@@ -149,6 +145,7 @@ public class UserController {
     @GetMapping("/resetPwd")
     @UserLoginToken
     public ApiResult resetPwd(@RequestParam Integer id) throws IOException {
+        logger.info("请求参数为：用户id:"+id);
         User user = us.findUserById(id);
         Properties properties = new Properties();
         properties.load(new FileInputStream("config/config.properties"));
@@ -167,6 +164,7 @@ public class UserController {
     public ApiResult findUser(@RequestParam(required = false) String realname,
                               @RequestParam(required = false) Integer pageIndex,
                               @RequestParam(required = false) Integer pageSize){
+        logger.info("请求参数为：真实姓名:"+realname);
         if (pageIndex == null || pageSize== null){
             pageIndex = 1;
             pageSize =20;
@@ -201,8 +199,7 @@ public class UserController {
     @PostMapping("/updateUserById")
     @UserLoginToken
     public ApiResult updateUserById(@RequestBody User user){
-
-
+        logger.info("请求参数为："+user.toString());
         us.updateUserById(user,user.getId());
         return ApiResult.success();
     }
@@ -215,6 +212,7 @@ public class UserController {
     @GetMapping("/deleteUserById")
     @UserLoginToken
     public ApiResult deleteUserById(@RequestParam Integer id) {
+        logger.info("请求参数为：用户id:"+id);
         Integer state = 0;
         us.deleteUserById(id,state);
         return  ApiResult.success();

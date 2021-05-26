@@ -11,11 +11,11 @@ public interface RecordService {
 
     Integer findId(Integer cid, Long deal_date);
 
-    List<Record> findRecord(Integer store,Integer pageIndex,Integer pageSize);
+    List<Record> findRecord(Integer store, Integer pageIndex, Integer pageSize, String customer_name);
 
     void findRecordLimt(Integer storeid, int i);
 
-    Integer findTotal(Integer storeid);
+    Integer findTotal(Integer storeid, String customer_name);
 
-    void deleteRecordById(Integer id,Integer state);
+    void deleteRecordById(Integer id, Integer state);
 }

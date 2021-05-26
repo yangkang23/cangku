@@ -26,8 +26,8 @@
     </sql>
 
     <insert id="insertProduct" parameterType="com.brt.oa.product.pojo.Product">
-        insert into product (product_name, inventory, price, storeid, state, remarks,tag)
-        values (#{product_name}, #{inventory}, #{price}, #{storeid}, #{state}, #{remarks},#{tag});
+        insert into product (product_name, inventory, price, storeid, state, remarks, tag)
+        values (#{product_name}, #{inventory}, #{price}, #{storeid}, #{state}, #{remarks}, #{tag});
     </insert>
 
     <select id="findProductById" resultType="java.lang.Integer">
@@ -50,8 +50,6 @@
 
             <if test="tag != null">
                 and tag = #{tag}
-
-
             </if>
             and state = 1
                     limit #{start},#{size};
@@ -282,7 +280,6 @@
             <if test="pid != null">
                 pid = #{pid}
             </if>
-
         </where>
     </select>
 
