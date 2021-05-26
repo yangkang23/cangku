@@ -9,6 +9,8 @@
         <result column="rid" property="rid"/>
         <result column="state" property="state"/>
         <result column="pid" property="pid"/>
+        <result column="remarks" property="remarks"/>
+        <result column="tag" property="tag"/>
     </resultMap>
 
     <sql id="all_column">
@@ -18,12 +20,14 @@
         amount,
         rid,
         state,
-        pid
+        pid,
+        remarks,
+        tag
     </sql>
 
     <insert id="insertProduct" parameterType="com.brt.oa.product.pojo.Product">
-        insert into product (product_name, inventory, price, storeid, state)
-        values (#{product_name}, #{inventory}, #{price}, #{storeid}, #{state});
+        insert into product (product_name, inventory, price, storeid, state, remarks,tag)
+        values (#{product_name}, #{inventory}, #{price}, #{storeid}, #{state}, #{remarks},#{tag});
     </insert>
 
     <select id="findProductById" resultType="java.lang.Integer">
@@ -37,11 +41,17 @@
         select *
         from product
         <where>
-            <if test="storeid != null and storeid != 0">
-                storeid = #{storeid}
-            </if>
             <if test="product_name != null and product_name != ''">
                 and product_name like concat('%', #{product_name}, '%')
+            </if>
+            <if test="storeid != null and storeid != 0">
+                and storeid = #{storeid}
+            </if>
+
+            <if test="tag != null">
+                and tag = #{tag}
+
+
             </if>
             and state = 1
                     limit #{start},#{size};
@@ -98,7 +108,13 @@
             price = #{product.price},
         </if>
         <if test="product.storeid != null">
-            storeid = #{product.storeid}
+            storeid = #{product.storeid},
+        </if>
+        <if test="product.remarks != null and product.remarks != ''">
+            remarks = #{product.remarks},
+        </if>
+        <if test="product.tag != null">
+            tag = #{product.tag}
         </if>
         where id = #{id}
           and state = 1;
@@ -115,7 +131,9 @@
              #{pojo.amount},
              #{pojo.rid},
              #{pojo.state},
-             #{pojo.pid})
+             #{pojo.pid},
+             #{pojo.remarks},
+             #{pojo.tag})
         </foreach>
     </insert>
 
@@ -208,11 +226,14 @@
         select count(1)
         from product
         <where>
-            <if test="storeid != null and storeid != 0">
-                storeid = #{storeid}
-            </if>
             <if test="product_name != null and product_name != ''">
-                and product_name like concat('%', #{product_name}, '%')
+                product_name like concat('%', #{product_name}, '%')
+            </if>
+            <if test="storeid != null and storeid != 0">
+                and storeid = #{storeid}
+            </if>
+            <if test="tag != null">
+                and tag = #{tag}
             </if>
             and state = 1 ;
         </where>
@@ -261,6 +282,32 @@
             <if test="pid != null">
                 pid = #{pid}
             </if>
+
         </where>
+    </select>
+
+    <select id="findProductByTag" resultType="com.brt.oa.product.pojo.Product">
+        select *
+        from product
+        where storeid = #{storeid}
+          and tag = #{tag};
+    </select>
+
+    <select id="findPriceById" resultType="java.lang.Double">
+        select price
+        from product
+        where id = #{id}
+    </select>
+
+    <select id="findNameById" resultType="java.lang.String">
+        select product_name
+        from product
+        where id = #{inside}
+    </select>
+
+    <select id="findRemarksById" resultType="java.lang.String">
+        select remarks
+        from product
+        where id = #{inside}
     </select>
 </mapper>
