@@ -131,7 +131,8 @@
     <update id="updateTimeById">
         update conditioning
         set startTime = #{startTime},
-            endTime   = #{endTime}
+            endTime   = #{endTime},
+            fee       = #{fee}
         where id = #{id}
     </update>
 

@@ -28,7 +28,7 @@ public interface PlanService {
 
     List<Ear> findEarByPlanid(Integer planid);
 
-    void updateTimeById(Integer id, Long startTime, Long endTime);
+    void updateTimeById(Integer id, Long startTime, Long endTime,Double fee);
 
     void updateRemakeById(Integer id, String remark);
 }

@@ -68,8 +68,8 @@ public class PlanServiceImpl implements PlanService {
     }
 
     @Override
-    public void updateTimeById(Integer id, Long startTime, Long endTime) {
-        planDao.updateTimeById(id, startTime, endTime);
+    public void updateTimeById(Integer id, Long startTime, Long endTime,Double fee) {
+        planDao.updateTimeById(id, startTime, endTime,fee);
     }
 
     @Override

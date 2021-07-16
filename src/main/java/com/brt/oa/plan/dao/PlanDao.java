@@ -31,7 +31,7 @@ public interface PlanDao {
 
     List<Ear> findEarByPlanid(Integer planid);
 
-    void updateTimeById(@Param("id") Integer id, @Param("startTime") Long startTime, @Param("endTime") Long endTime);
+    void updateTimeById(@Param("id") Integer id, @Param("startTime") Long startTime, @Param("endTime") Long endTime, @Param("fee") Double fee);
 
 
     void updateRemakeById(@Param("id") Integer id, @Param("remark") String remark);

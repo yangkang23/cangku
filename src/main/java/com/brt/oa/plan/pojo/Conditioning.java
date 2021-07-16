@@ -25,7 +25,7 @@ public class Conditioning {
     private String inside;
 
     //其他调理  产品id
-    private String other;
+    private Integer other;
 
     //费用
     @Ignore
@@ -38,8 +38,8 @@ public class Conditioning {
 //    @Ignore
 //    private String insidename;
 //
-//    @Ignore
-//    private  String othername;
+    @Ignore
+    private  String othername;
 //
 //    @Ignore
 //    private  String insidename_remark;

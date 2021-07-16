@@ -86,14 +86,14 @@ public class PlanController {
         //List list1 = new  ArrayList <>();
         for (Plan plan:planList) {
             List<Conditioning> conditioningList= planService.findConditioningByPlanid(plan.getId());
-//            for (Conditioning conditioning: conditioningList) {
+            for (Conditioning conditioning: conditioningList) {
 //                String insidename = productService.findNameById(conditioning.getInside());
 //                String insidename_remark = productService.findRemarksById(conditioning.getInside());
-//                String othername = productService.findNameById(conditioning.getOther());
+                String othername = productService.findNameById(conditioning.getOther());
 //                conditioning.setInsidename(insidename);
-//                conditioning.setOthername(othername);
+                conditioning.setOthername(othername);
 //                conditioning.setInsidename_remark(insidename_remark);
-//            }
+            }
 
             List<Discomfort> discomfortList = planService.findDiscomfortByPlanid(plan.getId());
             List<Ear> earList = planService.findEarByPlanid(plan.getId());
@@ -116,7 +116,7 @@ public class PlanController {
         List<Conditioning> conditioningList = plan.getConditioningList();
         planService.updateRemakeById(plan.getId(), plan.getRemark());
         for (Conditioning conditioning:conditioningList) {
-            planService.updateTimeById(conditioning.getId(),conditioning.getStartTime(),conditioning.getEndTime());
+            planService.updateTimeById(conditioning.getId(),conditioning.getStartTime(),conditioning.getEndTime(),conditioning.getFee());
         }
         return ApiResult.success();
     }

@@ -113,7 +113,7 @@ public class ProductController {
         if (productService.findProductById(productList.getPid()) != 1) {
             return ApiResult.error("产品不存在");
         }
-        if ((0 - productList.getAmount()) > productService.findProductById(productList.getPid())) {
+        if ((0 - productList.getAmount()) > productService.findProductByIdA(productList.getPid()).getInventory()) {
             return ApiResult.error("库存不足");
         }
 
